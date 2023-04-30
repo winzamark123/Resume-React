@@ -1,0 +1,26 @@
+.side-nav-container {
+    background-color: var(--dark);
+    width: 300px;
+    height: 160vh;
+    position: relative;
+    color: white;
+}
+
+.nav-upper, .nav-heading{
+    display: grid;
+}
+
+.nav-heading{
+    grid-template-columns: 2fr, 1fr;
+    grid-template-rows: 1fr;
+    height: 75px;
+    /* border: solid white; */
+}
+
+.nav_brand{
+
+}
+
+hr{
+    border-top: 2px solid;
+}
