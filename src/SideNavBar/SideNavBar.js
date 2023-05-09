@@ -2,16 +2,46 @@ import "./SideNavBar.css"
 
 const sideNavBar = () => {
     return (
-        <div className="side-nav-container">
-            <div className="nav-upper">
-                <div className="nav-heading">
-                    <div className="nav-brand">
-                        {/* <img src="Icons/" alt="" /> Logo for my Profile */}
-                        <h2>ShowKart</h2>
-                        <hr />
-                    </div>
+        <div class="primary-nav">
+
+            <button href="#" class="hamburger open-panel nav-toggle">
+                <span class="screen-reader-text">Menu</span>
+            </button>
+
+            <nav role="navigation" class="menu">
+
+                <a href="#" class="logotype">LOGO<span>TYPE</span></a>
+
+                <div class="overflow-container">
+
+                    <ul class="menu-dropdown">
+
+                        <li><a href="#">Dashboard</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+
+                        <li class="menu-hasdropdown">
+                            <a href="#">Settings</a><span class="icon"><i class="fa fa-gear"></i></span>
+
+                            <label title="toggle menu" for="settings">
+                                <span class="downarrow"><i class="fa fa-caret-down"></i></span>
+                            </label>
+                            <input type="checkbox" class="sub-menu-checkbox" id="settings" />
+
+                            <ul class="sub-menu-dropdown">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Account</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Favourites</a><span class="icon"><i class="fa fa-heart"></i></span></li>
+
+                        <li><a href="#">Messages</a><span class="icon"><i class="fa fa-envelope"></i></span></li>
+
+                    </ul>
+
                 </div>
-            </div>
+
+            </nav>
 
         </div>);
 }
