@@ -1,0 +1,16 @@
+.map-pixel-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+
+}
+
+.map-pixel-art img {
+    image-rendering: pixelated;
+}
+
+.character {
+    position: absolute;
+    overflow: hidden;
+}
