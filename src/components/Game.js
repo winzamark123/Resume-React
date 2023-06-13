@@ -1,6 +1,6 @@
 import PlaceHolderMap from '../assets/PlaceHolderMap.png';
 import PlaceHolderCharacter from '../assets/PlaceHolderCharacter.png';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import './Game.css';
 
 
@@ -18,34 +18,96 @@ const Game = () => {
 
     var [heldDirectionsArray, setHeldDirectionsArray] = useState([]);
 
-    const placeCharacter = () => {
+    const directions = {
+        up: "up",
+        down: "down",
+        left: "left",
+        right: "right"
+    }
+
+    const keys = {
+        38: directions.up,
+        37: directions.left,
+        39: directions.right,
+        40: directions.down
+    }
+
+
+
+    const placeCharacter = useCallback(() => {
         var pixelSizeNumber = parseInt(pixelSize);
         const currentDirection = heldDirectionsArray[0];
-        if (currentDirection === "right") {
+
+        if (currentDirection === directions.right) {
             setX(x => x + speed);
         }
-        if (currentDirection === "left") {
+        if (currentDirection === directions.left) {
             setX(x => x - speed);
         }
-        if (currentDirection === "up") {
+        if (currentDirection === directions.up) {
             setY(y => y - speed);
         }
-        if (currentDirection === "down") {
+        if (currentDirection === directions.down) {
             setY(y => y + speed);
         }
-        
+
         setFacing(currentDirection); //set facing to the current direction
         setWalking(currentDirection ? true : false); //set walking to true if the current direction is anything other than null
 
+        mapRef.current.style.transform = `translate3d(${-x * pixelSizeNumber}px, ${-y * pixelSizeNumber}px, 0 )`;
+        characterRef.current.style.transform = `translate3d(${x * pixelSizeNumber}px, ${y * pixelSizeNumber}px, 0)`;
+    }, [x, y, directions, setX, setY, setFacing, setWalking, heldDirectionsArray]);
 
-        characterRef.current.style.transform = `translate(${x * pixelSizeNumber}px, ${y * pixelSizeNumber}px)`;
-    }
+    const step = useCallback(() => {
+        placeCharacter();
+    }, [placeCharacter]);
+
+    useEffect(() => {
+        window.requestAnimationFrame(step);
+    }, [step]);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            console.log(e.keyCode);
+            var dir = keys[e.keyCode];
+            if (dir && heldDirectionsArray.indexOf(dir) === -1) {
+                //might have to change this line as the array is being expanded from the front 
+                setHeldDirectionsArray((prev) => [dir, ...prev]);
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [heldDirectionsArray, keys]);
+
+    useEffect(() => {
+        const handleKeyUp = (e) => {
+            var dir = keys[e.keyCode];
+            var index = heldDirectionsArray.indexOf(dir);
+            if (index > -1) {
+                setHeldDirectionsArray((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
+            }
+        }
+
+        document.addEventListener('keyup', handleKeyUp);
+
+        return () => {
+            document.removeEventListener('keyup', handleKeyUp);
+        };
+
+
+    }, [heldDirectionsArray, keys]);
+
+
 
     return (
         <div className="frame">
-            <div ref = {mapRef} className="map-pixel-art">
-                <img src={PlaceHolderMap} alt="" />
-                <div ref = {characterRef} className="character" facing = {facing} walking = {walking}>
+            <div ref={mapRef} className="map-pixel-art">
+                {/* <img src={PlaceHolderMap} alt="" /> */}
+                <div ref={characterRef} className="character" facing={facing} walking={walking}>
                     <img src={PlaceHolderCharacter} alt="" />
                 </div>
             </div>
