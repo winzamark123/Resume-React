@@ -54,7 +54,7 @@ const Game = () => {
         setFacing(currentDirection); //set facing to the current direction
         setWalking(currentDirection ? true : false); //set walking to true if the current direction is anything other than null
 
-        mapRef.current.style.transform = `translate3d(${-x * pixelSizeNumber}px, ${-y * pixelSizeNumber}px, 0 )`;
+        // mapRef.current.style.transform = `translate3d(${-x * pixelSizeNumber}px, ${-y * pixelSizeNumber}px, 0 )`;
         characterRef.current.style.transform = `translate3d(${x * pixelSizeNumber}px, ${y * pixelSizeNumber}px, 0)`;
     }, [x, y, directions, setX, setY, setFacing, setWalking, heldDirectionsArray]);
 
@@ -106,7 +106,7 @@ const Game = () => {
     return (
         <div className="frame">
             <div ref={mapRef} className="map-pixel-art">
-                {/* <img src={PlaceHolderMap} alt="" /> */}
+                <img src={PlaceHolderMap} alt="" />
                 <div ref={characterRef} className="character" facing={facing} walking={walking}>
                     <img src={PlaceHolderCharacter} alt="" />
                 </div>
