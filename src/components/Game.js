@@ -1,5 +1,6 @@
 import PlaceHolderMap from '../assets/PlaceHolderMap.png';
 import PlaceHolderCharacter from '../assets/PlaceHolderCharacter.png';
+import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja Frog/Idle (32x32).png'
 import { useState, useRef, useEffect, useCallback } from 'react';
 import './Game.css';
 
@@ -108,7 +109,7 @@ const Game = () => {
             <div ref={mapRef} className="map-pixel-art">
                 <img src={PlaceHolderMap} alt="" />
                 <div ref={characterRef} className="character" facing={facing} walking={walking}>
-                    <img src={PlaceHolderCharacter} alt="" />
+                    <img src={FrogCharacter} className="character_spritesheet" alt="" />
                 </div>
             </div>
         </div>
