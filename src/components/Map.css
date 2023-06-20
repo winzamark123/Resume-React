@@ -1,4 +1,4 @@
-.map-container{
+.map-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,8 +6,33 @@
     background-color: darkgray;
 }
 
-.map-pixelart{
+.map-pixelart {
     width: 100%;
     height: 100%;
     image-rendering: pixelated;
+}
+
+.tile {
+    width: calc(12px*var(--pixel-size));
+    height: calc(14px*var(--pixel-size));
+    image-rendering: pixelated;
+}
+
+.row {
+    display: flex;
+}
+
+.tile.floor {
+    /* Way to draw sprite image on tiles */
+    background-image: url("../assets/Pixel Art Top Down - Basic/Texture/TX\ Tileset\ Grass.png");
+    background-size: 512px 512px;
+    background-position: 0px 132px;
+    border: solid 1px black;
+}
+
+.tile.wall {
+    background-image: url("../assets/Pixel Art Top Down - Basic/Texture/TX\ Tileset\ Wall.png");
+    background-position: -32px 242px;
+    background-color: darkslategrey;
+    border: solid 1px black;
 }

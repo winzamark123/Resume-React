@@ -13,15 +13,30 @@ const Map = () => {
         [1, 1, 1, 1, 1],
         [1, 0, 0, 0, 1],
         [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
         [1, 1, 1, 1, 1]
     ];
 
     return (
         <div className="map-container">
             <div className="map-pixelart">
-                <h1>Map</h1>
+                {/* <h1>Map</h1>
                 <img src={PlaceHolderMap} alt="" />
-                <img src={PlaceHolderMap2} alt="" />
+                <img src={PlaceHolderMap2} alt="" /> */}
+                {
+                    map.map((row, rowIndex) => (
+                        <div key={rowIndex} className="row">
+                            {
+                                row.map((tile, tileIndex) => (
+                                    <div
+                                        key={tileIndex}
+                                        className={`tile ${tile === 0 ? 'floor' : 'wall'}`}
+                                    ></div>
+                                ))
+                            }
+                        </div>
+                    ))
+                }
             </div>
         </div>
     );
