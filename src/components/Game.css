@@ -2,13 +2,16 @@
     --pixel-size: 6;
 }
 
-.map-pixel-art {
+
+.frame{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: darkgray;
-
 }
+
+
 
 .character {
     width: calc(12px*var(--pixel-size));

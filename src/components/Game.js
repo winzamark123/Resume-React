@@ -1,16 +1,14 @@
-import PlaceHolderMap from '../assets/PlaceHolderMap.png';
-import PlaceHolderCharacter from '../assets/PlaceHolderCharacter.png';
+
 import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja Frog/Idle (32x32).png'
 import { useState, useRef, useEffect, useCallback } from 'react';
 import './Game.css';
-
+import Map from './Map';
 
 const Game = () => {
     var pixelSize = 2;
     var speed = 1;
 
     const characterRef = useRef(null);
-    const mapRef = useRef(null);
 
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
@@ -106,12 +104,11 @@ const Game = () => {
 
     return (
         <div className="frame">
-            <div ref={mapRef} className="map-pixel-art">
-                <img src={PlaceHolderMap} alt="" />
-                <div ref={characterRef} className="character" facing={facing} walking={walking}>
-                    <img src={FrogCharacter} className="character_spritesheet" alt="" />
-                </div>
+            <Map />
+            <div ref={characterRef} className="character" facing={facing} walking={walking}>
+                <img src={FrogCharacter} className="character_spritesheet" alt="" />
             </div>
+
         </div>
     )
 }
