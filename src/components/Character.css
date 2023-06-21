@@ -1,0 +1,24 @@
+.character {
+    width: calc(12px*var(--pixel-size));
+    height: calc(14px*var(--pixel-size));
+    /* background-color: bisque; */
+    position: absolute;
+    overflow: hidden;
+}
+
+.character_spritesheet {
+    animation: moveSpritesheet 1s steps(11) infinite;
+    width: calc(128px * var(--pixel-size));
+    image-rendering: pixelated;
+    position: absolute;
+}
+
+@keyframes moveSpritesheet {
+    from {
+        transform: translate3d(0, 0, 0)
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0)
+    }
+}
