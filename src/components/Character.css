@@ -4,6 +4,8 @@
     /* background-color: bisque; */
     position: absolute;
     overflow: hidden;
+    top: 30%;
+    left: 46%;
 }
 
 .character_spritesheet {

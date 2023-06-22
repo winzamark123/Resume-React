@@ -6,11 +6,16 @@ import Map from './Map';
 import Character from './Character';
 
 const Game = () => {
-    return (
-        <div className="frame">
-            <Map />
-            <Character />
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0);
 
+    return (
+        <div className="game-container">
+            <div className="frame">
+                <Map x={x} y={y} />
+                <Character x={x} y={y} setX={setX} setY={setY} />
+
+            </div>
         </div>
     )
 }

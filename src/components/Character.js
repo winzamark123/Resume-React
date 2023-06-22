@@ -3,14 +3,16 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja Frog/Idle (32x32).png'
 
 
-const Character = () => {
-    var pixelSize = 2;
+const Character = ({ x, y, setX, setY }) => {
+    var pixelSize = 1;
     var speed = 1;
+    x = 12 * pixelSize;
+    y = 12 * pixelSize;
 
     const characterRef = useRef(null);
 
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    // const [x, setX] = useState(0);
+    // const [y, setY] = useState(0);
     const [facing, setFacing] = useState("down");
     const [walking, setWalking] = useState(false);
 
