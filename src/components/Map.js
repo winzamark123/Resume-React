@@ -6,6 +6,9 @@ const Map = ({ x, y }) => {
     // 2 = player
     // mapRef.current.style.transform = `translate3d(${-x * pixelSizeNumber}px, ${-y * pixelSizeNumber}px, 0 )`;
     const pixelSizeNumber = 2;
+
+
+
     var map = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],

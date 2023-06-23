@@ -4,10 +4,8 @@ import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja 
 
 
 const Character = ({ x, y, setX, setY }) => {
-    var pixelSize = 1;
+    var pixelSize = 6;
     var speed = 1;
-    x = 12 * pixelSize;
-    y = 12 * pixelSize;
 
     const characterRef = useRef(null);
 
@@ -33,7 +31,7 @@ const Character = ({ x, y, setX, setY }) => {
     }
 
     const placeCharacter = useCallback(() => {
-        var pixelSizeNumber = parseInt(pixelSize);
+        // var pixelSizeNumber = parseInt(pixelSize);
         const currentDirection = heldDirectionsArray[0];
 
         if (currentDirection === directions.right) {
@@ -53,7 +51,7 @@ const Character = ({ x, y, setX, setY }) => {
         setWalking(currentDirection ? true : false); //set walking to true if the current direction is anything other than null
 
         // mapRef.current.style.transform = `translate3d(${-x * pixelSizeNumber}px, ${-y * pixelSizeNumber}px, 0 )`;
-        characterRef.current.style.transform = `translate3d(${x * pixelSizeNumber}px, ${y * pixelSizeNumber}px, 0)`;
+        characterRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
     }, [x, y, directions, setX, setY, setFacing, setWalking, heldDirectionsArray]);
 
     const step = useCallback(() => {

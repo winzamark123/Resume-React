@@ -31,7 +31,8 @@
 }
 
 .tile.wall {
-    background-image: url("../assets/Pixel Art Top Down - Basic/Texture/TX\ Tileset\ Wall.png");
+    /* background-image: url("../assets/Pixel Art Top Down - Basic/Texture/TX\ Tileset\ Wall.png"); */
+    background-image: url("../assets/PlaceHolderMap.png");
     background-position: -32px 242px;
     background-color: darkslategrey;
     border: solid 1px black;
