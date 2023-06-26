@@ -4,7 +4,6 @@ import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja 
 
 
 const Character = ({ x, y, setX, setY }) => {
-    var pixelSize = 6;
     var speed = 1;
 
     const characterRef = useRef(null);

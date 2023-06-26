@@ -1,3 +1,10 @@
-.resume-img-item {}
+.items-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
 
-.education-img-item {}
+.resume-img-item{
+    width: 64px;
+}

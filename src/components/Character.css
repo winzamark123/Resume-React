@@ -1,3 +1,7 @@
+.character-container {
+    z-index: 3;
+}
+
 .character {
     width: calc(12px*var(--pixel-size));
     height: calc(14px*var(--pixel-size));

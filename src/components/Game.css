@@ -13,4 +13,5 @@
 .frame {
     border: solid red;
     overflow: hidden;
+    width: 1024px;
 }

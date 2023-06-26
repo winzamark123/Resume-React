@@ -8,37 +8,37 @@ const Game = () => {
     var [x, setX] = useState(0);
     var [y, setY] = useState(0);
 
-    const leftLimit = -125;
-    const rightLimit = 130;
-    const topLimit = -35;
-    const bottomLimit = 35;
+    // const leftLimit = -125;
+    // const rightLimit = 130;
+    // const topLimit = -35;
+    // const bottomLimit = 35;
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (x < leftLimit) {
-            setX(leftLimit);
-        };
+    //     if (x < leftLimit) {
+    //         setX(leftLimit);
+    //     };
 
-        if (x > rightLimit) {
-            setX(rightLimit);
-        };
+    //     if (x > rightLimit) {
+    //         setX(rightLimit);
+    //     };
 
-        if (y < topLimit) {
-            setY(topLimit);
-        };
+    //     if (y < topLimit) {
+    //         setY(topLimit);
+    //     };
 
-        if (y > bottomLimit) {
-            setY(bottomLimit);
-        };
+    //     if (y > bottomLimit) {
+    //         setY(bottomLimit);
+    //     };
 
-    }, [x, y, leftLimit, rightLimit, topLimit, bottomLimit]);
+    // }, [x, y, leftLimit, rightLimit, topLimit, bottomLimit]);
 
     return (
         <div className="game-container">
             <div className="frame">
                 <Map x={x} y={y} />
                 <Character x={x} y={y} setX={setX} setY={setY} />
-                <Item />
+                {/* <Item x={x} y={y} /> */}
             </div>
         </div>
     )
