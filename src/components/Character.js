@@ -1,10 +1,11 @@
 import "./Character.css"
 import { useState, useRef, useEffect, useCallback } from 'react';
 import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja Frog/Idle (32x32).png'
+import NinjaCharacter from '../assets/Pixel Art Characters/Main Characters/Mask Dude/Idle (32x32).png'
 
 
 const Character = ({ x, y, setX, setY }) => {
-    var speed = 1;
+    var speed = 3;
 
     const characterRef = useRef(null);
 
@@ -23,10 +24,10 @@ const Character = ({ x, y, setX, setY }) => {
     }
 
     const keys = {
-        38: directions.up,
+        // 38: directions.up,
         37: directions.left,
         39: directions.right,
-        40: directions.down
+        // 40: directions.down
     }
 
     const placeCharacter = useCallback(() => {
@@ -95,6 +96,8 @@ const Character = ({ x, y, setX, setY }) => {
 
 
     }, [heldDirectionsArray, keys]);
+
+
 
 
 

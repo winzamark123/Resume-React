@@ -4,7 +4,7 @@ import RoomMap from "../assets/RoomMap.png";
 const Map = ({ x, y }) => {
     // 0 = wall
     // 1 = grass 
-    const speed = 1;
+    const speed = 2;
     const tileSize = 32; // or whatever size your tiles should be
     const mapSize = 1024;
     const mapTiles = mapSize / tileSize;

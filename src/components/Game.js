@@ -6,32 +6,33 @@ import Item from './Items';
 
 const Game = () => {
     var [x, setX] = useState(0);
-    var [y, setY] = useState(0);
+    var [y, setY] = useState(-13);
 
-    // const leftLimit = -125;
-    // const rightLimit = 130;
-    // const topLimit = -35;
-    // const bottomLimit = 35;
+    const [characterNames] = useState(["Frog", "Ninja", "Pink", "Virtual"]);
+    const [activeCharacterIndex, setActiveCharacterIndex] = useState(0);
 
-    // useEffect(() => {
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.keyCode === 38) {
+                setActiveCharacterIndex(activeCharacterIndex => (activeCharacterIndex - 1) % characterNames.length);
+            }
 
-    //     if (x < leftLimit) {
-    //         setX(leftLimit);
-    //     };
+            if (e.keyCode === 40) {
+                setActiveCharacterIndex(activeCharacterIndex => (activeCharacterIndex + 1) % characterNames.length);
+            }
+        }
 
-    //     if (x > rightLimit) {
-    //         setX(rightLimit);
-    //     };
+        window.addEventListener("keydown", handleKeyDown);
 
-    //     if (y < topLimit) {
-    //         setY(topLimit);
-    //     };
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        }
 
-    //     if (y > bottomLimit) {
-    //         setY(bottomLimit);
-    //     };
+    }, [activeCharacterIndex, characterNames.length]);
 
-    // }, [x, y, leftLimit, rightLimit, topLimit, bottomLimit]);
+
+
+
 
     return (
         <div className="game-container">
