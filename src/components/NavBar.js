@@ -30,7 +30,7 @@ const NavBar = () => {
                     <li className="navbar__item">
                         <a href="#" className="navbar__link">
                             <FontAwesomeIcon icon={faBriefcase} size="lg" />
-                            <span>Internships</span>
+                            <span>Experiences</span>
                         </a>
                     </li>
                     <li className="navbar__item">

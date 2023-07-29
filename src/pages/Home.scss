@@ -1,0 +1,79 @@
+
+//Brown Palette
+$bg-color: #1B1F28;
+$dark-undertone: #3E321E;
+$light-undertone: #B9A89B;
+$primary-color: #446A53;
+$secondary-color: #759D85; 
+$pop-color: #E2684A;
+
+
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+.home{
+    height: 100vh;
+    background-color: $bg-color;
+
+    &_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark-undertone;
+
+        height: 90px; 
+    }
+
+    &_body{
+        display: flex;
+        
+        
+        border: 1px solid red;
+
+        margin-left: 100px;
+
+        &_left{
+            height: 400px;
+            width: 900px;
+            border: solid 1px white;
+            
+            h1{
+                font-size: 50px;
+                color: $primary-color;
+                font-family: 'Oswald', sans-serif;
+            }
+
+
+            span{
+                padding-left: 50px;
+                font: 700 4em "Oswald", sans-serif;
+  	            letter-spacing: 0;
+	            display: block;
+
+                /* Clip Background Image */
+
+                background: url("../assets/animated-text-fill.png") repeat-y;
+                -webkit-background-clip: text;
+                background-clip: text;
+
+            /* Animate Background Image */
+
+                -webkit-text-fill-color: transparent;
+                animation: aitf 80s linear infinite;
+
+            /* Activate hardware acceleration for smoother animations */
+
+                transform: translate3d(0,0,0);
+                backface-visibility: hidden;
+            }
+        }
+    }
+
+
+}
+
+
+    
+
+

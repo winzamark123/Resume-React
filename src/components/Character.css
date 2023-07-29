@@ -6,7 +6,7 @@
     width: calc(12px*var(--pixel-size));
     height: calc(14px*var(--pixel-size));
     /* background-color: bisque; */
-    position: absolute;
+    position: relative;
     overflow: hidden;
     top: 30%;
     left: 46%;
