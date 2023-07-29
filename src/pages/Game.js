@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Game.css';
-import Map from './Map';
-import Character from './Character';
-import Item from './Items';
+import Map from '../components/Map';
+import Character from '../components/Character';
+import Item from '../components/Items';
 
 const Game = () => {
     var [x, setX] = useState(0);

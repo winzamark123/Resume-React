@@ -1,12 +1,13 @@
 //tryingout SCSS
 //tryingout Github Discord bot
 $borderRadius: 10px;
-$spacer: 1rem;
+$spacer: 10px;
 $primary: #406ff3;
 $text: #6a778e;
 $linkHeight: $spacer * 3.5;
 $timing: 250ms;
 $transition: $timing ease all;
+$shiftdownblueBlock: 2;
 
 @mixin gooeyEffect($i) {
     @keyframes gooeyEffect-#{$i} {
@@ -40,7 +41,7 @@ body {
     border-radius: $borderRadius;
     padding: $spacer 0;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
-    width: 80px;
+    width: 60px;
     height: auto;
     top: 25%;
     
@@ -53,8 +54,9 @@ body {
         align-items: center;
         justify-content: center;
         height: $linkHeight;
-        padding-top: 10px;
-        // left: -25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        left: -20px;
         color: $text;
         transition: $transition;
 
@@ -71,6 +73,8 @@ body {
             transition: $transition;
             border-radius: $borderRadius * 1.75;
         }
+
+
 
         &:hover {
             color: #fff;
@@ -95,14 +99,16 @@ body {
                 content: '';
                 position: absolute;
                 opacity: 0;
-                // z-index: -1;
-                top: 0;
+                z-index: -1;
+                top: 40px;
                 left: 0;
-                width: $linkHeight;
+                padding-top: 35px;
+                width: 60px;
                 height: $linkHeight;
                 background: $primary;
                 border-radius: $borderRadius * 1.75;
                 transition: $timing cubic-bezier(1, 0.2, 0.1, 1.2) all;
+
 
             }
         }
@@ -122,21 +128,18 @@ body {
                 }
 
                 @for $j from 1 to $i {
-
-                    &:nth-child(#{$j}):hover,
-                    {
+                    &:nth-child(#{$j}):hover {
                     ~li:last-child:before {
                         @include gooeyEffect($j);
-                        top: (100% / $i) * ($j - 1);
+                        top: ((100% / $i) * ($j - 1)) + $shiftdownblueBlock; 
                         animation: gooeyEffect-#{$j} $timing 1;
                     }
                 }
             }
 
-            &:last-child:hover:before,
-            {
+            &:last-child:hover:before{
             @include gooeyEffect($i);
-            top: (100% / $i) * ($i - 1);
+            top: (100% / $i) * ($i - 1) + $shiftdownblueBlock;
             animation: gooeyEffect-#{$i} $timing 1;
         }
     }

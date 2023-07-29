@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './pages/Home';
-import Game from './components/Game';
+import Game from './pages/Game';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Home />
-      <Game />
+      {/* <Game /> */}
     </div>
   );
 }
