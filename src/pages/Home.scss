@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 
 //Brown Palette
 $bg-color: #1B1F28;
-$dark-undertone: #3E321E;
+$dark-undertone: #09111e;
 $light-undertone: #B9A89B;
 $primary-color: #446A53;
 $secondary-color: #759D85; 
@@ -14,40 +15,34 @@ $pop-color: #E2684A;
 }
 .home{
     height: 100vh;
-    background-color: $bg-color;
-
-    &_header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $dark-undertone;
-
-        height: 90px; 
-    }
+    background-color: $dark-undertone;
 
     &_body{
+        height: 100vh;
         display: flex;
-        
-        
         border: 1px solid red;
-
+        border-bottom: solid 1px white;
         margin-left: 100px;
+        display: flex;
+        align-items: center;
+        
 
         &_left{
             height: 400px;
             width: 900px;
             border: solid 1px white;
+            margin-left: 100px;
             
             h1{
-                font-size: 50px;
-                color: $primary-color;
-                font-family: 'Oswald', sans-serif;
+                font-family: 'Roboto Slab', serif;
+                font-size: 64px;
+                color: white;
             }
 
 
             span{
                 padding-left: 50px;
-                font: 700 4em "Oswald", sans-serif;
+                font: 700 3em "Oswald", sans-serif;
   	            letter-spacing: 0;
 	            display: block;
 
@@ -68,6 +63,19 @@ $pop-color: #E2684A;
                 backface-visibility: hidden;
             }
         }
+
+        &_right{
+            height: 900px;
+            width: 600px;
+            border: solid 1px white;
+            margin-left: 100px;
+
+            background-image: url("../assets/RoomMap.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+        }
+
     }
 
 
