@@ -21,3 +21,4 @@ const home = () => {
 }
 
 export default home;
+//Just trying out Commits 
