@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Russo+One&display=swap');
+
 
 //Brown Palette
-$bg-color: #1B1F28;
+$bg-color: #09111e;
 $dark-undertone: #09111e;
 $light-undertone: #B9A89B;
 $primary-color: #446A53;
@@ -15,7 +17,7 @@ $pop-color: #E2684A;
 }
 .home{
     height: 100vh;
-    background-color: $dark-undertone;
+    background-color: $bg-color;
 
     &_body{
         height: 100vh;
@@ -28,40 +30,110 @@ $pop-color: #E2684A;
         
 
         &_left{
-            height: 400px;
-            width: 900px;
-            border: solid 1px white;
+            width: 1000px;
+            // border: solid 1px white;
             margin-left: 100px;
             
-            h1{
-                font-family: 'Roboto Slab', serif;
-                font-size: 64px;
-                color: white;
+            
+            &_title {
+                &_animate{
+                    // border: solid 1px white;
+                    position: relative;
+                    font-family: 'Roboto Slab', serif;
+                    color: $pop-color;
+
+                    overflow: hidden;
+                    
+
+                    font-size: 48px;
+                    line-height: 48px;
+                    height: 55px;
+                    // border: solid 1px white;
+
+                    &_text{
+                        display: inline;
+                        float: left;
+                        margin-left: 30px;
+                    }
+                    
+                  
+                    &_list{
+                        margin-left: 200px;
+                        margin-top: 3px;
+                        text-align: left;
+                        list-style: none;
+
+
+                        animation-name: change;
+                        animation-duration: 10s;
+                        animation-iteration-count: infinite;
+
+                        &_item{
+                            padding-bottom: 20px;
+                            line-height: 48px;
+                            margin: 0;
+                        }
+                    }
+
+                    
+                    &::before{
+                        content: '[';
+                        
+                        left: 0;
+                        font-family: 'Roboto Slab', serif;
+                        font-size: 48px;
+                        color: #16a085;
+                    }
+    
+                    &::after{
+                        content: ']';
+
+                        right: 0;
+                        font-family: 'Roboto Slab', serif;
+                        font-size: 48px;
+                        color: #16a085;
+                    }
+
+                    &::before, &::after{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+
+                        animation-name: opacity;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+
+                    }
+        
+                }
+
+                h1{
+                    font-family: 'Russo One', sans-serif;
+                    font-size: 120px;
+                    color: white;
+                    
+                    margin-left: 250px;
+                    margin-top: 0px;
+                }
+
+                h2{
+                    font-family: 'Russo One', serif;
+                    font-size: 120px;
+                    color: $pop-color;
+                    // border: solid 1px white;
+                    
+                    margin-left: 600px;
+                    margin-top: -80px;
+                }
+              
             }
 
 
-            span{
-                padding-left: 50px;
-                font: 700 3em "Oswald", sans-serif;
-  	            letter-spacing: 0;
-	            display: block;
 
-                /* Clip Background Image */
+            
+        
 
-                background: url("../assets/animated-text-fill.png") repeat-y;
-                -webkit-background-clip: text;
-                background-clip: text;
 
-            /* Animate Background Image */
-
-                -webkit-text-fill-color: transparent;
-                animation: aitf 80s linear infinite;
-
-            /* Activate hardware acceleration for smoother animations */
-
-                transform: translate3d(0,0,0);
-                backface-visibility: hidden;
-            }
         }
 
         &_right{
@@ -78,8 +150,28 @@ $pop-color: #E2684A;
 
     }
 
+    @keyframes opacity {
+        0%, 100% {opacity:0;}
+        50% {opacity:1;}
+    }
+
+    @keyframes change{
+        0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+        16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+        33.32%,45.98% {transform:translate3d(0,-50%,0);}
+        49.98%,62.64% {transform:translate3d(0,-75%,0);}
+        66.64%,79.3% {transform:translate3d(0,-50%,0);}
+        83.3%,95.96% {transform:translate3d(0,-25%,0);}
+    }
+
+
+    
+    
+
 
 }
+
+
 
 
     
