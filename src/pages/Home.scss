@@ -72,6 +72,8 @@ $pop-color: #E2684A;
                             line-height: 48px;
                             margin: 0;
 
+                            // color: #16a085;
+
                         }
 
                     }
@@ -131,6 +133,8 @@ $pop-color: #E2684A;
               
             }
 
+            
+
 
 
             
@@ -151,6 +155,32 @@ $pop-color: #E2684A;
             background-position: center center;
         }
 
+    }
+
+    .socials_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 49%;
+        left: 410px;
+  
+
+        &_list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+
+            &_item{
+                padding: 5px;
+            }
+
+            // border: solid 1px red;
+        }
+
+        // border: solid 1px white;
     }
 
     @keyframes opacity {
