@@ -53,7 +53,6 @@ $pop-color: #E2684A;
                     &_text{
                         display: inline;
                         float: left;
-                        margin-left: 30px;
                     }
                     
                   
@@ -72,14 +71,15 @@ $pop-color: #E2684A;
                             padding-bottom: 20px;
                             line-height: 48px;
                             margin: 0;
+
                         }
+
                     }
 
-                    
                     &::before{
                         content: '[';
                         
-                        left: 0;
+                        left: 210px;
                         font-family: 'Roboto Slab', serif;
                         font-size: 48px;
                         color: #16a085;
@@ -88,7 +88,7 @@ $pop-color: #E2684A;
                     &::after{
                         content: ']';
 
-                        right: 0;
+                        right: 150px;
                         font-family: 'Roboto Slab', serif;
                         font-size: 48px;
                         color: #16a085;
@@ -104,6 +104,9 @@ $pop-color: #E2684A;
                         animation-iteration-count: infinite;
 
                     }
+
+                    
+                    
         
                 }
 
