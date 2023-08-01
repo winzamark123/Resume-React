@@ -43,8 +43,8 @@ const Home = () => {
                             <ul className="home_body_left_title_animate_list">
                                 <li className="home_body_left_title_animate_list_item">Software Engineer</li>
                                 <li className="home_body_left_title_animate_list_item">Full-Stack Developer</li>
+                                <li className="home_body_left_title_animate_list_item">App Developer</li>
                                 <li className="home_body_left_title_animate_list_item">CEO of my own Company</li>
-                                <li className="home_body_left_title_animate_list_item">Anime Addict</li>
                             </ul>
                         </div>
                         <h1 className='home_body_left_title_name_firstName'> Teeranade </h1>
@@ -56,21 +56,21 @@ const Home = () => {
                             <li className="socials_container_list_item">
                                 <a href="https://www.instagram.com/winzamark12/">
                                     <button class="button-logo">
-                                        <FontAwesomeIcon icon={faInstagram} size="5x" />
+                                        <FontAwesomeIcon icon={faInstagram} size="4x" />
                                     </button>
                                 </a>
                             </li>
                             <li className="socials_container_list_item">
                                 <a href="https://github.com/winzamark123">
                                     <button class="button-logo">
-                                        <FontAwesomeIcon icon={faGithub} size="5x" />
+                                        <FontAwesomeIcon icon={faGithub} size="4x" />
                                     </button>
                                 </a>
                             </li>
                             <li className="socials_container_list_item">
                                 <a href="https://www.linkedin.com/in/teeranade-cheng-68ab28253/">
                                     <button class="button-logo">
-                                        <FontAwesomeIcon icon={faLinkedin} size="5x" />
+                                        <FontAwesomeIcon icon={faLinkedin} size="4x" />
                                     </button>
                                 </a>
                             </li>

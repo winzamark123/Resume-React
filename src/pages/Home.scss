@@ -11,19 +11,16 @@ $secondary-color: #759D85;
 $pop-color: #E2684A;
 
 
-@keyframes aitf {
-	0% { background-position: 0% 50%; }
-	100% { background-position: 100% 50%; }
-}
 .home{
     height: 100vh;
     background-color: $bg-color;
 
     &_body{
+        
         height: 100vh;
         display: flex;
-        border: 1px solid red;
-        border-bottom: solid 1px white;
+        // border: 1px solid red;
+        // border-bottom: solid 1px white;
         margin-left: 100px;
         display: flex;
         align-items: center;
@@ -32,7 +29,7 @@ $pop-color: #E2684A;
         &_left{
             width: 1000px;
             // border: solid 1px white;
-            margin-left: 100px;
+            margin-left: 50px;
             
             
             &_title {
@@ -45,9 +42,9 @@ $pop-color: #E2684A;
                     overflow: hidden;
                     
 
-                    font-size: 48px;
-                    line-height: 48px;
-                    height: 55px;
+                    font-size: 40px;
+                    line-height: 40px;
+                    height: 44px;
                     // border: solid 1px white;
 
                     &_text{
@@ -57,7 +54,8 @@ $pop-color: #E2684A;
                     
                   
                     &_list{
-                        margin-left: 200px;
+                        // border: solid 1px blue;
+                        margin-left: 170px;
                         margin-top: 3px;
                         text-align: left;
                         list-style: none;
@@ -69,7 +67,7 @@ $pop-color: #E2684A;
 
                         &_item{
                             padding-bottom: 20px;
-                            line-height: 48px;
+                            line-height: 40px;
                             margin: 0;
 
                             // color: #16a085;
@@ -81,7 +79,7 @@ $pop-color: #E2684A;
                     &::before{
                         content: '[';
                         
-                        left: 210px;
+                        left: 180px;
                         font-family: 'Roboto Slab', serif;
                         font-size: 48px;
                         color: #16a085;
@@ -90,7 +88,7 @@ $pop-color: #E2684A;
                     &::after{
                         content: ']';
 
-                        right: 150px;
+                        right: 110px;
                         font-family: 'Roboto Slab', serif;
                         font-size: 48px;
                         color: #16a085;
@@ -114,40 +112,34 @@ $pop-color: #E2684A;
 
                 h1{
                     font-family: 'Russo One', sans-serif;
-                    font-size: 120px;
+                    font-size: 100px;
                     color: white;
                     
-                    margin-left: 250px;
+                    margin-left: 200px;
                     margin-top: 0px;
                 }
 
                 h2{
                     font-family: 'Russo One', serif;
-                    font-size: 120px;
+                    font-size: 100px;
                     color: $pop-color;
                     // border: solid 1px white;
                     
-                    margin-left: 600px;
+                    margin-left: 480px;
                     margin-top: -80px;
                 }
               
             }
 
             
-
-
-
-            
-        
-
-
         }
 
         &_right{
-            height: 900px;
-            width: 600px;
+            height: 600px;
+            width: 500px;
             border: solid 1px white;
-            margin-left: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
 
             background-image: url("../assets/RoomMap.png");
             background-repeat: no-repeat;
@@ -163,8 +155,8 @@ $pop-color: #E2684A;
         justify-content: center;
 
         position: absolute;
-        top: 49%;
-        left: 410px;
+        top: 48%;
+        left: 300px;
   
 
         &_list{
