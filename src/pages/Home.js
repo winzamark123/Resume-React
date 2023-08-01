@@ -76,8 +76,6 @@ const Home = () => {
                             </li>
                         </ul>
                     </div>
-
-
                 </div>
                 <div className="home_body_right">
                 </div>

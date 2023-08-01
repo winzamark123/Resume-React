@@ -1,0 +1,27 @@
+//Brown Palette
+$bg-color: #09111e;
+$dark-undertone: #09111e;
+$light-undertone: #B9A89B;
+$primary-color: #446A53;
+$secondary-color: #759D85; 
+$pop-color: #E2684A;
+
+:root {
+    --pixel-size: 6;
+}
+
+.game-container {
+    // border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    background-color: $bg-color;
+
+}
+
+.frame {
+    // border: solid red;
+    overflow: hidden;
+    width: 1200px;
+}

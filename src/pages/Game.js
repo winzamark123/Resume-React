@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Game.css';
+import './Game.scss';
 import Map from '../components/Map';
 import Character from '../components/Character';
 import Item from '../components/Items';

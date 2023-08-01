@@ -15,6 +15,9 @@
     height: 100%;
     image-rendering: pixelated;
     background-image: url("../assets/RoomMap.png");
+    background-size: 100%;
+    margin-top: -50px;
+    /* border: 1px solid wheat; */
 }
 
 .tile {

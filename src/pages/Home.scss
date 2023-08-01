@@ -4,33 +4,38 @@
 
 //Brown Palette
 $bg-color: #09111e;
-$dark-undertone: #09111e;
 $light-undertone: #B9A89B;
-$primary-color: #446A53;
+$primary-color: #16a085;
 $secondary-color: #759D85; 
 $pop-color: #E2684A;
 
 
 .home{
-    height: 100vh;
+    height: 70vh;
     background-color: $bg-color;
+
+    // border: solid 1px white;
+
+  
 
     &_body{
         
-        height: 100vh;
-        display: flex;
-        // border: 1px solid red;
-        // border-bottom: solid 1px white;
-        margin-left: 100px;
+        height: 100%;
         display: flex;
         align-items: center;
         
+        margin-left: 100px;
+        margin-right: 100px;
 
+        // border: solid 1px white;
+        
+        
         &_left{
             width: 1000px;
-            // border: solid 1px white;
             margin-left: 50px;
+            margin-top: 30vh;
             
+            // border-bottom: solid 1px white;
             
             &_title {
                 &_animate{
@@ -82,7 +87,7 @@ $pop-color: #E2684A;
                         left: 180px;
                         font-family: 'Roboto Slab', serif;
                         font-size: 48px;
-                        color: #16a085;
+                        color: $primary-color;
                     }
     
                     &::after{
@@ -91,7 +96,7 @@ $pop-color: #E2684A;
                         right: 110px;
                         font-family: 'Roboto Slab', serif;
                         font-size: 48px;
-                        color: #16a085;
+                        color: $primary-color;
                     }
 
                     &::before, &::after{
@@ -135,16 +140,11 @@ $pop-color: #E2684A;
         }
 
         &_right{
-            height: 600px;
+            height: 400px;
             width: 500px;
             border: solid 1px white;
             margin-left: 50px;
             margin-right: 50px;
-
-            background-image: url("../assets/RoomMap.png");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center center;
         }
 
     }
