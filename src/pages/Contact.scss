@@ -1,0 +1,49 @@
+//Brown Palette
+$bg-color: #09111e;
+$light-undertone: #B9A89B;
+$dark-undertone: #153a2c;
+$primary-color: #16a085;
+$secondary-color: #759D85; 
+$pop-color: #E2684A;
+
+.contact_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $bg-color;
+    
+}
+
+.form_container{
+    display: flex;
+    align-items: center;
+    
+    border: solid 1px white;
+    box-shadow: 1px 1px 10px 1px $light-undertone;
+    
+    height: 500px;
+    width: 900px;
+    
+    margin: 100px;
+    
+    &_left{
+        width: 50%;
+        height: 100%;
+        background-color: $light-undertone;
+
+        
+
+        &_text{
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 50px;
+        }
+        
+    }
+
+    &_right{
+        width: 50%;
+        height: 100%;
+        background-color: $bg-color;
+    }
+}

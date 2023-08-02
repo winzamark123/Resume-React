@@ -1,4 +1,4 @@
-import "./Items.css";
+import "./Items.scss";
 import { useState, useRef, useEffect, useCallback } from 'react';
 import PlaceHolderCharacter from "../assets/PlaceHolderCharacter.png";
 import GameObject from "./GameObject.js";

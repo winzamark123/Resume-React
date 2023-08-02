@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
 //Brown Palette
 $bg-color: #09111e;
 $dark-undertone: #09111e;
 $light-undertone: #B9A89B;
-$primary-color: #446A53;
+$primary-color: #16a085;
 $secondary-color: #759D85; 
 $pop-color: #E2684A;
 
@@ -10,18 +12,33 @@ $pop-color: #E2684A;
     --pixel-size: 6;
 }
 
-.game-container {
+.game_container {
     // border: solid 1px white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     // align-items: center;
     background-color: $bg-color;
 
+    &_right{
+        border: solid 1px white;
+        width: 300px;
+        height: 300px;
+
+        text-align: center;
+
+        p{
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+            color: $primary-color;
+
+            margin-top: -50px;
+        }
+    }
+
 }
 
 .frame {
-    // border: solid red;
+    border: solid red;
     overflow: hidden;
-    width: 1200px;
+    // width: 1200px;
 }

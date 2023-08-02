@@ -1,4 +1,4 @@
-import "./Character.css"
+import "./Character.scss"
 import { useState, useRef, useEffect, useCallback } from 'react';
 import FrogCharacter from '../assets/Pixel Art Characters/Main Characters/Ninja Frog/Idle (32x32).png'
 import NinjaCharacter from '../assets/Pixel Art Characters/Main Characters/Mask Dude/Idle (32x32).png'

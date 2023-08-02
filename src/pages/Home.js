@@ -77,8 +77,8 @@ const Home = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="home_body_right">
-                </div>
+                {/* <div className="home_body_right">
+                </div> */}
             </div>
         </div>
     );

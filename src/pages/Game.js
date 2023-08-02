@@ -43,10 +43,10 @@ const Game = () => {
     }, [activeCharacterIndex, characterNames.length]);
 
     return (
-        <div className="game-container">
+        <div className="game_container">
             <div className="frame">
                 <Map x={x} y={y} />
-                {characterNames.map((characterName, index) => (
+                {/* {characterNames.map((characterName, index) => (
                     <Character
                         key={characterName}
                         characterName={characterName}
@@ -55,9 +55,14 @@ const Game = () => {
                         initPos={initPos[characterName]}
                         setX={setX}
                     />
-                ))}
-                <Character x={x} y={y} setX={setX} activeCharacterIndex={activeCharacterIndex} />
+                ))} */}
+                {/* <Character x={x} y={y} setX={setX} activeCharacterIndex={activeCharacterIndex} /> */}
                 {/* <Item x={x} y={y} /> */}
+            </div>
+            <div className="game_container_right">
+                <div className="game_container_right_title">
+                    <p>Scroll Down ↓</p>
+                </div>
             </div>
         </div>
     )
