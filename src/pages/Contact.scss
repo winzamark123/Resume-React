@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@800&display=swap');
 //Brown Palette
 $bg-color: #09111e;
 $light-undertone: #B9A89B;
@@ -35,8 +36,32 @@ $pop-color: #E2684A;
         
 
         &_text{
+            position: relative;
+            border: solid 1px red;
             font-family: 'Times New Roman', Times, serif;
+            top: 45%;
+            transform: translateY(-50%);
+
+
+            width: 80%;
             margin-left: 50px;
+
+            &_descrip{
+                position: absolute;
+                font-weight: 600;
+                margin-top: -20px;
+            } 
+            &_p{
+                margin-top: 50px;
+
+                p{
+                    font-weight: 500;
+                    margin-top: 10px;
+                    line-height: 1.5;
+                }
+            }
+
+           
         }
         
     }
@@ -44,6 +69,6 @@ $pop-color: #E2684A;
     &_right{
         width: 50%;
         height: 100%;
-        background-color: $bg-color;
+        background-color: #14253f;
     }
 }

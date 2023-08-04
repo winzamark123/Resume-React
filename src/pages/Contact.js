@@ -18,17 +18,21 @@ const Contact = () => {
             <div className="form_container">
                 <div className="form_container_left">
                     <div className="form_container_left_text">
-                        <h1>About Me</h1>
-                        <span>Aspiring Software Engineer</span>
-                        <p>I'm Teeranade Cheng (Win), a {years}-year-old Thai Student
-                            studying <span style={{ color: "green" }}> Computer Science @UCDavis</span></p>
-                        <p> I like to <span style={{ color: "orange" }}> tinker </span> around with new
-                            <span style={{ color: "green" }}> Technologies and Products</span>,
-                            <span style={{ color: "orange" }}> creating </span>
-                            smart user interfaces and keeping up with the latest trends in the tech space.
-                        </p>
-                        <p> If anyone is interested in working together
-                            <span style={{ color: "orange" }}> Don't Hesitate to Reach Out! </span> </p>
+                        <h1>About Me.</h1>
+                        <span className="form_container_left_text_descrip">Aspiring Software Engineer</span>
+                        <div className="form_container_left_text_p">
+                            <p>I'm Teeranade Cheng (Win), a {years}-year-old Thai Student
+                                studying <span style={{ color: "green" }}> Computer Science @UCDavis.</span> </p>
+
+                            <p> I like to <span style={{ color: "white" }}> tinker </span> around with new
+                                <span style={{ color: "darkgreen" }}> Technologies and Products</span>,
+                                <span style={{ color: "white" }}> creating </span>
+                                smart user interfaces and keeping up with the latest trends in the tech space. </p>
+
+                            <p> If anyone is interested in working together,
+                                <span style={{ color: "white" }}> Don't Hesitate to Reach Out! </span> </p>
+                        </div>
+
                     </div>
                 </div>
 
