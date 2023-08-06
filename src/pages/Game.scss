@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Russo+One&display=swap');
 
 //Brown Palette
 $bg-color: #09111e;
@@ -20,18 +21,49 @@ $pop-color: #E2684A;
     background-color: $bg-color;
 
     &_right{
-        border: solid 1px white;
+        // border: solid 1px white;
         width: 300px;
-        height: 300px;
+        height: 100vh;
 
         text-align: center;
+        justify-content: center;
+        align-items: center;
 
         p{
             font-family: 'Caveat', cursive;
-            font-size: 30px;
+            font-size: 35px;
             color: $primary-color;
 
-            margin-top: -50px;
+            position: absolute;
+            top: 60%;
+            left: 85%;
+        }
+
+        &_title{
+
+            h1{
+            font-family: 'Russo One', serif;
+            font-style: italic;
+            color: $primary-color;
+            font-size: 40px;
+            text-shadow:
+            0 0 5px #ffffff,   /* White color with a 5px blur */
+            0 0 10px #ffffff,  /* White color with a 10px blur */
+            0 0 15px $pop-color,  /* Pink color with a 15px blur */
+            0 0 20px $pop-color,  /* Pink color with a 20px blur */
+            0 0 25px $pop-color,  /* Pink color with a 25px blur */
+            0 0 30px $pop-color,  /* Pink color with a 30px blur */
+            0 0 35px $pop-color;  /* Pink color with a 35px blur */
+
+
+            position: absolute;
+            margin-top: 15px;
+            left: 17%;
+            
+
+
+
+            }
         }
     }
 

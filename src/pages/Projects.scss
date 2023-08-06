@@ -1,0 +1,100 @@
+//Brown Palette
+$bg-color: #09111e;
+$light-undertone: #B9A89B;
+$primary-color: #16a085;
+$secondary-color: #759D85; 
+$pop-color: #E2684A;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Russo+One&display=swap');
+
+
+.projects{
+    // height: 100vh;
+    // width: 100%;
+    border: solid 1px white;
+    background-color: $bg-color;
+
+    &_container{
+
+        margin: 100px 100px 100px 100px;
+
+        &_text{
+            display: flex;
+            line-height: 40px;
+            height: 50px;
+            font-size: 40px;
+            align-items: center;
+            margin-bottom: 100px;
+            
+
+
+            span{
+                font-family: 'Caveat', cursive;
+                color: $primary-color;
+            }
+            h1{
+                font-family: 'Russo One', serif;
+                font-style: italic;
+                color: $pop-color;
+                margin-left: 40px;
+                
+            }
+          
+        }
+
+        &_carousel{
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            
+
+            &_item{
+                width: 90%;
+                height: 500px;
+                background-color: $light-undertone;
+                display: flex;
+                
+                // margin-top: 100px;
+                margin-bottom: 100px;
+        
+
+
+                &_left{
+                    &_odd{
+                        width: 60%;
+                        background-color: black;
+                    }
+
+                    &_even{
+                        width: 40%;
+                        background-color: $light-undertone;
+                    }
+                    
+                }
+
+                &_right{
+                    &_odd{
+                        width: 40%;
+                        background-color: $light-undertone;
+                    }
+
+                    &_even{
+                        width: 60%;
+                        background-color: black;
+                    }
+
+                    
+                }
+
+
+            }
+
+
+        }
+    }
+}
+

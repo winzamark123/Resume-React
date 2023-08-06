@@ -60,8 +60,12 @@ const Game = () => {
                 {/* <Item x={x} y={y} /> */}
             </div>
             <div className="game_container_right">
+                <p>Scroll Down ↓</p>
+
                 <div className="game_container_right_title">
-                    <p>Scroll Down ↓</p>
+
+                    {/* <h1>Navigation</h1>
+                    <span>A little Gamey I know</span> */}
                 </div>
             </div>
         </div>

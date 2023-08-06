@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Game from './pages/Game';
 import NavBar from './components/NavBar';
 import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       {/* <NavBar /> */}
       <Home />
       <Game />
+      <Projects />
       <Contact />
+      
     </div>
   );
 }

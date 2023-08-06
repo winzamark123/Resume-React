@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Russo+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
 //Brown Palette
 $bg-color: #09111e;
@@ -32,7 +32,7 @@ $pop-color: #E2684A;
         
         &_left{
             width: 1000px;
-            margin-left: 400px;
+            margin-left: 35vw;
             margin-top: 30vh;
             
             // border-bottom: solid 1px white;
@@ -156,7 +156,7 @@ $pop-color: #E2684A;
 
         position: absolute;
         top: 48%;
-        left: 640px;
+        margin-left: 8vw;
   
 
         &_list{
