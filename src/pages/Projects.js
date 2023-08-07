@@ -30,7 +30,7 @@ const Projects = () => {
                     <h1>Projects</h1>
                 </div>
                 <div className="projects_container_carousel">
-                    <CarouselItem order={1} style={{backgroundImage: `url(${imageGPTBG})`, backgroundSize: "120%", backgroundPosition: "50% 50%", }} />
+                    <CarouselItem order={1} style={{ backgroundImage: `url(${imageGPTBG})`, backgroundSize: "120%", backgroundPosition: "50% 50%", }} />
                     <CarouselItem order={2} style={{ backgroundImage: `url(${tasaBG})`, backgroundSize: "180%", backgroundPosition: "50% 90%" }} />
                     <CarouselItem order={3} style={{ backgroundImage: `url(${tasaBG})` }} />
                 </div>
