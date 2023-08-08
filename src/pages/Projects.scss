@@ -7,7 +7,7 @@ $pop-color: #E2684A;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Russo+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&display=swap');
 
 .projects{
     // height: 100vh;
@@ -73,6 +73,19 @@ $pop-color: #E2684A;
                         width: 40%;
                         background-color: $light-undertone;
                     }
+
+                    &_text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        h1{
+                            font-family: 'Inconsolata', monospace;
+                            color: $bg-color;
+                            font-size: 70px;
+                        }
+                    }
                     
                 }
 
@@ -89,6 +102,7 @@ $pop-color: #E2684A;
 
                     
                 }
+
 
 
             }

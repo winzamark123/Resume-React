@@ -3,7 +3,25 @@ import tasaBG from "../assets/Projects-BG/TASA-bg.png"
 import imageGPTBG from "../assets/Projects-BG/NewImageGPT-bg.png"
 import financeAutoBG from "../assets/Projects-BG/FinanceAuto-bg.png"
 
-const CarouselItem = ({ order, style }) => {
+const backgroundImageStyles = [
+    {
+        backgroundImage: `url(${imageGPTBG})`,
+        backgroundSize: "120%",
+        backgroundPosition: "50% 50%"
+    },
+    {
+        backgroundImage: `url(${tasaBG})`,
+        backgroundSize: "180%",
+        backgroundPosition: "50% 100%"
+    },
+    {
+        backgroundImage: `url(${financeAutoBG})`,
+        backgroundSize: "170%",
+        backgroundPosition: "5% 50%"
+    }
+];
+
+const CarouselItem = ({ order, title, descrip, style }) => {
 
     const isEven = Number(order) % 2 === 0;
 
@@ -12,10 +30,22 @@ const CarouselItem = ({ order, style }) => {
             <div className={`projects_container_carousel_item_left_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? {} : style}
             >
+                <div className="projects_container_carousel_item_left_text"
+                    style={isEven ? { display: "flex" } : { display: "none" }}
+                >
+                    <h1>{title}</h1>
+                    <p>{descrip}</p>
+                </div>
             </div>
             <div className={`projects_container_carousel_item_right_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? style : {}}
             >
+                <div className="projects_container_carousel_item_right_text"
+                    style={isEven ? { display: "none" } : { display: "flex" }}
+                >
+                    <h1>{title}</h1>
+                    <p>{descrip}</p>
+                </div>
 
             </div>
         </div>
@@ -31,9 +61,9 @@ const Projects = () => {
                     <h1>Projects</h1>
                 </div>
                 <div className="projects_container_carousel">
-                    <CarouselItem order={1} style={{ backgroundImage: `url(${imageGPTBG})`, backgroundSize: "120%", backgroundPosition: "50% 50%", }} />
-                    <CarouselItem order={2} style={{ backgroundImage: `url(${tasaBG})`, backgroundSize: "180%", backgroundPosition: "50% 100%" }} />
-                    <CarouselItem order={3} style={{ backgroundImage: `url(${financeAutoBG})`, backgroundSize: "170%", backgroundPosition: "5% 50%", backgroundRepeat: "no-repeat", }} />
+                    <CarouselItem order={1} title="ImageGPT" style={backgroundImageStyles[0]} />
+                    <CarouselItem order={2} title="TASA Website" style={backgroundImageStyles[1]} />
+                    <CarouselItem order={3} title="Finance Automation" style={backgroundImageStyles[2]} />
                 </div>
             </div>
         </div>
