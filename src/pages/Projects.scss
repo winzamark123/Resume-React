@@ -64,6 +64,11 @@ $pop-color: #E2684A;
 
 
                 &_left{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
                     &_odd{
                         width: 60%;
                         background-color: black;
@@ -75,6 +80,7 @@ $pop-color: #E2684A;
                     }
 
                     &_text{
+                        border: solid 3px white;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -90,6 +96,10 @@ $pop-color: #E2684A;
                 }
 
                 &_right{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     &_odd{
                         width: 40%;
                         background-color: $light-undertone;
@@ -98,6 +108,20 @@ $pop-color: #E2684A;
                     &_even{
                         width: 60%;
                         background-color: black;
+                    }
+
+                    &_text{
+                        border: solid 3px white;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        h1{
+                            font-family: 'Inconsolata', monospace;
+                            color: $bg-color;
+                            font-size: 70px;
+                        }
                     }
 
                     
