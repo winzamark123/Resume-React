@@ -21,6 +21,28 @@ const backgroundImageStyles = [
     }
 ];
 
+const itemLabelStyles = [
+    {
+        title: "ImageGPT",
+        descrip: "ImageGPT: An advanced GPT-3 model trained to convert visual data into actionable text content, enabling dynamic queries on image-derived contexts.",
+        backgroundImageStyles: `${backgroundImageStyles[0]}`
+    },
+
+    {
+        title: "TASA Website",
+        descrip: "A website for the Thai American Student Association at UCSD, built with React and Firebase.",
+        backgroundImageStyles: `${backgroundImageStyles[1]}`
+    }, 
+    
+    {
+        title: "Finance Automation",
+        descrip: "A Python script that automates the process of organizing financial data from multiple sources to be represented in one easy to read spreadsheet.",
+        backgroundImageStyles: `${backgroundImageStyles[2]}`
+    }
+
+
+]
+
 const CarouselItem = ({ order, title, descrip, style }) => {
 
     const isEven = Number(order) % 2 === 0;
@@ -30,17 +52,18 @@ const CarouselItem = ({ order, title, descrip, style }) => {
             <div className={`projects_container_carousel_item_left_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? {} : style}
             >
-                <div className="projects_container_carousel_item_left_text"
+                <div className="projects_container_carousel_item_text"
                     style={isEven ? { display: "flex" } : { display: "none" }}
                 >
                     <h1>{title}</h1>
                     <p>{descrip}</p>
                 </div>
+
             </div>
             <div className={`projects_container_carousel_item_right_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? style : {}}
             >
-                <div className="projects_container_carousel_item_right_text"
+                <div className="projects_container_carousel_item_text"
                     style={isEven ? { display: "none" } : { display: "flex" }}
                 >
                     <h1>{title}</h1>
