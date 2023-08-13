@@ -32,8 +32,8 @@ const itemLabelStyles = [
         title: "TASA Website",
         descrip: "A website for the Thai American Student Association at UCSD, built with React and Firebase.",
         backgroundImageStyles: `${backgroundImageStyles[1]}`
-    }, 
-    
+    },
+
     {
         title: "Finance Automation",
         descrip: "A Python script that automates the process of organizing financial data from multiple sources to be represented in one easy to read spreadsheet.",
@@ -43,9 +43,10 @@ const itemLabelStyles = [
 
 ]
 
-const CarouselItem = ({ order, title, descrip, style }) => {
+const CarouselItem = ({ order, projectStyles, style }) => {
 
     const isEven = Number(order) % 2 === 0;
+    const { title, descrip } = projectStyles;
 
     return (
         <div className="projects_container_carousel_item" data-order={order} style={style}>
@@ -84,9 +85,9 @@ const Projects = () => {
                     <h1>Projects</h1>
                 </div>
                 <div className="projects_container_carousel">
-                    <CarouselItem order={1} title="ImageGPT" style={backgroundImageStyles[0]} />
-                    <CarouselItem order={2} title="TASA Website" style={backgroundImageStyles[1]} />
-                    <CarouselItem order={3} title="Finance Automation" style={backgroundImageStyles[2]} />
+                    <CarouselItem order={1} projectStyles={itemLabelStyles[0]} style={backgroundImageStyles[0]} />
+                    <CarouselItem order={2} projectStyles={itemLabelStyles[1]} style={backgroundImageStyles[1]} />
+                    <CarouselItem order={3} projectStyles={itemLabelStyles[2]} style={backgroundImageStyles[2]} />
                 </div>
             </div>
         </div>
