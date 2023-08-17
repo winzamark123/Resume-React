@@ -1,24 +1,27 @@
-
-
-.character-container {
-    z-index: 3;
+:root{
+    --pixel-size: 7;
 }
 
 .character {
-    width: calc(12px*var(--pixel-size));
-    height: calc(14px*var(--pixel-size));
-    /* background-color: bisque; */
-    position: relative;
-    overflow: hidden;
-    top: 30%;
-    left: 46%;
-}
+    z-index: 100;
 
-.character_spritesheet {
-    animation: moveSpritesheet 1s steps(11) infinite;
-    width: calc(128px * var(--pixel-size));
-    image-rendering: pixelated;
-    position: absolute;
+    &_container{
+        width: calc(12px*var(--pixel-size));
+        height: calc(14px*var(--pixel-size));
+        /* background-color: bisque; */
+        position: relative;
+        overflow: hidden;
+        top: 30%;
+        left: 46%;
+
+        &_spritesheet{
+            animation: moveSpritesheet 1s steps(11) infinite;
+            width: calc(128px * var(--pixel-size));
+            image-rendering: pixelated;
+        }
+    }
+
+
 }
 
 @keyframes moveSpritesheet {

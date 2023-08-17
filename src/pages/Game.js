@@ -45,19 +45,8 @@ const Game = () => {
     return (
         <div className="game_container">
             <div className="frame">
-                <Map/>
-                {/* {characterNames.map((characterName, index) => (
-                    <Character
-                        key={characterName}
-                        characterName={characterName}
-                        activeCharacterIndex={activeCharacterIndex}
-                        isActive={activeCharacterIndex === index}
-                        initPos={initPos[characterName]}
-                        setX={setX}
-                    />
-                ))} */}
-                {/* <Character x={x} y={y} setX={setX} activeCharacterIndex={activeCharacterIndex} /> */}
-                {/* <Item x={x} y={y} /> */}
+                <Map />
+                <Character characterName={characterNames[0]} initPos={characterNames[0]} />
             </div>
             <div className="game_container_right">
                 <p>Scroll Down ↓</p>
