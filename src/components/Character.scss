@@ -3,7 +3,9 @@
 }
 
 .character {
+    border: solid 1px white;
     z-index: 100;
+    position: relative;
 
     &_container{
         width: calc(12px*var(--pixel-size));

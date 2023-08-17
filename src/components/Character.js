@@ -7,7 +7,13 @@ import VirtualCharacter from '../assets/Pixel Art Characters/Main Characters/Vir
 
 
 const Character = ({ characterName, initPos }) => {
+    const [x, setX] = useState(0);
+    const [y, setY] = useState(0);
+    const [facing, setFacing] = useState("down");
+    const [walking, setWalking] = useState(false);
+    const characterRef = useRef(null);
     var speed = 3;
+
     const characterImages = {
         "Frog": FrogCharacter,
         "Ninja": NinjaCharacter,
@@ -15,29 +21,42 @@ const Character = ({ characterName, initPos }) => {
         "Virtual": VirtualCharacter
     };
 
-    const characterRef = useRef(null);
-
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
-    const [facing, setFacing] = useState("down");
-    const [walking, setWalking] = useState(false);
-    var [heldDirectionsArray, setHeldDirectionsArray] = useState([]);
-
     useEffect(() => {
+        //Initialize Position at the Start of Render
         if (initPos) {
             setX(initPos.x);
             setY(initPos.y);
         }
-    }, [initPos]);
 
-    const directions = {
-        left: "left",
-        right: "right"
-    }
+        function moveCharacterX(mouseX) {
+            if (mouseX < x) {
+                setFacing("left");
+                setWalking(true);
+                setX(x - speed);
+            } else if (mouseX > x) {
+                setFacing("right");
+                setWalking(true);
+                setX(x + speed);
+            }
+        }
+
+        const handleMouseMove = (event) => {
+            const mouseX = event.clientX;
+
+            moveCharacterX(mouseX);
+        }
+
+        //Move Character based on Mouse 
+        document.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, [initPos, speed, x]);
 
     return (
-        <div className="character">
-            <div ref={characterRef} className="character_container" facing={facing} walking={walking}>
+        <div className="character" style={{ left: x, top: y }}>
+            <div ref={characterRef} className={`character_container ${facing} ${walking ? 'walking' : ''}`}>
                 <img src={characterImages[characterName]} className="character_container_spritesheet" alt="" />
             </div>
         </div>
