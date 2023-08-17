@@ -1,6 +1,6 @@
 import "./Map.css"
 
-const Map = ({ x, y }) => {
+const Map = () => {
 
     return (
         <div className="map-container">

@@ -45,7 +45,7 @@ const Game = () => {
     return (
         <div className="game_container">
             <div className="frame">
-                <Map x={x} y={y} />
+                <Map/>
                 {/* {characterNames.map((characterName, index) => (
                     <Character
                         key={characterName}
@@ -61,12 +61,6 @@ const Game = () => {
             </div>
             <div className="game_container_right">
                 <p>Scroll Down ↓</p>
-
-                <div className="game_container_right_title">
-
-                    {/* <h1>Navigation</h1>
-                    <span>A little Gamey I know</span> */}
-                </div>
             </div>
         </div>
     )
