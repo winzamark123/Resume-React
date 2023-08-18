@@ -12,7 +12,7 @@ const Character = ({ characterName, initPos }) => {
     const [facing, setFacing] = useState("down");
     const [walking, setWalking] = useState(false);
     const characterRef = useRef(null);
-    var speed = 50;
+    var speed = 3;
 
     const characterImages = {
         "Frog": FrogCharacter,
@@ -20,6 +20,8 @@ const Character = ({ characterName, initPos }) => {
         "Pink": PinkCharacter,
         "Virtual": VirtualCharacter
     };
+
+  
 
     useEffect(() => {
         //Initialize Position at the Start of Render

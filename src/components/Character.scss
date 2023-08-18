@@ -3,7 +3,7 @@
 }
 
 .character {
-    border: solid 1px white;
+    // border: solid 1px white;
     z-index: 100;
     position: relative;
 
@@ -33,3 +33,4 @@
         transform: translate3d(-100%, 0, 0)
     }
 }
+
