@@ -13,8 +13,6 @@
         /* background-color: bisque; */
         position: relative;
         overflow: hidden;
-        top: 30%;
-        left: 46%;
 
         &_spritesheet{
             animation: moveSpritesheet 1s steps(11) infinite;

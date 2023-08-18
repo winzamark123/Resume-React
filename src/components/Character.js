@@ -12,7 +12,7 @@ const Character = ({ characterName, initPos }) => {
     const [facing, setFacing] = useState("down");
     const [walking, setWalking] = useState(false);
     const characterRef = useRef(null);
-    var speed = 3;
+    var speed = 50;
 
     const characterImages = {
         "Frog": FrogCharacter,
@@ -29,20 +29,23 @@ const Character = ({ characterName, initPos }) => {
         }
 
         function moveCharacterX(mouseX) {
-            if (mouseX < x) {
-                setFacing("left");
-                setWalking(true);
-                setX(x - speed);
-            } else if (mouseX > x) {
-                setFacing("right");
-                setWalking(true);
-                setX(x + speed);
-            }
+            setX((currentX) => {
+                if (mouseX < currentX) {
+                    setFacing("left");
+                    setWalking(true);
+                    return currentX - speed;
+                } else if (mouseX > currentX) {
+                    setFacing("right");
+                    setWalking(true);
+                    return currentX + speed;
+                }
+
+                return currentX;
+            });
         }
 
         const handleMouseMove = (event) => {
             const mouseX = event.clientX;
-
             moveCharacterX(mouseX);
         }
 
@@ -52,10 +55,15 @@ const Character = ({ characterName, initPos }) => {
         return () => {
             document.removeEventListener("mousemove", handleMouseMove);
         };
-    }, [initPos, speed, x]);
+    }, [initPos, speed]);
+
+    useEffect(() => {
+        console.log("Updated x:", x);
+    }, [x]);
+
 
     return (
-        <div className="character" style={{ left: x, top: y }}>
+        <div className="character" style={{ left: `${x}px`, top: `${y}px` }}>
             <div ref={characterRef} className={`character_container ${facing} ${walking ? 'walking' : ''}`}>
                 <img src={characterImages[characterName]} className="character_container_spritesheet" alt="" />
             </div>

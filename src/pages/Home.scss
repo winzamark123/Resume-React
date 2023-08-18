@@ -157,14 +157,16 @@ $pop-color: #E2684A;
         position: absolute;
         top: 48%;
         margin-left: 8vw;
-  
-
+        
+        
+        
         &_list{
             display: flex;
             align-items: center;
             justify-content: center;
             width: 300px;
-
+           
+            
             &_item{
                 padding: 5px;
             }

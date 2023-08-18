@@ -6,7 +6,7 @@ import Item from '../components/Items';
 
 const Game = () => {
     var [x, setX] = useState(0);
-    var [y, setY] = useState(-13);
+    var [y, setY] = useState(0);
 
     const [characterNames] = useState(["Frog", "Ninja", "Pink", "Virtual"]);
     const [activeCharacterIndex, setActiveCharacterIndex] = useState(0);
@@ -18,35 +18,36 @@ const Game = () => {
         "Virtual": { x: 0, y: 300 },
     };
 
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (e.keyCode === 38) {
-                setActiveCharacterIndex(activeCharacterIndex => ((activeCharacterIndex - 1) % characterNames.length) < 0 ? 0 : (activeCharacterIndex - 1) % characterNames.length);
-                console.log(activeCharacterIndex);
-            }
+    //Change Characters Index based on the KeyPress -> Mouse YPosition
+    // useEffect(() => {
+    //     const handleKeyDown = (e) => {
+    //         if (e.keyCode === 38) {
+    //             setActiveCharacterIndex(activeCharacterIndex => ((activeCharacterIndex - 1) % characterNames.length) < 0 ? 0 : (activeCharacterIndex - 1) % characterNames.length);
+    //             console.log(activeCharacterIndex);
+    //         }
 
-            if (e.keyCode === 40) {
-                if (e.keyCode === 40) {
-                    setActiveCharacterIndex(activeCharacterIndex => activeCharacterIndex < characterNames.length - 1 ? activeCharacterIndex + 1 : activeCharacterIndex);
-                }
+    //         if (e.keyCode === 40) {
+    //             if (e.keyCode === 40) {
+    //                 setActiveCharacterIndex(activeCharacterIndex => activeCharacterIndex < characterNames.length - 1 ? activeCharacterIndex + 1 : activeCharacterIndex);
+    //             }
 
-                console.log(activeCharacterIndex);
-            }
-        }
+    //             console.log(activeCharacterIndex);
+    //         }
+    //     }
 
-        window.addEventListener("keydown", handleKeyDown);
+    //     window.addEventListener("keydown", handleKeyDown);
 
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-        }
+    //     return () => {
+    //         window.removeEventListener("keydown", handleKeyDown);
+    //     }
 
-    }, [activeCharacterIndex, characterNames.length]);
+    // }, [activeCharacterIndex, characterNames.length]);
 
     return (
         <div className="game_container">
             <div className="frame">
                 <Map />
-                <Character characterName={characterNames[0]} initPos={characterNames[0]} />
+                <Character characterName={characterNames[0]} initPos={initPos[characterNames[0]]} />
             </div>
             <div className="game_container_right">
                 <p>Scroll Down ↓</p>
