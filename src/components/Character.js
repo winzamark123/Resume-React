@@ -12,6 +12,7 @@ const Character = ({ characterName, initPos }) => {
     const [facing, setFacing] = useState("down");
     const [walking, setWalking] = useState(false);
     const characterRef = useRef(null);
+    const [targetX, setTargetX] = useState(null);
     var speed = 3;
 
     const characterImages = {
@@ -21,34 +22,53 @@ const Character = ({ characterName, initPos }) => {
         "Virtual": VirtualCharacter
     };
 
-  
-
     useEffect(() => {
         //Initialize Position at the Start of Render
         if (initPos) {
             setX(initPos.x);
             setY(initPos.y);
         }
+    }, [initPos])
 
-        function moveCharacterX(mouseX) {
+    const updateCharacterPos = useCallback(() => {
+        if (targetX !== null) {
             setX((currentX) => {
-                if (mouseX < currentX) {
-                    setFacing("left");
-                    setWalking(true);
-                    return currentX - speed;
-                } else if (mouseX > currentX) {
+                // console.log("CurrentX: ", currentX, "TargetX:", targetX);
+
+                const distanceToTarget = Math.abs(currentX - targetX);
+
+                if (distanceToTarget < speed) {
+                    setWalking(false);
+                    return targetX;
+                }
+
+
+                if (currentX < targetX) {
+
                     setFacing("right");
                     setWalking(true);
                     return currentX + speed;
+
+                } else if (currentX > targetX) {
+
+                    setFacing("left");
+                    setWalking(true);
+                    return currentX - speed;
                 }
 
                 return currentX;
             });
+
+            if (x !== targetX) {
+                setTimeout(updateCharacterPos, 1000 / 60);
+            }
         }
 
+    }, [targetX, speed, x]);
+
+    useEffect(() => {
         const handleMouseMove = (event) => {
-            const mouseX = event.clientX;
-            moveCharacterX(mouseX);
+            setTargetX(event.clientX);
         }
 
         //Move Character based on Mouse 
@@ -56,8 +76,15 @@ const Character = ({ characterName, initPos }) => {
 
         return () => {
             document.removeEventListener("mousemove", handleMouseMove);
+
         };
-    }, [initPos, speed]);
+    }, []);
+
+    useEffect(() => {
+        // setTimeout(updateCharacterPos, 1000/30);
+        updateCharacterPos();
+    }, [updateCharacterPos]);
+
 
     useEffect(() => {
         console.log("Updated x:", x);

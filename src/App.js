@@ -11,7 +11,7 @@ function App() {
       {/* <NavBar /> */}
       <Home />
       <Game />
-      {/* <Projects /> */}
+      <Projects />
       {/* <Contact /> */}
       
     </div>
