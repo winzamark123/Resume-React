@@ -27,18 +27,43 @@
 .floor{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 
     border: solid 1px white; 
     width: 95%;
     height: 200px;
 
-    &_door{
-        position: absolute;
+    &_hover{
+    }
+
+    #door{
+        position: relative;
+        margin-right: 100px;
+        
         border: solid 2px red; 
-        height: 100px;
+        height: 80%;
         width: 100px; 
 
 
+    }
+
+    #livingRoom{
+        position: relative;
+        margin-right: 610px; 
+        
+        border: solid 2px red; 
+        height: 80%;
+        width: 260px; 
+    }
+
+    #painting{
+        position: relative;
+        margin-right: 100px; 
+        
+        border: solid 2px red; 
+        height: 80%;
+        width: 260px; 
     }
 
     
