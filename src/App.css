@@ -1,0 +1,10 @@
+#cursor{
+    border: 1px solid white;
+    position: absolute;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+    /* cursor: none; */
+}
+
