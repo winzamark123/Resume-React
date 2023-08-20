@@ -47,7 +47,7 @@ const Game = () => {
         <div className="game_container">
             <div className="frame">
                 <Map />
-                <Character characterName={characterNames[0]} initPos={initPos[characterNames[0]]} />
+                {/* <Character characterName={characterNames[0]} initPos={initPos[characterNames[0]]} /> */}
             </div>
             <div className="game_container_right">
                 <p>Scroll Down ↓</p>
