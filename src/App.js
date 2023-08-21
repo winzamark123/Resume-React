@@ -11,33 +11,29 @@ function App() {
 
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
-  const cursor = document.querySelector(".custom-cursor");
 
   useEffect(() => {
     const handleCursor = (event) => {
-      setCursorX(event.clientX);
-      setCursorY(event.clientY);
+      setCursorX(event.clientX + window.scrollX);
+      setCursorY(event.clientY + window.scrollY);
+
     }
 
-    // document.addEventListener("mousemove", (e) => {
-    //   cursor.style.left = `${e.clientX}px`;
-    //   cursor.style.top = `${e.clientY}px`;
-    // });
+
 
     document.addEventListener("mousemove", handleCursor);
 
     return () => {
       document.removeEventListener("mousemove", handleCursor);
     };
-  }, []);
+  }, [cursorX, cursorY]);
 
 
   return (
     <div className="App">
       {/* <NavBar /> */}
-      <div className="cursor_container">
-        <div id="cursor" style={{ left: `${cursorX}px`, top: `${cursorY}` }}></div>
-      </div>
+      <div id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
+
       <Home />
       <Game />
       <Projects />
