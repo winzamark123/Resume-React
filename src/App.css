@@ -1,6 +1,6 @@
 #cursor {
     z-index: 999;
-    border: 1px solid white;
+    border: 2px solid white;
     position: absolute;
 
     height: 30px;
