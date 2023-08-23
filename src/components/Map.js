@@ -1,26 +1,63 @@
+import Projects from "../pages/Projects";
 import "./Map.scss"
 
-const Map = () => {
+const NavLinks = {
+    "Projects": "google.com",
+    "Experiences": "google.com",
+    "Contact": "google.com",
+}
+
+const Map = ({ cursorRef }) => {
+
+    const handleMouseEnter = () => {
+        if (cursorRef.current) {
+            cursorRef.current.style.width = "100px";
+            cursorRef.current.style.height = "100px";
+            cursorRef.current.style.border = "3px solid #16a085";
+        }
+    }
+
+    const handleMouseLeave = () => {
+        if (cursorRef.current) {
+            cursorRef.current.style.width = "30px";
+            cursorRef.current.style.height = "30px";
+            cursorRef.current.style.border = "2px solid white";
+        }
+    }
 
     return (
         <div className="map-container">
             <div className="map-pixelart">
                 <div className="floor" id="floor1"></div>
                 <div className="floor" id="floor2">
-                    <div className="floor_hover" id = "door">
-
-                    </div>
+                    <a className="floor_hover"
+                        href={NavLinks["Projects"]}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        id="door"
+                    >
+                        <div className="floor_hover_inside" ></div>
+                    </a>
                 </div>
                 <div className="floor" id="floor3">
-                    <div className="floor_hover" id = "livingRoom">
+                    <a className="floor_hover"
+                        href={NavLinks["Experiences"]}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        id="livingRoom">
 
-                    </div>
+                        <div className="floor_hover_inside" ></div>
+                    </a>
                 </div>
                 <div className="floor" id="floor4"></div>
                 <div className="floor" id="floor5">
-                    <div className="floor_hover" id = "painting">
-                        
-                    </div>
+                    <a className="floor_hover"
+                        href={NavLinks["Contact"]}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        id="painting">
+                        <div className="floor_hover_inside" ></div>
+                    </a>
                 </div>
             </div>
         </div>

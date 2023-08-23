@@ -4,7 +4,7 @@ import Map from '../components/Map';
 import Character from '../components/Character';
 import Item from '../components/Items';
 
-const Game = () => {
+const Game = ({cursorRef}) => {
     var [x, setX] = useState(0);
     var [y, setY] = useState(0);
 
@@ -46,7 +46,7 @@ const Game = () => {
     return (
         <div className="game_container">
             <div className="frame">
-                <Map />
+                <Map cursorRef={cursorRef}/>
                 {/* <Character characterName={characterNames[0]} initPos={initPos[characterNames[0]]} /> */}
             </div>
             <div className="game_container_right">

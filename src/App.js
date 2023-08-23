@@ -1,16 +1,17 @@
-import './App.css';
+import './App.scss';
 import Home from './pages/Home';
 import Game from './pages/Game';
 import NavBar from './components/NavBar';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 
 function App() {
 
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
+  const cursorRef = useRef(null);
 
   useEffect(() => {
     const handleCursor = (event) => {
@@ -32,11 +33,11 @@ function App() {
   return (
     <div className="App">
       {/* <NavBar /> */}
-      <div id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
+      <div ref={cursorRef} id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
 
       <Home />
-      <Game />
-      <Projects />
+      <Game cursorRef={cursorRef}/>
+      {/* <Projects /> */}
       {/* <Contact /> */}
 
     </div>

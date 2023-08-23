@@ -1,0 +1,27 @@
+//Brown Palette
+$bg-color: #09111e;
+$light-undertone: #B9A89B;
+$primary-color: #16a085;
+$secondary-color: #759D85; 
+$pop-color: #E2684A;
+
+#cursor {
+    z-index: 999;
+    border: 2px solid white;
+    position: absolute;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: none;
+    transition: top 0.1s ease, left 0.1s ease;
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+
+}
+
+.App {
+    cursor: none;
+}
