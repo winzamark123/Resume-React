@@ -1,14 +1,36 @@
 import "./Resume.scss"
+import ResumePDF from '../assets/ResumePage-Assets/Cheng_Teeranade_Resume.pdf'
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 const Resume = ({ cursorRef }) => {
     const [showResume, setShowResume] = useState(false);
 
-    const handleMouseEnter = () => {
+    const handleMouseEnter = (event) => {
         if (cursorRef.current) {
-            cursorRef.current.style.width = "100px";
-            cursorRef.current.style.height = "100px";
-            cursorRef.current.style.border = "3px solid #16a085";
+            const targetID = event.target.id;
+            switch (targetID) {
+                case "back_BTN":
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #E2684A";
+                    cursorRef.current.style.cursor = "none";
+                    break;
+
+                case "download_BTN":
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #16a085";
+                    cursorRef.current.style.cursor = "none";
+                    break;
+                default:
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #16a085";
+            }
+
+            // cursorRef.current.style.width = "100px";
+            // cursorRef.current.style.height = "100px";
+            // cursorRef.current.style.border = "3px solid #16a085";
         }
     }
 
@@ -28,15 +50,36 @@ const Resume = ({ cursorRef }) => {
     return (
         <div className="resume">
             <div className="resume_container">
-                <div className="resume_container_item" 
+                <div className="resume_container_item"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-                    onClick = {handleResumeToggle}
-                > 
+                    onClick={handleResumeToggle}
+                >
                 </div>
-
-                <div className={`resume_container_item_${showResume ? "show" : ""}`}>
-
+            </div>
+            <div className={`resume_popup_${showResume ? "show" : ""}`}>
+                <iframe
+                    title="ResumePDF"
+                    src={ResumePDF}
+                    frameborder="0"
+                    width="100%"
+                    height="100%"
+                ></iframe>
+                <div className="resume_popup_show_download">
+                    <btn
+                        id="back_BTN"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onClick = {handleResumeToggle}
+                    >←Lets go Back!
+                    </btn>
+                    <a
+                        id="download_BTN"
+                        href={ResumePDF}
+                        download={ResumePDF}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >Download Here!</a>
                 </div>
             </div>
         </div>
