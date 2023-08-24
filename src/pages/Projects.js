@@ -1,7 +1,7 @@
 import "./Projects.scss"
-import tasaBG from "../assets/Projects-BG/TASA-bg.png"
-import imageGPTBG from "../assets/Projects-BG/NewImageGPT-bg.png"
-import financeAutoBG from "../assets/Projects-BG/FinanceAuto-bg.png"
+import tasaBG from "../assets/ProjectsPage-Assets/TASA-bg.png"
+import imageGPTBG from "../assets/ProjectsPage-Assets/NewImageGPT-bg.png"
+import financeAutoBG from "../assets/ProjectsPage-Assets/FinanceAuto-bg.png"
 
 const backgroundImageStyles = [
     {

@@ -1,0 +1,36 @@
+//Brown Palette
+$bg-color: #09111e;
+$light-undertone: #B9A89B;
+$primary-color: #16a085;
+$secondary-color: #759D85; 
+$pop-color: #E2684A;
+
+.resume{
+    height: 100vh;
+    width: 100%;
+    background-color: $bg-color;
+
+    &_container{
+        height: 100vh;
+        background-image: url("../assets/ResumePage-Assets/ResumeTable.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_item{
+            border: solid 3px black;
+
+            height: 45vh;
+            width: 43vw;
+            margin-right: 5vw;
+
+            transform: rotate(-10deg);
+            
+        }
+    }
+
+}

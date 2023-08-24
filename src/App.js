@@ -1,6 +1,7 @@
 import './App.scss';
 import Home from './pages/Home';
 import Game from './pages/Game';
+import Resume from './pages/Resume';
 import NavBar from './components/NavBar';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
@@ -35,9 +36,10 @@ function App() {
       {/* <NavBar /> */}
       <div ref={cursorRef} id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
 
-      <Home />
-      <Game cursorRef={cursorRef}/>
+      {/* <Home /> */}
+      {/* <Game cursorRef={cursorRef}/> */}
       {/* <Projects /> */}
+      <Resume cursorRef={cursorRef}/>
       {/* <Contact /> */}
 
     </div>
