@@ -49,6 +49,10 @@ const Resume = ({ cursorRef }) => {
 
     return (
         <div className="resume">
+            <div className="resume_title">
+                <span>Take a look at my </span>
+                <h1>Resume!</h1>
+            </div>
             <div className="resume_container">
                 <div className="resume_container_item"
                     onMouseEnter={handleMouseEnter}

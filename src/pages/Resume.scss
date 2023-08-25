@@ -13,6 +13,32 @@ $pop-color: #E2684A;
     width: 100%;
     background-color: $bg-color;
 
+    &_title{
+        // z-index: 2;
+        position: absolute; 
+        // border: solid 3px white;
+
+        transform: rotate(-5deg);
+
+        
+        left: 20%;
+        top: 8%;
+
+        span{
+            font-family: 'Caveat', cursive;
+            color: whitesmoke;
+            font-size: 4vw;
+        }
+        h1{
+            font-family: 'Russo One', serif;
+            font-style: italic;
+            color: $primary-color;
+            font-size: 4vw;
+            margin-left: 17vw;
+            margin-top: 6px;
+            
+        }
+    }
     &_container{
         height: 100vh;
         background-image: url("../assets/ResumePage-Assets/ResumeTable.png");
