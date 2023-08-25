@@ -2,7 +2,6 @@ import './App.scss';
 import Home from './pages/Home';
 import Game from './pages/Game';
 import Resume from './pages/Resume';
-import NavBar from './components/NavBar';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import { useEffect, useState, useRef } from 'react';
