@@ -1,8 +1,8 @@
-
-const NavBar = () => {
+import "navBack.scss";
+const NavBack = () => {
     return(
-        <div className="navBar">
-            <div className="navBar_home">
+        <div className="navBack">
+            <div className="navBack_home">
                 <a href="./Home.js">
                 </a>
             </div>
@@ -10,4 +10,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;
+export default NavBack;

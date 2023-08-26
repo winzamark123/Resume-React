@@ -12,17 +12,18 @@ $pop-color: #E2684A;
     height: 100vh;
     width: 100%;
     background-color: $bg-color;
+    overflow: hidden;
 
     &_title{
         // z-index: 2;
         position: absolute; 
         // border: solid 3px white;
 
-        transform: rotate(-5deg);
-
         
-        left: 18vw;
-        top: 4vw;
+        
+        transform: rotate(-5deg);
+        left: 20vw;
+        top: 6vh;
 
         span{
             font-family: 'Caveat', cursive;
@@ -35,14 +36,14 @@ $pop-color: #E2684A;
             color: $primary-color;
             font-size: 4vw;
             margin-left: 17vw;
-            margin-top: 6px;
+            margin-top: 0.5vh;
             
         }
     }
     &_container{
         height: 100vh;
         background-image: url("../assets/ResumePage-Assets/ResumeTable.png");
-        background-size: 100%;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
 
@@ -53,7 +54,7 @@ $pop-color: #E2684A;
         &_item{
             // border: solid 3px black;
 
-            height: 45vh;
+            height: 25vw;
             width: 43vw;
             margin-right: 5vw;
 
@@ -62,6 +63,23 @@ $pop-color: #E2684A;
         }
 
 
+    }
+
+    &_back{
+        // border: 3px solid red;
+        width: 11vw;
+        height: 11vw;
+
+        position: absolute;
+        top: 73%;
+        left: 14%;
+
+        transform: rotate(18deg) translate(-50%, -50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     &_popup{

@@ -1,6 +1,8 @@
 import "./Resume.scss"
 import ResumePDF from '../assets/ResumePage-Assets/Cheng_Teeranade_Resume.pdf'
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Resume = ({ cursorRef }) => {
     const [showResume, setShowResume] = useState(false);
@@ -47,6 +49,10 @@ const Resume = ({ cursorRef }) => {
         setShowResume(!showResume);
     }
 
+    const handleNavBack = () => {
+
+    }
+
     return (
         <div className="resume">
             <div className="resume_title">
@@ -61,6 +67,17 @@ const Resume = ({ cursorRef }) => {
                 >
                 </div>
             </div>
+
+            <div className="resume_back"
+                id="back_BTN"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}>
+                <div className="resume_back_icon">
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" beat/>
+                </div>
+
+            </div>
+
             <div className={`resume_popup_${showResume ? "show" : ""}`}>
                 <iframe
                     title="ResumePDF"
@@ -74,7 +91,7 @@ const Resume = ({ cursorRef }) => {
                         id="back_BTN"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
-                        onClick = {handleResumeToggle}
+                        onClick={handleResumeToggle}
                     >←Lets go Back!
                     </btn>
                     <a
@@ -86,7 +103,7 @@ const Resume = ({ cursorRef }) => {
                     >Download Here!</a>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }
