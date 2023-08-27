@@ -85,9 +85,9 @@ const Projects = () => {
                     <h1>Projects</h1>
                 </div>
                 <div className="projects_container_carousel">
-                    <CarouselItem order={1} projectStyles={itemLabelStyles[0]} style={backgroundImageStyles[0]} />
-                    <CarouselItem order={2} projectStyles={itemLabelStyles[1]} style={backgroundImageStyles[1]} />
-                    <CarouselItem order={3} projectStyles={itemLabelStyles[2]} style={backgroundImageStyles[2]} />
+                    {/* <CarouselItem order={1} projectStyles={itemLabelStyles[0]} style={backgroundImageStyles[0]} /> */}
+                    {/* <CarouselItem order={2} projectStyles={itemLabelStyles[1]} style={backgroundImageStyles[1]} /> */}
+                    {/* <CarouselItem order={3} projectStyles={itemLabelStyles[2]} style={backgroundImageStyles[2]} /> */}
                 </div>
             </div>
         </div>
