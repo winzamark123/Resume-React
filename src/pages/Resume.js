@@ -49,7 +49,7 @@ const Resume = ({ cursorRef }) => {
         setShowResume(!showResume);
     }
 
-    const handleNavBack = () => {
+    const handleNavHome = () => {
 
     }
 
@@ -71,9 +71,10 @@ const Resume = ({ cursorRef }) => {
             <div className="resume_back"
                 id="back_BTN"
                 onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}>
+                onMouseLeave={handleMouseLeave}
+                onClick={handleNavHome}>
                 <div className="resume_back_icon">
-                    <FontAwesomeIcon icon={faArrowLeft} size="4x" beat/>
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" beat />
                 </div>
 
             </div>
