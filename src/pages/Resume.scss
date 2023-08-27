@@ -23,7 +23,7 @@ $pop-color: #E2684A;
         
         transform: rotate(-5deg);
         left: 20vw;
-        top: 6vh;
+        top: 9vh;
 
         span{
             font-family: 'Caveat', cursive;
@@ -80,6 +80,10 @@ $pop-color: #E2684A;
         align-items: center;
         justify-content: center;
         text-align: center;
+
+        &_icon{
+            color: $bg-color;
+        }
     }
 
     &_popup{
