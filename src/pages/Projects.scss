@@ -28,7 +28,7 @@ $pop-color: #E2684A;
         justify-content: flex-end;
 
         &_text{
-            border: solid 1px white;
+            // border: solid 1px white;
             display: flex;
             font-size: 40px;
             height: 20%;
@@ -41,12 +41,13 @@ $pop-color: #E2684A;
 
             span{
                 font-family: 'Caveat', cursive;
-                color: $primary-color;
+                color: white;
             }
             h1{
+                // border: 1px solid white;
                 font-family: 'Russo One', serif;
                 font-style: italic;
-                color: $pop-color;
+                color: $primary-color;
                 margin-left: 40px;
                 
             }
