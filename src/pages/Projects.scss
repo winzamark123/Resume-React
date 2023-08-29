@@ -17,11 +17,12 @@ $pop-color: #E2684A;
     overflow: hidden;
 
     &_container{
-        background-image: url("../assets/ProjectsPage-Assets/ProjectsBG.png");
         height: 100%;
-        background-size: cover;
-        background-position: center;
+        background-image: url("../assets/ProjectsPage-Assets/ShelfBG.png");
         background-repeat: no-repeat;
+        background-size: cover;
+        // image-rendering: pixelated;
+        // background-position: bottom;
 
         display: flex;
         flex-direction: column;

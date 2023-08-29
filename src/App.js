@@ -37,7 +37,7 @@ function App() {
 
       {/* <Home /> */}
       {/* <Game cursorRef={cursorRef}/> */}
-      <Resume cursorRef={cursorRef} />
+      {/* <Resume cursorRef={cursorRef} /> */}
       <Projects cursorRef={cursorRef} />
       {/* <Contact /> */}
 
