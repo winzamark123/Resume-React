@@ -2,7 +2,7 @@ import Projects from "../pages/Projects";
 import "./Map.scss"
 
 const NavLinks = {
-    "Projects": "google.com",
+    "Resume": "google.com",
     "Experiences": "google.com",
     "Contact": "google.com",
 }

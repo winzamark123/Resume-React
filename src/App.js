@@ -5,6 +5,12 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import { useEffect, useState, useRef } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 
 
 function App() {
@@ -29,20 +35,37 @@ function App() {
     };
   }, [cursorX, cursorY]);
 
+  function NotFound() {
+    const navigate = useNavigate();
+    navigate('/');
+    return null;
+  }
 
   return (
-    <div className="App">
-      {/* <NavBar /> */}
+    <>
       <div ref={cursorRef} id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
-
-      {/* <Home /> */}
-      {/* <Game cursorRef={cursorRef}/> */}
-      {/* <Resume cursorRef={cursorRef} /> */}
-      <Projects cursorRef={cursorRef} />
-      {/* <Contact /> */}
-
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home cursorRef={cursorRef} />} />
+          <Route path="/resume" element={<Resume cursorRef={cursorRef} />} />
+          <Route path="/projects" element={<Projects cursorRef={cursorRef} />} />
+          <Route path="/contact" element={<Contact cursorRef={cursorRef} />} />
+          <Route path="*" element={<NotFound cursorRef={cursorRef} />} />
+        </Routes>
+      </Router>
+    </>
   );
+  // <div className="App">
+  {/* <NavBar /> */ }
+
+
+  {/* <Home /> */ }
+  {/* <Game cursorRef={cursorRef} /> */ }
+  {/* <Resume cursorRef={cursorRef} /> */ }
+  {/* <Projects cursorRef={cursorRef} /> */ }
+  {/* <Contact /> */ }
+
+  {/* </div> */ }
 }
 
 export default App;

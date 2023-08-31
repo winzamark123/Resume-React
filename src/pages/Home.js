@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './Home.scss';
+import Game from './Game';
 
-const Home = () => {
+const Home = ({ cursorRef }) => {
 
     const listItems = ["Software Engineer",
         "Full-Stack Developer",
@@ -77,9 +78,9 @@ const Home = () => {
                         </ul>
                     </div>
                 </div>
-                {/* <div className="home_body_right">
-                </div> */}
             </div>
+
+            <Game cursorRef={cursorRef} />
         </div>
     );
 }
