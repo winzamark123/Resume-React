@@ -1,9 +1,10 @@
 import Projects from "../pages/Projects";
 import "./Map.scss"
+import {Link} from "react-router-dom"
 
 const NavLinks = {
-    "Resume": "google.com",
-    "Experiences": "google.com",
+    "Resume": "/resume",
+    "Projects": "/projects",
     "Contact": "google.com",
 }
 
@@ -25,13 +26,20 @@ const Map = ({ cursorRef }) => {
         }
     }
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log("clicked");
+
+
+    }
+
     return (
         <div className="map-container">
             <div className="map-pixelart">
                 <div className="floor" id="floor1"></div>
                 <div className="floor" id="floor2">
                     <a className="floor_hover"
-                        href={NavLinks["Projects"]}
+                        href={NavLinks["Resume"]}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         id="door"
@@ -41,7 +49,7 @@ const Map = ({ cursorRef }) => {
                 </div>
                 <div className="floor" id="floor3">
                     <a className="floor_hover"
-                        href={NavLinks["Experiences"]}
+                        href={NavLinks["Projects"]}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         id="livingRoom">
