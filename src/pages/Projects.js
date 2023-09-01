@@ -76,19 +76,61 @@ const CarouselItem = ({ order, projectStyles, style }) => {
     );
 }
 
-const Projects = () => {
+
+
+
+
+
+
+const Projects = ({ cursorRef }) => {
+
+    const handleMouseEnter = (event) => {
+        if (cursorRef.current) {
+            const targetID = event.target.id;
+            switch (targetID) {
+                default:
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #16a085";
+            }
+
+            // cursorRef.current.style.width = "100px";
+            // cursorRef.current.style.height = "100px";
+            // cursorRef.current.style.border = "3px solid #16a085";
+        }
+    }
+
+
+    const handleMouseLeave = () => {
+        if (cursorRef.current) {
+            cursorRef.current.style.width = "30px";
+            cursorRef.current.style.height = "30px";
+            cursorRef.current.style.border = "2px solid white";
+        }
+    }
+
     return (
         <div className="projects">
             <div className="projects_container">
-                <div className="projects_container_text">
-                    <span>Some of my not so cool </span>
-                    <h1>Projects</h1>
-                </div>
                 <div className="projects_container_carousel">
-                    {/* <CarouselItem order={1} projectStyles={itemLabelStyles[0]} style={backgroundImageStyles[0]} /> */}
-                    {/* <CarouselItem order={2} projectStyles={itemLabelStyles[1]} style={backgroundImageStyles[1]} /> */}
-                    {/* <CarouselItem order={3} projectStyles={itemLabelStyles[2]} style={backgroundImageStyles[2]} /> */}
+                    <div className="projects_container_carousel_floor" id="floor1">
+                        <div className="projects_container_carousel_floor_hover"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            id = {itemLabelStyles[0]["title"]} //id = ImageGPT
+                        >
+
+                        </div>
+                    </div>
+                    <div className="projects_container_carousel_floor" id="floor2">
+
+                    </div>
+                    <div className="projects_container_carousel_floor" id="floor3"></div>
                 </div>
+            </div>
+            <div className="projects_title">
+                <span>Some of my not so cool </span>
+                <h1>Projects</h1>
             </div>
         </div>
 
