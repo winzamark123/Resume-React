@@ -51,11 +51,11 @@ const CarouselItem = ({ order, projectStyles, style }) => {
     const { title, descrip } = projectStyles;
 
     return (
-        <div className="projects_container_carousel_item" data-order={order} style={style}>
-            <div className={`projects_container_carousel_item_left_${isEven ? 'even' : 'odd'}`}
+        <div className="projects_items_item" data-order={order} style={style}>
+            <div className={`projects_items_item_left_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? {} : style}
             >
-                <div className="projects_container_carousel_item_text"
+                <div className="projects_items_item_text"
                     style={isEven ? { display: "flex" } : { display: "none" }}
                 >
                     <h1>{title}</h1>
@@ -63,10 +63,10 @@ const CarouselItem = ({ order, projectStyles, style }) => {
                 </div>
 
             </div>
-            <div className={`projects_container_carousel_item_right_${isEven ? 'even' : 'odd'}`}
+            <div className={`projects_items_item_right_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? style : {}}
             >
-                <div className="projects_container_carousel_item_text"
+                <div className="projects_items_item_text"
                     style={isEven ? { display: "none" } : { display: "flex" }}
                 >
                     <h1>{title}</h1>
@@ -107,11 +107,21 @@ const Projects = ({ cursorRef }) => {
         }
     }
 
+    const carouselItems = itemLabels.map((item, index) => (
+        <CarouselItem
+            key={index}
+            order={index}
+            projectStyles={item}
+            style={backgroundImageStyles[index]}
+        />
+    ));
+
+
     return (
         <div className="projects">
             <div className="projects_container">
                 <div className="projects_container_carousel">
-                    <div className="projects_container_carousel_floor" id="floor1">
+                    <div className="projects_container_carousel_floor" id="projectsPage_floor1">
                         <div className="projects_container_carousel_floor_hover"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
@@ -121,7 +131,7 @@ const Projects = ({ cursorRef }) => {
 
                     </div>
 
-                    <div className="projedcts_container_carousel_floor" id="floor2">
+                    <div className="projects_container_carousel_floor" id="projectsPage_floor2">
                         <div className="projects_container_carousel_floor_hover"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
@@ -129,10 +139,10 @@ const Projects = ({ cursorRef }) => {
                             style={{ marginLeft: "12vw" }}
                         ></div>
                     </div>
-                    <div className="projects_container_carousel_floor" id="floor3">
+                    <div className="projects_container_carousel_floor" id="projectsPage_floor3">
 
                     </div>
-                    <div className="projects_container_carousel_floor" id="floor4">
+                    <div className="projects_container_carousel_floor" id="projectsPage_floor4">
                         <div className="projects_container_carousel_floor_hover"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
@@ -147,7 +157,8 @@ const Projects = ({ cursorRef }) => {
                 <h1>Projects</h1>
             </div>
             <div className="projects_items">
-                
+                {carouselItems}
+
             </div>
         </div>
 

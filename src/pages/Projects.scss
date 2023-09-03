@@ -85,90 +85,94 @@ $pop-color: #E2684A;
             }
             
 
-            &_item{
-                width: 80%;
-                height: 550px;
-                background-color: $light-undertone;
-                display: flex;
-                
-                // margin-top: 100px;
-                margin-bottom: 50px;
-        
-
-
-                &_left{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    &_odd{
-                        width: 60%;
-                        background-color: black;
-                    }
-
-                    &_even{
-                        width: 40%;
-                        background-color: $light-undertone;
-                    }
-                    
-                }
-
-                &_right{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    &_odd{
-                        width: 40%;
-                        background-color: $light-undertone;
-                    }
-
-                    &_even{
-                        width: 60%;
-                        background-color: black;
-                    }
-
-                    
-                }
-
-                &_text{
-                    border: solid 3px white;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    h1{
-                        font-family: 'Inconsolata', monospace;
-                        color: $bg-color;
-                        font-size: 70px;
-                    }
-                }
-
-
-
-            }
-
-
         }
+    }
+
+    &_items{
+        height: 100vh;
+        width: 100%;
+        background-color: white;
     }
 }
 
-#floor1{
+#projectsPage_floor1{
     height: 80px;
 }
 
-#floor2{
+#projectsPage_floor2{
     margin-top: 30px;
     height: 120px;
 }
 
-#floor3{
+#projectsPage_floor3{
     height: 60px;
 }
 
-#floor4{
-    height: 70px;
+#projectsPage_floor4{
+    height: 100px;
 }
 
+// &_item{
+//     width: 80%;
+//     height: 550px;
+//     background-color: $light-undertone;
+//     display: flex;
+    
+//     // margin-top: 100px;
+//     margin-bottom: 50px;
+
+
+
+//     &_left{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+
+//         &_odd{
+//             width: 60%;
+//             background-color: black;
+//         }
+
+//         &_even{
+//             width: 40%;
+//             background-color: $light-undertone;
+//         }
+        
+//     }
+
+//     &_right{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         &_odd{
+//             width: 40%;
+//             background-color: $light-undertone;
+//         }
+
+//         &_even{
+//             width: 60%;
+//             background-color: black;
+//         }
+
+        
+//     }
+
+//     &_text{
+//         border: solid 3px white;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+
+//         h1{
+//             font-family: 'Inconsolata', monospace;
+//             color: $bg-color;
+//             font-size: 70px;
+//         }
+//     }
+
+
+
+// }

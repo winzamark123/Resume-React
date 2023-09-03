@@ -25,3 +25,56 @@ $pop-color: #E2684A;
 .App {
     cursor: none;
 }
+
+
+.load_container_logo{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+}
+.load_container_logo hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.load_container_logo :first-child{background:#19A68C;animation-delay:-1.5s}
+.load_container_logo :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load_container_logo :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load_container_logo :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideOut{
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translatex(100%);
+    }
+}
+
+.load_container{
+    cursor: none; 
+    position: fixed;
+    background-color: $bg-color;
+    
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideOut 1s forwards;
+}

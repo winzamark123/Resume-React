@@ -18,6 +18,7 @@ function App() {
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
   const cursorRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleCursor = (event) => {
@@ -35,37 +36,43 @@ function App() {
     };
   }, [cursorX, cursorY]);
 
+  // Loading Animation
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   function NotFound() {
     const navigate = useNavigate();
     navigate('/');
     return null;
   }
 
+
   return (
-    <>
+    <div className="app_container">
       <div ref={cursorRef} id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home cursorRef={cursorRef} />} />
-          <Route path="/resume" element={<Resume cursorRef={cursorRef} />} />
-          <Route path="/projects" element={<Projects cursorRef={cursorRef} />} />
-          <Route path="/contact" element={<Contact cursorRef={cursorRef} />} />
-          <Route path="*" element={<NotFound cursorRef={cursorRef} />} />
-        </Routes>
-      </Router>
-    </>
+      {loading ? (
+        <div className="load_container">
+          <div class="load_container_logo">
+            <hr /><hr /><hr /><hr />
+          </div>
+        </div>)
+        :
+        (
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home cursorRef={cursorRef} />} />
+              <Route path="/resume" element={<Resume cursorRef={cursorRef} />} />
+              <Route path="/projects" element={<Projects cursorRef={cursorRef} />} />
+              <Route path="/contact" element={<Contact cursorRef={cursorRef} />} />
+              <Route path="*" element={<NotFound cursorRef={cursorRef} />} />
+            </Routes>
+          </Router>)}
+    </div>
   );
-  // <div className="App">
-  {/* <NavBar /> */ }
-
-
-  {/* <Home /> */ }
-  {/* <Game cursorRef={cursorRef} /> */ }
-  {/* <Resume cursorRef={cursorRef} /> */ }
-  {/* <Projects cursorRef={cursorRef} /> */ }
-  {/* <Contact /> */ }
-
-  {/* </div> */ }
 }
 
 export default App;
