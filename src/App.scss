@@ -71,7 +71,7 @@ $pop-color: #E2684A;
     flex-direction: column;
     
     &_section{
-        background-color: black;
+        background-color: #0f1724;
         height: 34vh;
         width: 100%;
         // animation: slideOut 1s forwards;
@@ -124,6 +124,6 @@ $pop-color: #E2684A;
         transform: translateX(0);
     }
     to {
-        transform: translatex(-100vw);
+        transform: translatex(100%);
     }
 }

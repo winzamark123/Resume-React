@@ -1,6 +1,5 @@
 import './App.scss';
 import Home from './pages/Home';
-import Game from './pages/Game';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
