@@ -28,7 +28,6 @@ function App() {
     }
 
 
-
     document.addEventListener("mousemove", handleCursor);
 
     return () => {
@@ -41,7 +40,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   function NotFound() {
@@ -54,24 +53,36 @@ function App() {
   return (
     <div className="app_container">
       <div ref={cursorRef} id="cursor" style={{ left: `${cursorX - 10}px`, top: `${cursorY - 10}px` }}></div>
+
       {loading ? (
         <div className="load_container">
-          <div class="load_container_logo">
-            <hr /><hr /><hr /><hr />
+          <div className={`load_container_section`} ></div>
+          <div className={`load_container_section`} >
+            <div class="load_container_section_logo">
+              <hr /><hr /><hr /><hr />
+            </div>
           </div>
+          <div className={`load_container_section`} ></div>
         </div>)
         :
-        (
-          <Router>
-            <Routes>
-              <Route path="/" element={<Home cursorRef={cursorRef} />} />
-              <Route path="/resume" element={<Resume cursorRef={cursorRef} />} />
-              <Route path="/projects" element={<Projects cursorRef={cursorRef} />} />
-              <Route path="/contact" element={<Contact cursorRef={cursorRef} />} />
-              <Route path="*" element={<NotFound cursorRef={cursorRef} />} />
-            </Routes>
-          </Router>)}
+        (<div className="nothing"></div>)}
+
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home cursorRef={cursorRef} />} />
+          <Route path="/resume" element={<Resume cursorRef={cursorRef} />} />
+          <Route path="/projects" element={<Projects cursorRef={cursorRef} />} />
+          <Route path="/contact" element={<Contact cursorRef={cursorRef} />} />
+          <Route path="*" element={<NotFound cursorRef={cursorRef} />} />
+        </Routes>
+      </Router>
+
+
+
+
     </div>
+
   );
 }
 

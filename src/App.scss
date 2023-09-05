@@ -27,17 +27,25 @@ $pop-color: #E2684A;
 }
 
 
-.load_container_logo{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+.load_container_section_logo{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
   /*change these sizes to fit into your project*/
   width:100px;
   height:100px;
 }
-.load_container_logo hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+.load_container_section_logo hr{
+    border:0;
+    margin:0;
+    width:40%;
+    height:40%;
+    position:absolute;
+    border-radius:50%;
+    animation:spin 2s ease infinite
+}
 
-.load_container_logo :first-child{background:#19A68C;animation-delay:-1.5s}
-.load_container_logo :nth-child(2){background:#F63D3A;animation-delay:-1s}
-.load_container_logo :nth-child(3){background:#FDA543;animation-delay:-0.5s}
-.load_container_logo :last-child{background:#193B48}
+.load_container_section_logo :first-child{background:#19A68C;animation-delay:-1.5s}
+.load_container_section_logo :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load_container_section_logo :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load_container_section_logo :last-child{background:#193B48}
 
 @keyframes spin{
   0%,100%{transform:translate(0)}
@@ -46,6 +54,61 @@ $pop-color: #E2684A;
   75%{transform:translate(0, 160%)}
 }
 
+
+
+.load_container{
+    z-index: 9999;
+    cursor: none; 
+    position: fixed;
+    background-color: transparent;
+    
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    &_section{
+        background-color: black;
+        height: 34vh;
+        width: 100%;
+        // animation: slideOut 1s forwards;
+
+         &:first-child{
+                animation: slideOut 1s forwards;
+                animation-delay: 1s;
+            }
+
+        &:nth-child(2){
+                animation: slideOut 1s forwards;
+                animation-delay: 1.5s;
+        }
+
+        &:nth-child(3){
+                animation: slideOut 1s forwards;
+                animation-delay: 2s;
+        }
+    }
+    
+    
+}
+
+.load_container_section:first-child {
+    animation: slideOut 1s forwards;
+    animation-delay: 1s;
+}
+
+.load_container_section:nth-child(2) {
+    animation: slideOut 1s forwards;
+    animation-delay: 1.5s;
+}
+
+.load_container_section:nth-child(3) {
+    animation: slideOut 1s forwards;
+    animation-delay: 2s;
+}
 
 @keyframes fadeOut {
     from {
@@ -61,20 +124,6 @@ $pop-color: #E2684A;
         transform: translateX(0);
     }
     to {
-        transform: translatex(100%);
+        transform: translatex(-100vw);
     }
-}
-
-.load_container{
-    cursor: none; 
-    position: fixed;
-    background-color: $bg-color;
-    
-    height: 100%;
-    width: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slideOut 1s forwards;
 }
