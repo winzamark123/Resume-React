@@ -116,7 +116,6 @@ const Projects = ({ cursorRef }) => {
         />
     ));
 
-
     return (
         <div className="projects">
             <div className="projects_container">
@@ -126,7 +125,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[0]["title"]} //id = ImageGPT
-                            style={{ marginLeft: "10vw" }}
+                            style={{ marginLeft: "10vw", backgroundPosition: "41% 27%" }}
                         ></div>
 
                     </div>
@@ -136,7 +135,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[1]["title"]}
-                            style={{ marginLeft: "12vw" }}
+                            style={{ marginLeft: "12vw", backgroundPosition: "1% 48%" }}
                         ></div>
                     </div>
                     <div className="projects_container_carousel_floor" id="projectsPage_floor3">
@@ -147,18 +146,19 @@ const Projects = ({ cursorRef }) => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[2]["title"]}
-                            style={{ marginLeft: "50vw" }}
+                            style={{ marginLeft: "50vw", backgroundPosition: "100% 25%" }}
                         ></div>
                     </div>
                 </div>
             </div>
+
+            <div className="projects_items">
+                <div className="temp"></div>
+
+            </div>
             <div className="projects_title">
                 <span>Some of my not so cool </span>
                 <h1>Projects</h1>
-            </div>
-            <div className="projects_items">
-                {carouselItems}
-
             </div>
         </div>
 
