@@ -2,6 +2,7 @@ import "./Projects.scss"
 import tasaBG from "../assets/ProjectsPage-Assets/TASA-bg.png"
 import imageGPTBG from "../assets/ProjectsPage-Assets/NewImageGPT-bg.png"
 import financeAutoBG from "../assets/ProjectsPage-Assets/FinanceAuto-bg.png"
+import tempBG from "../assets/PlaceHolderMap.png"
 
 const backgroundImageStyles = [
     {
@@ -18,6 +19,11 @@ const backgroundImageStyles = [
         backgroundImage: `url(${financeAutoBG})`,
         backgroundSize: "170%",
         backgroundPosition: "5% 50%"
+    },
+    {
+        backgroundImage: `url(${tempBG})`,
+        backgroundSize: "100%",
+        backgroundPosition: "50% 50%"
     }
 ];
 
@@ -40,6 +46,11 @@ const itemLabels = [
         title: "Finance Automation",
         descrip: "A Python script that automates the process of organizing financial data from multiple sources to be represented in one easy to read spreadsheet.",
         backgroundImageStyles: `${backgroundImageStyles[2]}`
+    },
+    {
+        title: "Temp",
+        descrip: "temp descrip",
+        backgroundImageStyles: `${backgroundImageStyles[3]}`
     }
 
 
@@ -146,7 +157,14 @@ const Projects = ({ cursorRef }) => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[2]["title"]}
-                            style={{ marginLeft: "50vw", backgroundPosition: "100% 25%" }}
+                            style={{ marginLeft: "43vw", backgroundPosition: "100% 25%" }}
+                        ></div>
+
+                        <div className="projects_container_carousel_floor_hover"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            id={itemLabels[3]["title"]}
+                            style={{ backgroundPosition: "20% 25%" }}
                         ></div>
                     </div>
                 </div>
