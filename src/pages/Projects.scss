@@ -129,7 +129,7 @@ $pop-color: #E2684A;
         
         &_carousel{
             margin-top: 20vh;
-            border: 2px solid white;
+            // border: 2px solid white;
             display: flex;
             flex-direction: column;
             width: 80vw;
@@ -143,11 +143,12 @@ $pop-color: #E2684A;
 
 
                 &_hover{
-                    border: 1px solid blue;
+                    // border: 1px solid blue;
                     height: 100%;
                     width: 100px;
                     background-image: url("../assets/ProjectsPage-Assets/pixelArtItems.png");
                     background-size: 600%;
+                    animation: floating 2s ease-in-out infinite;
                 }
 
                 
@@ -176,12 +177,25 @@ $pop-color: #E2684A;
 }
 
 #projectsPage_floor3{
-    height: 60px;
+    height: 90px;
 }
 
 #projectsPage_floor4{
     height: 130px;
 }
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5%); /* adjust this value to move the div more or less */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 
 
