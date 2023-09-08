@@ -1,6 +1,4 @@
-import Projects from "../pages/Projects";
 import "./Map.scss"
-import {Link} from "react-router-dom"
 
 const NavLinks = {
     "Resume": "/resume",

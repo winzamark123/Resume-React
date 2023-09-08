@@ -138,11 +138,11 @@ $pop-color: #E2684A;
             
             
             &_floor{
-                border: 1px solid wheat;
+                // border: 1px solid wheat;
 
 
                 &_hover{
-                    border: 1px solid blue;
+                    // border: 1px solid blue;
                     height: 100%;
                     width: 100px;
                     background-image: url("../assets/ProjectsPage-Assets/pixelArtItems.png");
@@ -158,9 +158,9 @@ $pop-color: #E2684A;
     }
 
     &_items{
+        // position: absolute; 
         // height: 100vh;
         // width: 100%;
-        // background-color: white;
 
 
     }
@@ -181,10 +181,12 @@ $pop-color: #E2684A;
 
 #projectsPage_floor4{
     height: 130px;
-    border: 3px solid purple;
+    // border: 3px solid purple;
     display: flex;
     flex-wrap: wrap;
 }
+
+
 
 
 

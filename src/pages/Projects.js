@@ -32,14 +32,15 @@ const itemLabels = [
         title: "ImageGPT",
         descrip: "ImageGPT: An advanced GPT-3 model trained to convert visual data into actionable text content, enabling dynamic queries on image-derived contexts.",
         backgroundImageStyles: `${backgroundImageStyles[0]}`,
-        marginLeft: "150px"
+        height: "100vh"
+        // marginLeft: "150px"
     },
 
     {
         title: "TASA Website",
         descrip: "A website for the Thai American Student Association at UCSD, built with React and Firebase.",
         backgroundImageStyles: `${backgroundImageStyles[1]}`,
-        marginLeft: "200px"
+        // marginLeft: "200px"
     },
 
     {
@@ -170,13 +171,15 @@ const Projects = ({ cursorRef }) => {
                 </div>
             </div>
 
-            <div className="projects_items">
-                <div className="temp"></div>
-
-            </div>
+            
             <div className="projects_title">
                 <span>Some of my not so cool </span>
                 <h1>Projects</h1>
+            </div>
+
+            <div className="projects_items">
+                {carouselItems[0]}
+
             </div>
         </div>
 
