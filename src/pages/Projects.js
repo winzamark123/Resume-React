@@ -102,6 +102,15 @@ const Projects = ({ cursorRef }) => {
     const [showCarousel, setShowCarousel] = useState("")
     const [selectedCarousel, setSelectedCarousel] = useState(null)
 
+    const carouselItems = itemLabels.map((item, index) => (
+        <CarouselItem
+            key={index}
+            order={index}
+            projectStyles={item}
+            style={backgroundImageStyles[index]}
+        />
+    ));
+
     const handleMouseEnter = (event) => {
         if (cursorRef.current) {
             const targetID = event.target.id;
@@ -123,21 +132,17 @@ const Projects = ({ cursorRef }) => {
         }
     }
 
-    const carouselItems = itemLabels.map((item, index) => (
-        <CarouselItem
-            key={index}
-            order={index}
-            projectStyles={item}
-            style={backgroundImageStyles[index]}
-        />
-    ));
+
 
     const handleProjectsToggle = (item) => {
         setShowCarousel(!showCarousel);
-        if (selectedCarousel && selectedCarousel.title === item.index) {
+
+        console.log(selectedCarousel);
+
+        if (selectedCarousel && item.index === selectedCarousel.index) {
             setSelectedCarousel(null);
         } else {
-            setSelectedCarousel(item.index);
+            setSelectedCarousel(item);
         }
     }
 
@@ -204,7 +209,8 @@ const Projects = ({ cursorRef }) => {
                     />
                 } */}
 
-                {carouselItems[selectedCarousel]}
+                {selectedCarousel && carouselItems[selectedCarousel.index]}
+
 
             </div>
         </div>
