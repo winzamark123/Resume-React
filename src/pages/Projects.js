@@ -4,6 +4,8 @@ import imageGPTBG from "../assets/ProjectsPage-Assets/NewImageGPT-bg.png"
 import financeAutoBG from "../assets/ProjectsPage-Assets/FinanceAuto-bg.png"
 import tempBG from "../assets/PlaceHolderMap.png"
 
+import { useState } from "react"
+
 const backgroundImageStyles = [
     {
         backgroundImage: `url(${imageGPTBG})`,
@@ -97,6 +99,8 @@ const CarouselItem = ({ order, projectStyles, style }) => {
 
 
 const Projects = ({ cursorRef }) => {
+    const [showCarousel, setShowCarousel] = useState("")
+    const [selectedCarousel, setSelectedCarousel] = useState(null)
 
     const handleMouseEnter = (event) => {
         if (cursorRef.current) {
@@ -128,6 +132,15 @@ const Projects = ({ cursorRef }) => {
         />
     ));
 
+    const handleProjectsToggle = (item) => {
+        setShowCarousel(!showCarousel);
+        if (selectedCarousel && selectedCarousel.title === item.index) {
+            setSelectedCarousel(null);
+        } else {
+            setSelectedCarousel(item.index);
+        }
+    }
+
     return (
         <div className="projects">
             <div className="projects_container">
@@ -138,6 +151,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[0]["title"]} //id = ImageGPT
                             style={{ marginLeft: "10vw", backgroundPosition: "41% 27%" }}
+                            onClick={() => handleProjectsToggle(itemLabels[0])}
                         ></div>
 
                     </div>
@@ -148,6 +162,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[1]["title"]}
                             style={{ marginLeft: "12vw", backgroundPosition: "1% 48%" }}
+                            onClick={() => handleProjectsToggle(itemLabels[1])}
                         ></div>
                     </div>
                     <div className="projects_container_carousel_floor" id="projectsPage_floor3">
@@ -159,6 +174,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[2]["title"]}
                             style={{ marginLeft: "43vw", backgroundPosition: "100% 25%" }}
+                            onClick={() => handleProjectsToggle(itemLabels[2])}
                         ></div>
 
                         <div className="projects_container_carousel_floor_hover"
@@ -166,19 +182,29 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[3]["title"]}
                             style={{ backgroundPosition: "20% 25%" }}
+                            onClick={() => handleProjectsToggle(itemLabels[3])}
                         ></div>
                     </div>
                 </div>
             </div>
 
-            
+
             <div className="projects_title">
                 <span>Some of my not so cool </span>
                 <h1>Projects</h1>
             </div>
 
-            <div className="projects_items">
-                {carouselItems[0]}
+            <div className={`projects_items_${showCarousel ? "show" : ""}`}>
+                {/* {selectedCarousel &&
+                    <CarouselItem
+                        key={selectedCarousel.title}
+                        order={itemLabels.findIndex(item => item.title === selectedCarousel.title)}
+                        projectStyles={selectedCarousel}
+                        style={backgroundImageStyles[itemLabels.findIndex(item => item.title === selectedCarousel.title)]}
+                    />
+                } */}
+
+                {carouselItems[selectedCarousel]}
 
             </div>
         </div>
