@@ -1,9 +1,8 @@
 import "./Resume.scss"
 import ResumePDF from '../assets/ResumePage-Assets/Cheng_Teeranade_Resume.pdf'
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from 'react-router-dom';
 
 const Resume = ({ cursorRef }) => {
 
@@ -73,8 +72,8 @@ const Resume = ({ cursorRef }) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <a className="resume_back_icon" href = "/">
-                        <FontAwesomeIcon icon={faArrowLeft} size="4x" beat/>
+                <a className="resume_back_icon" href="/">
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" beat />
                 </a>
 
             </div>

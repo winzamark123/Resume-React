@@ -3,6 +3,8 @@ import tasaBG from "../assets/ProjectsPage-Assets/TASA-bg.png"
 import imageGPTBG from "../assets/ProjectsPage-Assets/NewImageGPT-bg.png"
 import financeAutoBG from "../assets/ProjectsPage-Assets/FinanceAuto-bg.png"
 import tempBG from "../assets/PlaceHolderMap.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react"
 
@@ -134,7 +136,7 @@ const Projects = ({ cursorRef }) => {
         if (selectedCarousel && index === selectedCarousel.index) {
             setSelectedCarousel(null);
         } else {
-            setSelectedCarousel({...item, index });
+            setSelectedCarousel({ ...item, index });
         }
     }
 
@@ -191,16 +193,31 @@ const Projects = ({ cursorRef }) => {
                 <h1>Projects</h1>
             </div>
 
+            <div className="projects_back"
+                id="projects_back_BTN"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <a className="projects_back_icon" href="/">
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" />
+                </a>
+
+            </div>
+
             <div className={`projects_items_${selectedCarousel ? "show" : ""}`}>
                 {selectedCarousel && carouselItems[selectedCarousel.index]}
                 {selectedCarousel &&
-                    (<btn
-                        id="projects_back_BTN"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        onClick={() => handleProjectsToggle(itemLabels[selectedCarousel.index], selectedCarousel.index)}
-                    >←Lets go Back!
-                    </btn>
+                    (
+                        <div className="projects_items_show_backContainer">
+                            <btn
+                                className="projects_items_show_backContainer_backBTN"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                                onClick={() => handleProjectsToggle(itemLabels[selectedCarousel.index], selectedCarousel.index)}
+                            >←Lets go Back!
+                            </btn>
+                        </div>
+
 
                     )}
             </div>

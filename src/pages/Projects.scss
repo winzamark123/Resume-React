@@ -116,6 +116,27 @@ $pop-color: #E2684A;
             left: 50%;
             transform: translate(-50%, -50%);
 
+            &_backContainer{
+                width: 100%;
+                display: flex;
+                justify-content: start;
+            
+
+                &_backBTN{
+                    border: 1px solid green;
+                    display: flex;
+                    font-family: 'Caveat', cursive;
+    
+                    font-size: 35px;
+                    margin-top: 10px;
+                    cursor: none;
+    
+                    color: $primary-color;
+                }
+            }
+
+            
+
 
             &_item{
                 height: 90vh;
@@ -183,6 +204,18 @@ $pop-color: #E2684A;
         
 
 
+    }
+
+    &_back{
+        position: absolute;
+        cursor: none;
+
+        top: 5vh;
+        left: 2vw;
+        &_icon{
+            cursor: none;
+            color: $bg-color;
+        }
     }
 }
 
