@@ -64,7 +64,7 @@ function App() {
           <div className={`load_container_section`} ></div>
         </div>)
         :
-        (<div className="nothing"></div>)}
+        (<div className="stash_nothing"></div>)}
 
 
       <Router>

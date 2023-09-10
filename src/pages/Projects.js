@@ -34,15 +34,12 @@ const itemLabels = [
         title: "ImageGPT",
         descrip: "ImageGPT: An advanced GPT-3 model trained to convert visual data into actionable text content, enabling dynamic queries on image-derived contexts.",
         backgroundImageStyles: `${backgroundImageStyles[0]}`,
-        height: "100vh"
-        // marginLeft: "150px"
     },
 
     {
         title: "TASA Website",
         descrip: "A website for the Thai American Student Association at UCSD, built with React and Firebase.",
         backgroundImageStyles: `${backgroundImageStyles[1]}`,
-        // marginLeft: "200px"
     },
 
     {
@@ -65,11 +62,11 @@ const CarouselItem = ({ order, projectStyles, style }) => {
     const { title, descrip } = projectStyles;
 
     return (
-        <div className="projects_items_item" data-order={order} style={style}>
-            <div className={`projects_items_item_left_${isEven ? 'even' : 'odd'}`}
+        <div className="projects_items_show_item" data-order={order} style={style}>
+            <div className={`projects_items_show_item_left_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? {} : style}
             >
-                <div className="projects_items_item_text"
+                <div className="projects_items_show_item_text"
                     style={isEven ? { display: "flex" } : { display: "none" }}
                 >
                     <h1>{title}</h1>
@@ -77,10 +74,10 @@ const CarouselItem = ({ order, projectStyles, style }) => {
                 </div>
 
             </div>
-            <div className={`projects_items_item_right_${isEven ? 'even' : 'odd'}`}
+            <div className={`projects_items_show_item_right_${isEven ? 'even' : 'odd'}`}
                 style={isEven ? style : {}}
             >
-                <div className="projects_items_item_text"
+                <div className="projects_items_show_item_text"
                     style={isEven ? { display: "none" } : { display: "flex" }}
                 >
                     <h1>{title}</h1>
@@ -99,7 +96,6 @@ const CarouselItem = ({ order, projectStyles, style }) => {
 
 
 const Projects = ({ cursorRef }) => {
-    const [showCarousel, setShowCarousel] = useState("")
     const [selectedCarousel, setSelectedCarousel] = useState(null)
 
     const carouselItems = itemLabels.map((item, index) => (
@@ -134,15 +130,11 @@ const Projects = ({ cursorRef }) => {
 
 
 
-    const handleProjectsToggle = (item) => {
-        setShowCarousel(!showCarousel);
-
-        console.log(selectedCarousel);
-
-        if (selectedCarousel && item.index === selectedCarousel.index) {
+    const handleProjectsToggle = (item, index) => {
+        if (selectedCarousel && index === selectedCarousel.index) {
             setSelectedCarousel(null);
         } else {
-            setSelectedCarousel(item);
+            setSelectedCarousel({...item, index });
         }
     }
 
@@ -156,7 +148,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[0]["title"]} //id = ImageGPT
                             style={{ marginLeft: "10vw", backgroundPosition: "41% 27%" }}
-                            onClick={() => handleProjectsToggle(itemLabels[0])}
+                            onClick={() => handleProjectsToggle(itemLabels[0], 0)}
                         ></div>
 
                     </div>
@@ -167,7 +159,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[1]["title"]}
                             style={{ marginLeft: "12vw", backgroundPosition: "1% 48%" }}
-                            onClick={() => handleProjectsToggle(itemLabels[1])}
+                            onClick={() => handleProjectsToggle(itemLabels[1], 1)}
                         ></div>
                     </div>
                     <div className="projects_container_carousel_floor" id="projectsPage_floor3">
@@ -179,7 +171,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[2]["title"]}
                             style={{ marginLeft: "43vw", backgroundPosition: "100% 25%" }}
-                            onClick={() => handleProjectsToggle(itemLabels[2])}
+                            onClick={() => handleProjectsToggle(itemLabels[2], 2)}
                         ></div>
 
                         <div className="projects_container_carousel_floor_hover"
@@ -187,7 +179,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[3]["title"]}
                             style={{ backgroundPosition: "20% 25%" }}
-                            onClick={() => handleProjectsToggle(itemLabels[3])}
+                            onClick={() => handleProjectsToggle(itemLabels[3], 3)}
                         ></div>
                     </div>
                 </div>
@@ -199,19 +191,18 @@ const Projects = ({ cursorRef }) => {
                 <h1>Projects</h1>
             </div>
 
-            <div className={`projects_items_${showCarousel ? "show" : ""}`}>
-                {/* {selectedCarousel &&
-                    <CarouselItem
-                        key={selectedCarousel.title}
-                        order={itemLabels.findIndex(item => item.title === selectedCarousel.title)}
-                        projectStyles={selectedCarousel}
-                        style={backgroundImageStyles[itemLabels.findIndex(item => item.title === selectedCarousel.title)]}
-                    />
-                } */}
-
+            <div className={`projects_items_${selectedCarousel ? "show" : ""}`}>
                 {selectedCarousel && carouselItems[selectedCarousel.index]}
+                {selectedCarousel &&
+                    (<btn
+                        id="projects_back_BTN"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={() => handleProjectsToggle(itemLabels[selectedCarousel.index], selectedCarousel.index)}
+                    >←Lets go Back!
+                    </btn>
 
-
+                    )}
             </div>
         </div>
 
