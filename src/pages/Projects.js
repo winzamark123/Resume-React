@@ -33,25 +33,29 @@ const backgroundImageStyles = [
 
 const itemLabels = [
     {
-        title: "ImageGPT",
+        title: "<ImageGPT/>",
         descrip: "ImageGPT: An advanced GPT-3 model trained to convert visual data into actionable text content, enabling dynamic queries on image-derived contexts.",
+        link: "https://github.com/hdjekso/imageGPT",
         backgroundImageStyles: `${backgroundImageStyles[0]}`,
     },
 
     {
-        title: "TASA Website",
-        descrip: "A website for the Thai American Student Association at UCSD, built with React and Firebase.",
+        title: "<TASA Website/>",
+        descrip: "A website for the Thai American Student Association at UCSD, built with Plain HTML and CSS deployed using Firebase. The Website's purpose is to showcase the Thai American Student Association which exists in UC-Davis. Made with ☕ and some zzz..",
+        link: "tasa-ucdavis.com",
         backgroundImageStyles: `${backgroundImageStyles[1]}`,
     },
 
     {
-        title: "Finance Automation",
+        title: "<Finance Automation/>",
         descrip: "A Python script that automates the process of organizing financial data from multiple sources to be represented in one easy to read spreadsheet.",
+        link: "https://github.com/winzamark123/FinanceAutomation",
         backgroundImageStyles: `${backgroundImageStyles[2]}`
     },
     {
         title: "Temp",
         descrip: "temp descrip",
+        link: "",
         backgroundImageStyles: `${backgroundImageStyles[3]}`
     }
 
@@ -112,7 +116,15 @@ const Projects = ({ cursorRef }) => {
     const handleMouseEnter = (event) => {
         if (cursorRef.current) {
             const targetID = event.target.id;
+            console.log(targetID);
             switch (targetID) {
+
+                case "projects_back_BTN":
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #E2684A";
+                    break;
+
                 default:
                     cursorRef.current.style.width = "100px";
                     cursorRef.current.style.height = "100px";
@@ -194,12 +206,11 @@ const Projects = ({ cursorRef }) => {
             </div>
 
             <div className="projects_back"
-                id="projects_back_BTN"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <a className="projects_back_icon" href="/">
-                    <FontAwesomeIcon icon={faArrowLeft} size="4x" />
+                <a className="projects_back_icon"  href="/">
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" id="projects_back_BTN" />
                 </a>
 
             </div>
