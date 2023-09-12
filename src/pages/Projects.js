@@ -102,7 +102,8 @@ const CarouselItem = ({ order, projectStyles, style }) => {
 
 
 const Projects = ({ cursorRef }) => {
-    const [selectedCarousel, setSelectedCarousel] = useState(null)
+    const [filterSetting, setFilterSetting] = useState("none");
+    const [selectedCarousel, setSelectedCarousel] = useState(null);
 
     const carouselItems = itemLabels.map((item, index) => (
         <CarouselItem
@@ -147,13 +148,15 @@ const Projects = ({ cursorRef }) => {
     const handleProjectsToggle = (item, index) => {
         if (selectedCarousel && index === selectedCarousel.index) {
             setSelectedCarousel(null);
+            setFilterSetting("none");
         } else {
             setSelectedCarousel({ ...item, index });
+            setFilterSetting('blur(2px) brightness(80%) contrast(150%)');
         }
     }
 
     return (
-        <div className="projects">
+        <div className="projects" style={{ "--filterSettings": filterSetting }}>
             <div className="projects_container">
                 <div className="projects_container_carousel">
                     <div className="projects_container_carousel_floor" id="projectsPage_floor1">

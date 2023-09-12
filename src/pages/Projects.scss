@@ -11,7 +11,10 @@ $pop-color: #E2684A;
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap');
 
-$dimmedOpacity: 0.7;
+
+
+
+
 
 .projects::before{
     content: "";
@@ -24,16 +27,15 @@ $dimmedOpacity: 0.7;
     background-repeat: no-repeat;
     background-size: cover;
 
-    opacity: 0.8;
-    filter: blur(5px), brightness(0.01), contrast(150%);
-    // filter: brightness(0.05);
-    // filter: contrast(150%);
+    filter: var(--filterSettings);
     
 
 }
 .projects{
+    --filterSettings: none;
     height: 100vh;
     width: 100%;
+    
     // background-color: $bg-color;
 
 
@@ -125,7 +127,7 @@ $dimmedOpacity: 0.7;
         display: none;
 
         &show{
-            border: 1px solid yellow;
+            // border: 1px solid yellow;
             display: flex;
             flex-direction: column;
             opacity: 1;
@@ -212,6 +214,7 @@ $dimmedOpacity: 0.7;
                     align-items: center;
                     justify-content: center;
 
+
                     h1{
                         font-family: 'M PLUS 1 Code', monospace;
                         color: $pop-color;
@@ -220,9 +223,11 @@ $dimmedOpacity: 0.7;
                     
                     p{
                         border: 1px white solid;
-                        margin: 10px 30px 30px 30px;
+                        margin: 10px 15px 10px 15px;
                         font-size: 20px;
                         font-family: 'Inconsolata', monospace;
+
+                        text-align: start;
 
                         line-height: 30px;
                         color: whitesmoke;
