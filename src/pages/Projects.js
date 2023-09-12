@@ -34,14 +34,14 @@ const backgroundImageStyles = [
 const itemLabels = [
     {
         title: "<ImageGPT/>",
-        descrip: "ImageGPT: An advanced GPT-3 model trained to convert visual data into actionable text content, enabling dynamic queries on image-derived contexts.",
+        descrip: "ImageGPT: An adaptation of GPT-3 framework, modeled and trained to convert visual data into actionable and describable text content, enabling dynamic queries on image-derived contexts. Users can upload different Images of PDFs, text messages, etc, and ask questions directly with our chatbot",
         link: "https://github.com/hdjekso/imageGPT",
         backgroundImageStyles: `${backgroundImageStyles[0]}`,
     },
 
     {
         title: "<TASA Website/>",
-        descrip: "A website for the Thai American Student Association at UCSD, built with Plain HTML and CSS deployed using Firebase. The Website's purpose is to showcase the Thai American Student Association which exists in UC-Davis. Made with ☕ and some zzz..",
+        descrip: "A website for the Thai American Student Association at UCSD, built with Plain HTML and CSS deployed using Firebase. The Website's purpose is to showcase the Thai American Student Association which exists in UC-Davis.",
         link: "tasa-ucdavis.com",
         backgroundImageStyles: `${backgroundImageStyles[1]}`,
     },
@@ -209,7 +209,7 @@ const Projects = ({ cursorRef }) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <a className="projects_back_icon"  href="/">
+                <a className="projects_back_icon" href="/">
                     <FontAwesomeIcon icon={faArrowLeft} size="4x" id="projects_back_BTN" />
                 </a>
 

@@ -11,18 +11,40 @@ $pop-color: #E2684A;
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap');
 
+$dimmedOpacity: 0.7;
 
-.projects{
-    height: 100vh;
-    width: 100%;
-    // background-color: $bg-color;
+.projects::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
     background-image: url("../assets/ProjectsPage-Assets/ShelfBG.png");
     background-repeat: no-repeat;
     background-size: cover;
 
+    opacity: 0.8;
+    filter: blur(5px), brightness(0.01), contrast(150%);
+    // filter: brightness(0.05);
+    // filter: contrast(150%);
+    
+
+}
+.projects{
+    height: 100vh;
+    width: 100%;
+    // background-color: $bg-color;
+
+
     // display: flex;
     // justify-content: center;
     // align-items: center;
+
+    // background-image: url("../assets/ProjectsPage-Assets/ShelfBG.png");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
 
     
     overflow: hidden;
@@ -106,6 +128,7 @@ $pop-color: #E2684A;
             border: 1px solid yellow;
             display: flex;
             flex-direction: column;
+            opacity: 1;
             
             height: 80vh;
             
