@@ -2,9 +2,12 @@ import "./Projects.scss"
 import tasaBG from "../assets/ProjectsPage-Assets/TASA-bg.png"
 import imageGPTBG from "../assets/ProjectsPage-Assets/NewImageGPT-bg.png"
 import financeAutoBG from "../assets/ProjectsPage-Assets/FinanceAuto-bg.png"
-import tempBG from "../assets/PlaceHolderMap.png"
+import nutriHealthBG from "../assets/ProjectsPage-Assets/NutriHealth.png"
+import blurBG from "../assets/ProjectsPage-Assets/blurredBG.jpeg"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 
 import { useState } from "react"
 
@@ -20,21 +23,22 @@ const backgroundImageStyles = [
         backgroundPosition: "50% 100%"
     },
     {
+        backgroundImage: `url(${nutriHealthBG})`,
+        backgroundSize: "90%",
+        backgroundPosition: "50% 50%",
+        backgroundRepeat: "no-repeat"
+    },
+    {
         backgroundImage: `url(${financeAutoBG})`,
         backgroundSize: "170%",
         backgroundPosition: "5% 50%"
-    },
-    {
-        backgroundImage: `url(${tempBG})`,
-        backgroundSize: "100%",
-        backgroundPosition: "50% 50%"
     }
 ];
 
 const itemLabels = [
     {
         title: "<ImageGPT/>",
-        descrip: "ImageGPT: An adaptation of GPT-3 framework, modeled and trained to convert visual data into actionable and describable text content, enabling dynamic queries on image-derived contexts. Users can upload different Images of PDFs, text messages, etc, and ask questions directly with our chatbot",
+        descrip: "ImageGPT: An adaptation of GPT-3 framework, modeled and trained to convert visual data into actionable and describable text content, enabling dynamic queries on image-derived contexts. Users can upload different Images of PDFs, text messages, etc, and ask questions directly with our chatbot.",
         link: "https://github.com/hdjekso/imageGPT",
         backgroundImageStyles: `${backgroundImageStyles[0]}`,
     },
@@ -47,15 +51,15 @@ const itemLabels = [
     },
 
     {
-        title: "<Finance Automation/>",
-        descrip: "A Python script that automates the process of organizing financial data from multiple sources to be represented in one easy to read spreadsheet.",
-        link: "https://github.com/winzamark123/FinanceAutomation",
+        title: "<NutriHealth.AI/>",
+        descrip: "AI for Food System - Hackathon Winner: Application Market Ready. We proposed a solution to autonomously manage the nutritional diets of individuals, effectively minimizing the need for continual user input — a distinct step forward in promoting proactive health management. To visually encapsulate our concept and showcase its feasibility, we crafted a compelling UI/UX prototype using tools like Figma and Balsamiq.",
+        link: "",
         backgroundImageStyles: `${backgroundImageStyles[2]}`
     },
     {
-        title: "Temp",
-        descrip: "temp descrip",
-        link: "",
+        title: "<Finance Automation/>",
+        descrip: "A Python-based automation solution designed to consolidate financial data from diverse sources, facilitating its representation in a streamlined and comprehensible spreadsheet format.",
+        link: "https://github.com/winzamark123/FinanceAutomation",
         backgroundImageStyles: `${backgroundImageStyles[3]}`
     }
 

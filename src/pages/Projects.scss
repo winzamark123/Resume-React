@@ -11,6 +11,7 @@ $pop-color: #E2684A;
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 
 
@@ -192,6 +193,7 @@ $pop-color: #E2684A;
                     &_even{
                         width: 60%;
                         background-color: $bg-color;
+                        // background-image: url("../assets/ProjectsPage-Assets/blurredBG.jpeg");
                     }
 
                     
@@ -205,18 +207,20 @@ $pop-color: #E2684A;
 
 
                     h1{
-                        font-family: 'M PLUS 1 Code', monospace;
+                        // font-family: 'M PLUS 1 Code', monospace;
+                        // font-family: 'Titillium Web', sans-serif;
+                        font-family: 'Fira Sans', sans-serif;
                         color: $pop-color;
                         font-size: 60px;
                     }
                     
                     p{
                         // border: 1px white solid;
-                        margin: 10px 15px 10px 15px;
+                        margin: 0px 15px 10px 15px;
                         font-size: 20px;
                         // font-family: 'M PLUS 1 Code', monospace;
-                        font-family: 'Titillium Web', sans-serif;
-
+                        // font-family: 'Titillium Web', sans-serif;
+                        font-family: 'Fira Sans', sans-serif;
                         text-align: start;
 
                         line-height: 30px;
