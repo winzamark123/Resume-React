@@ -151,12 +151,14 @@ const Projects = ({ cursorRef }) => {
             setFilterSetting("none");
         } else {
             setSelectedCarousel({ ...item, index });
-            setFilterSetting('blur(2px) brightness(80%) contrast(150%)');
+            setFilterSetting('blur(3px) contrast(130%)');
         }
     }
 
     return (
-        <div className="projects" style={{ "--filterSettings": filterSetting }}>
+        <div className="projects" style={{ "--filterSettings": filterSetting }}
+            onMouseEnter={handleMouseLeave}
+        >
             <div className="projects_container">
                 <div className="projects_container_carousel">
                     <div className="projects_container_carousel_floor" id="projectsPage_floor1">
