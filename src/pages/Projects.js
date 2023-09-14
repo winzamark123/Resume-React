@@ -47,7 +47,7 @@ const itemLabels = [
     {
         title: "<TASA Website/>",
         descrip: "A website for the Thai American Student Association at UCSD, built with Plain HTML and CSS deployed using Firebase. The Website's purpose is to showcase the Thai American Student Association which exists in UC-Davis.",
-        link: "tasa-ucdavis.com",
+        link: "https://tasa-ucdavis.com",
         linkType: "Website: ",
         tools: "HTML | CSS | Javascript | Firebase",
         backgroundImageStyles: `${backgroundImageStyles[1]}`,
@@ -55,8 +55,8 @@ const itemLabels = [
 
     {
         title: "<NutriHealth.AI/>",
-        descrip: "AI for Food System - Hackathon Winner: Application Market Ready. We proposed a solution to autonomously manage the nutritional diets of individuals, effectively minimizing the need for continual user input — a distinct step forward in promoting proactive health management. To visually encapsulate our concept and showcase its feasibility, we crafted a compelling UI/UX prototype using tools like Figma and Balsamiq.",
-        link: "",
+        descrip: "AI for Food System - Hackathon Winner: Application Market Ready. We proposed a solution to autonomously manage the nutritional diets of individuals, effectively minimizing the need for continual user input. To visually encapsulate our concept and showcase its feasibility, we crafted a compelling UI/UX prototype using tools like Figma and Balsamiq.",
+        link: "https://tinyurl.com/NutriHealthAI123",
         linkType: "Figma: ",
         tools: "Figma | Balsamiq ",
         backgroundImageStyles: `${backgroundImageStyles[2]}`
@@ -100,24 +100,27 @@ const Projects = ({ cursorRef }) => {
                     >
                         <h1>{title}</h1>
                         <p>{descrip}</p>
-                        <span className="projects_items_show_item_text_tools">
-                            <span>
-                                {"Developer Tools: "}
-                            </span>
-                            {`${tools}`}
-                        </span>
-                        <a className="projects_items_show_item_text_link"
-                            id="projects_items_show_item_text_link"
-                            href={link}
+                        <div className="projects_items_show_item_text_creds"
+                            id="projects_items_show_item_text_credsID"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <span>
-                                {linkType}
+                            <span className="projects_items_show_item_text_creds_tools">
+                                <span>
+                                    {"Developer Tools: "}
+                                </span>
+                                {`${tools}`}
                             </span>
-
-                            {link}
-                        </a>
+                            <div className="projects_items_show_item_text_creds_link"
+                            >
+                                <span>
+                                    {linkType}
+                                </span>
+                                <a href={link}>
+                                    {link}
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -129,24 +132,27 @@ const Projects = ({ cursorRef }) => {
                     >
                         <h1>{title}</h1>
                         <p>{descrip}</p>
-                        <span className="projects_items_show_item_text_tools">
-                            <span>
-                                {"Developer Tools: "}
-                            </span>
-                            {`${tools}`}
-                        </span>
-                        <a className="projects_items_show_item_text_link"
-                            id="projects_items_show_item_text_link"
-                            href={link}
+                        <div className="projects_items_show_item_text_creds"
+                            id="projects_items_show_item_text_credsID"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <span>
-                                {linkType}
+                            <span className="projects_items_show_item_text_creds_tools">
+                                <span>
+                                    {"Developer Tools: "}
+                                </span>
+                                {`${tools}`}
                             </span>
-
-                            {link}
-                        </a>
+                            <div className="projects_items_show_item_text_creds_link"
+                            >
+                                <span>
+                                    {linkType}
+                                </span>
+                                <a href={link}>
+                                    {link}
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -175,7 +181,13 @@ const Projects = ({ cursorRef }) => {
                     cursorRef.current.style.border = "3px solid #E2684A";
                     break;
 
-                case "projects_items_show_item_text_link":
+                case "projects_items_show_backContainer_backBTN":
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #E2684A";
+                    break;
+
+                case "projects_items_show_item_text_credsID":
                     cursorRef.current.style.width = "100px";
                     cursorRef.current.style.height = "100px";
                     cursorRef.current.style.border = "3px solid #E2684A";
@@ -265,7 +277,7 @@ const Projects = ({ cursorRef }) => {
                 <h1>Projects</h1>
             </div>
 
-            <div className="projects_back"
+            {selectedCarousel ? "" : <div className="projects_back"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
@@ -273,7 +285,7 @@ const Projects = ({ cursorRef }) => {
                     <FontAwesomeIcon icon={faArrowLeft} size="4x" id="projects_back_BTN" />
                 </a>
 
-            </div>
+            </div>}
 
             <div className={`projects_items_${selectedCarousel ? "show" : ""}`}>
                 {selectedCarousel && carouselItems[selectedCarousel.index]}
@@ -282,6 +294,7 @@ const Projects = ({ cursorRef }) => {
                         <div className="projects_items_show_backContainer">
                             <btn
                                 className="projects_items_show_backContainer_backBTN"
+                                id="projects_items_show_backContainer_backBTN"
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                                 onClick={() => handleProjectsToggle(itemLabels[selectedCarousel.index], selectedCarousel.index)}

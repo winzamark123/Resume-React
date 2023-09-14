@@ -18,7 +18,6 @@ $pop-color: #E2684A;
 
 
 .projects::before{
-    transition: filter 0.7s ease;
     content: "";
     position: absolute;
     top: 0px;
@@ -28,7 +27,8 @@ $pop-color: #E2684A;
     background-image: url("../assets/ProjectsPage-Assets/ShelfBG.png");
     background-repeat: no-repeat;
     background-size: cover;
-
+    
+    transition: filter 0.7s ease;
     filter: var(--filterSettings);
     
 
@@ -149,7 +149,7 @@ $pop-color: #E2684A;
                     margin-top: 10px;
                     cursor: none;
     
-                    color: $primary-color;
+                    color: $pop-color;
                 }
             }
 
@@ -203,8 +203,11 @@ $pop-color: #E2684A;
                 &_text{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+
+                    // align-items: center;
                     justify-content: center;
+
+
 
                     position: relative;
                     top: 50%;
@@ -229,7 +232,7 @@ $pop-color: #E2684A;
                     p{
                         // border: 1px blue solid;
 
-                        margin: 0px 40px 40px 40px;
+                        margin: 0px 40px 10px 40px;
                         font-size: 20px;
                         // font-family: 'M PLUS 1 Code', monospace;
                         font-family: 'Titillium Web', sans-serif;
@@ -241,29 +244,45 @@ $pop-color: #E2684A;
                         
                     }
 
-                    &_tools{
-                        font-family: 'Titillium Web', sans-serif;
-                        color: whitesmoke;
-                        font-style: italic;
+                    &_creds{
+                        display: flex;
+                        flex-direction: column;
+                        text-align: start;
+                        margin: 0px 40px 10px 40px;
+                        // justify-content: start;
 
-                        span{
-                            color: $primary-color;
-                            font-style: normal;
+                        &_tools{
+                            // border: 1px solid yellow;
+                            font-family: 'Titillium Web', sans-serif;
+                            color: whitesmoke;
+                            font-style: italic;
+    
+                            span{
+                                color: $primary-color;
+                                font-style: normal;
+                            }
+    
                         }
-
-                    }
-
-                    &_link{
-                        font-family: 'Titillium Web', sans-serif;
-                        color: $light-undertone;
-                        font-style: italic;
-                        cursor: none;
-
-                        span{
-                            color: $primary-color;
-                            font-style: normal;
+    
+                        &_link{
+                            // border: 1px solid yellow;
+                            font-family: 'Titillium Web', sans-serif;
+                            color: $light-undertone;
+                            font-style: italic;
+                            cursor: none;
+    
+                            span{
+                                color: $primary-color;
+                                font-style: normal;
+                            }
+    
+                            a{
+                                color: $light-undertone;
+                                cursor: none;
+                            }
                         }
                     }
+                    
                 }
 
 
@@ -279,10 +298,14 @@ $pop-color: #E2684A;
     &_back{
         position: absolute;
         cursor: none;
+        animation: appear 0.7s ease-in-out;
+
+       
 
         top: 5vh;
         left: 2vw;
         &_icon{
+            
             cursor: none;
             color: $bg-color;
         }
@@ -310,7 +333,13 @@ $pop-color: #E2684A;
 }
 
 
-
+@keyframes appear{
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
 
 
 @keyframes floating {
