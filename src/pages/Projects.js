@@ -3,7 +3,6 @@ import tasaBG from "../assets/ProjectsPage-Assets/TASA-bg.png"
 import imageGPTBG from "../assets/ProjectsPage-Assets/NewImageGPT-bg.png"
 import financeAutoBG from "../assets/ProjectsPage-Assets/FinanceAuto-bg.png"
 import nutriHealthBG from "../assets/ProjectsPage-Assets/NutriHealth.png"
-import blurBG from "../assets/ProjectsPage-Assets/blurredBG.jpeg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -40,6 +39,7 @@ const itemLabels = [
         title: "<ImageGPT/>",
         descrip: "ImageGPT: An adaptation of GPT-3 framework, modeled and trained to convert visual data into actionable and describable text content, enabling dynamic queries on image-derived contexts. Users can upload different Images of PDFs, text messages, etc, and ask questions directly with our chatbot.",
         link: "https://github.com/hdjekso/imageGPT",
+        tools: "OpenAI GPT 3.5 API | React.js | Tesseract | MySQL",
         backgroundImageStyles: `${backgroundImageStyles[0]}`,
     },
 
@@ -47,6 +47,7 @@ const itemLabels = [
         title: "<TASA Website/>",
         descrip: "A website for the Thai American Student Association at UCSD, built with Plain HTML and CSS deployed using Firebase. The Website's purpose is to showcase the Thai American Student Association which exists in UC-Davis.",
         link: "tasa-ucdavis.com",
+        tools: "HTML | CSS | Javascript | Firebase",
         backgroundImageStyles: `${backgroundImageStyles[1]}`,
     },
 
@@ -54,12 +55,14 @@ const itemLabels = [
         title: "<NutriHealth.AI/>",
         descrip: "AI for Food System - Hackathon Winner: Application Market Ready. We proposed a solution to autonomously manage the nutritional diets of individuals, effectively minimizing the need for continual user input — a distinct step forward in promoting proactive health management. To visually encapsulate our concept and showcase its feasibility, we crafted a compelling UI/UX prototype using tools like Figma and Balsamiq.",
         link: "",
+        tools: "Figma | Balsamiq ",
         backgroundImageStyles: `${backgroundImageStyles[2]}`
     },
     {
         title: "<Finance Automation/>",
         descrip: "A Python-based automation solution designed to consolidate financial data from diverse sources, facilitating its representation in a streamlined and comprehensible spreadsheet format.",
         link: "https://github.com/winzamark123/FinanceAutomation",
+        tools: "Python3 | gspread | Panda | Numpy",
         backgroundImageStyles: `${backgroundImageStyles[3]}`
     }
 
@@ -69,7 +72,7 @@ const itemLabels = [
 const CarouselItem = ({ order, projectStyles, style }) => {
 
     const isEven = Number(order) % 2 === 0;
-    const { title, descrip } = projectStyles;
+    const { title, descrip, link, tools } = projectStyles;
 
     return (
         <div className="projects_items_show_item" data-order={order} style={style}>
@@ -81,6 +84,8 @@ const CarouselItem = ({ order, projectStyles, style }) => {
                 >
                     <h1>{title}</h1>
                     <p>{descrip}</p>
+                    <span className="projects_items_show_item_text_tools">{`Developer Tools: ${tools}`}</span>
+                    <span className="projects_items_show_item_text_link">{link}</span>
                 </div>
 
             </div>
@@ -92,6 +97,8 @@ const CarouselItem = ({ order, projectStyles, style }) => {
                 >
                     <h1>{title}</h1>
                     <p>{descrip}</p>
+                    <span className="projects_items_show_item_text_tools">{`Developer Tools: ${tools}`}</span>
+                    <span className="projects_items_show_item_text_link">{link}</span>
                 </div>
 
             </div>
@@ -155,7 +162,7 @@ const Projects = ({ cursorRef }) => {
             setFilterSetting("none");
         } else {
             setSelectedCarousel({ ...item, index });
-            setFilterSetting('blur(3px) contrast(130%)');
+            setFilterSetting('blur(5px) contrast(130%)');
         }
     }
 
