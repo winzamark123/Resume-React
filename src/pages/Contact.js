@@ -1,6 +1,6 @@
 import "./Contact.scss"
 
-const Contact = () => {
+const Contact = ({ cursorRef }) => {
 
     // Calculate milliseconds in a year
     const minute = 1000 * 60;
@@ -18,8 +18,9 @@ const Contact = () => {
             <div className="form_container">
                 <div className="form_container_left">
                     <div className="form_container_left_text">
-                        <h1>About Me.</h1>
-                        <span className="form_container_left_text_descrip">Aspiring Software Engineer</span>
+                        <h1>ABOUT ME</h1>
+
+                        <span className = "form_container_left_text_title" >Aspiring Software Engineer</span>
                         <div className="form_container_left_text_p">
                             <p>I'm Teeranade Cheng (Win), a {years}-year-old Thai Student
                                 studying <span style={{ color: "green" }}> Computer Science @UCDavis.</span> </p>

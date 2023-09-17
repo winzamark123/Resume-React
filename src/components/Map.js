@@ -3,7 +3,7 @@ import "./Map.scss"
 const NavLinks = {
     "Resume": "/resume",
     "Projects": "/projects",
-    "Contact": "google.com",
+    "Contact": "/contact",
 }
 
 const Map = ({ cursorRef }) => {

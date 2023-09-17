@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+
+
 //Brown Palette
 $bg-color: #09111e;
 $light-undertone: #B9A89B;
@@ -12,8 +16,13 @@ $pop-color: #E2684A;
     justify-content: center;
     align-items: center;
 
-    background-color: $bg-color;
-    
+    background-image: url("../assets/ContactsPage-Assets/ContactsGridBG.jpg");
+    background-size: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    cursor: none;
+
 }
 
 .form_container{
@@ -22,43 +31,49 @@ $pop-color: #E2684A;
     
     border: solid 1px white;
     box-shadow: 1px 1px 10px 1px $light-undertone;
-    
-    height: 500px;
-    width: 900px;
+
+    height: 70%;
+    width: 70%;
     
     margin: 100px;
+
     
     &_left{
         width: 50%;
         height: 100%;
-        background-color: $light-undertone;
+        background-color: transparent;
 
         
 
         &_text{
             position: relative;
-            border: solid 1px red;
-            font-family: 'Times New Roman', Times, serif;
-            top: 45%;
-            transform: translateY(-50%);
+            color: whitesmoke;
 
+            display: flex;
+            flex-direction: column;
 
-            width: 80%;
-            margin-left: 50px;
+            // align-items: center;
+            // justify-content: center;
+            // text-align: center;
 
-            &_descrip{
-                position: absolute;
+            font-family: 'Hubballi', sans-serif;
+
+            h1{
+                // font-family: 'Hubballi', sans-serif;
+                text-align: center;
+                border: 1px solid white;
+                font-weight: 400;
+                font-size: 48px;
+
+            }
+
+            &_title{
+                border: 1px solid yellow;
                 font-weight: 600;
-                margin-top: -20px;
-            } 
-            &_p{
-                margin-top: 50px;
+                font-style: italic;
+                color: $pop-color;
 
-                p{
-                    font-weight: 500;
-                    margin-top: 10px;
-                    line-height: 1.5;
-                }
+                font-size: 30px;
             }
 
            
@@ -69,6 +84,6 @@ $pop-color: #E2684A;
     &_right{
         width: 50%;
         height: 100%;
-        background-color: #14253f;
+        background-color: $pop-color;
     }
 }

@@ -29,8 +29,9 @@ const backgroundImageStyles = [
     },
     {
         backgroundImage: `url(${financeAutoBG})`,
-        backgroundSize: "170%",
-        backgroundPosition: "5% 50%"
+        backgroundSize: "160%",
+        backgroundPosition: "5% 50%",
+        backgroundRepeat: "no-repeat"
     }
 ];
 
@@ -63,7 +64,7 @@ const itemLabels = [
     },
     {
         title: "<Finance Automation/>",
-        descrip: "A Python-based automation solution designed to consolidate financial data from diverse sources, facilitating its representation in a streamlined and comprehensible spreadsheet format.",
+        descrip: "A Python-based automation solution designed to consolidate financial data from diverse sources, facilitating its representation in a streamlined and comprehensible spreadsheet format. The program is set on a private server which runs monthly, updating the users about their current spending habits and choices.",
         link: "https://github.com/winzamark123/FinanceAutomation",
         linkType: "Github: ",
         tools: "Python3 | gspread | Panda | Numpy",
