@@ -35,13 +35,93 @@ $pop-color: #E2684A;
     }
 
     &_bottom{
-        border: 1px solid yellow;
         width: 90%;
         height: 100px;
+        // border: 1px solid yellow;
 
-        margin: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        
         margin-left: 70px;
         margin-right: 70px;
+        
+        &_absolute{
+            
+            height: 150px;
+            width: 50px;
+            //Vertical Line
+            border-left: 6px solid $primary-color;
+
+            position: absolute;
+            left: 70px;
+            bottom: 40px;
+
+            &_logoContainer{
+                // border: 1px solid white;
+
+                display: flex;
+                flex-direction: column;
+
+                justify-content: start;
+                align-items: start;
+
+
+                &_logo{
+
+
+                    &_list{
+                        list-style: none;
+
+                        display: flex;
+                        flex-direction: column;
+
+                        align-items: start;
+                        justify-content: start;
+                        // transform: translateX(-10px);
+
+                        &_item{
+                            transform: translate(-25px, -3px);
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        &_circles{
+            // border: 1px solid white;
+            width: 65px;
+            height: 30px;
+
+            margin-right: 10px;
+
+            display: flex;
+            justify-content: space-between;
+
+            &_circle1{
+                width: 25px;
+                height: 25px;
+
+                border-radius: 50%;
+                background-color: $primary-color;
+            }
+
+            &_circle2{
+                width: 25px;
+                height: 25px;
+
+                border-radius: 50%;
+                background-color: $primary-color;
+            }
+
+
+        }
+        
+        
     }
 }
 

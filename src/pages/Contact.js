@@ -1,4 +1,6 @@
 import "./Contact.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Contact = ({ cursorRef }) => {
 
@@ -71,6 +73,34 @@ const Contact = ({ cursorRef }) => {
             </div>
 
             <div className="contact_container_bottom">
+                <div className="contact_container_bottom_absolute">
+                    <div className="contact_container_bottom_absolute_logoContainer">
+                        <div className="contact_container_bottom_absolute_logoContainer_logo">
+                            <ul className="contact_container_bottom_absolute_logoContainer_logo_list">
+                                <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
+                                    <a href="https://www.instagram.com/winzamark12/">
+                                        <FontAwesomeIcon icon={faInstagram} size="2x" color = "whitesmoke"/>
+                                    </a>
+                                </li>
+                                <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
+                                    <a href="https://github.com/winzamark123" >
+                                        <FontAwesomeIcon icon={faGithub} size="2x"  color = "whitesmoke"/>
+                                    </a>
+                                </li>
+                                <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
+                                    <a href="https://www.linkedin.com/in/teeranade-cheng-68ab28253/">
+                                        <FontAwesomeIcon icon={faLinkedin} size="2x"  color = "whitesmoke"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="contact_container_bottom_circles">
+                    <div className="contact_container_bottom_circles_circle1"></div>
+                    <div className="contact_container_bottom_circles_circle2"></div>
+                </div>
 
             </div>
         </div>
