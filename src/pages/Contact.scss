@@ -25,13 +25,26 @@ $pop-color: #E2684A;
     cursor: none;
 
     &_top{
-        border: 1px solid white;
+        // border: 1px solid white;
         width: 90%;
-        height: 100px;
+        height: 50px;
 
         margin: 40px;
         margin-left: 70px;
         margin-right: 70px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        &_title{
+            border-top: 6px solid $primary-color;
+            display: flex;
+
+            h2{
+                color: whitesmoke;
+                font-family: 'Hubballi', sans-serif;
+            }
+        }
     }
 
     &_bottom{
@@ -165,7 +178,7 @@ $pop-color: #E2684A;
                 text-align: center;
                 // border: 1px solid white;
                 font-weight: 400;
-                font-size: 48px;
+                font-size: 40px;
 
             }
 
@@ -201,6 +214,23 @@ $pop-color: #E2684A;
     &_right{
         width: 50%;
         height: 100%;
-        background-color: $pop-color;
+        background-color: rgba(226, 104, 74, 0.71);
+        stroke-width: 1px;
+        stroke: rgba(207, 207, 207, 0.00);
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+
+        &_title{
+            h1{
+                font-family: 'Hubballi', sans-serif;
+                font-weight: 400;
+                font-size: 40px;
+                color: whitesmoke;
+            }
+        }
+
     }
 }

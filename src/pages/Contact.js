@@ -24,6 +24,9 @@ const Contact = ({ cursorRef }) => {
     return (
         <div className="contact_container">
             <div className="contact_container_top">
+                <div className="contact_container_top_title">
+                    <h2>Contacts Page</h2>
+                </div>
 
             </div>
             <div className="form_container">
@@ -65,6 +68,13 @@ const Contact = ({ cursorRef }) => {
                 </div>
 
                 <div className="form_container_right">
+                    <div className="form_container_right_title">
+                        <h1>CONTACT FORM</h1>
+                    </div>
+
+                    <div className="form_container_right_form">
+                        
+                    </div>
 
 
                 </div>
@@ -79,17 +89,17 @@ const Contact = ({ cursorRef }) => {
                             <ul className="contact_container_bottom_absolute_logoContainer_logo_list">
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://www.instagram.com/winzamark12/">
-                                        <FontAwesomeIcon icon={faInstagram} size="2x" color = "whitesmoke"/>
+                                        <FontAwesomeIcon icon={faInstagram} size="2x" color="whitesmoke" />
                                     </a>
                                 </li>
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://github.com/winzamark123" >
-                                        <FontAwesomeIcon icon={faGithub} size="2x"  color = "whitesmoke"/>
+                                        <FontAwesomeIcon icon={faGithub} size="2x" color="whitesmoke" />
                                     </a>
                                 </li>
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://www.linkedin.com/in/teeranade-cheng-68ab28253/">
-                                        <FontAwesomeIcon icon={faLinkedin} size="2x"  color = "whitesmoke"/>
+                                        <FontAwesomeIcon icon={faLinkedin} size="2x" color="whitesmoke" />
                                     </a>
                                 </li>
                             </ul>
