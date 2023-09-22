@@ -20,6 +20,38 @@ const Contact = ({ cursorRef }) => {
         "email": "winzamark12@gmail.com"
     }
 
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        console.log("Form Submit Clicked");
+
+        const formData = new FormData(event.target);
+
+        try {
+            const response = await fetch("https://formsubmit.co/winzamark12@gmail.com", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                console.log('Form successfully submitted');
+
+                // Clear the form if you want to
+                event.target.reset();
+
+                // Display a success message
+                alert('Thank you! Your form has been successfully submitted.');
+            } else {
+                console.error('Form submission failed');
+                // Show a user-friendly error message
+                alert('There was an error submitting your form. Please try again later.');
+            }
+        } catch (error) {
+            console.error("There was an error in submitting form", error);
+            // Handle network errors or other issues
+            alert('There was an error submitting your form. Please check your network connection and try again.');
+        }
+    }
+
 
     return (
         <div className="contact_container">
@@ -71,9 +103,28 @@ const Contact = ({ cursorRef }) => {
                     <div className="form_container_right_title">
                         <h1>CONTACT FORM</h1>
                     </div>
+                    <div className="form_container_right_divForm">
+                        <form className="form_container_right_divForm_form" onSubmit={handleFormSubmit} >
+                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_subject" value="Wincheng.fyi Contact Email!" />
+                            <input type="hidden" name="_next" value="http://localhost:3000/contact" />
 
-                    <div className="form_container_right_form">
-                        
+                            <div className="form_container_divForm_form_email">
+                                <input type="email" name="email" />
+                            </div>
+
+                            <div className="form_container_divForm_form_linkedIN">
+                                <input type="text" name="LinkedIN" placeholder="LinkedIN" />
+
+                            </div>
+
+                            <div className="form_container_divForm_form_message">
+                                <input type="text" name="message" placeholder="Write Your Messages here!" required />
+
+                            </div>
+                            <button type="submit"> Send </button>
+
+                        </form>
                     </div>
 
 

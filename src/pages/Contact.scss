@@ -159,7 +159,8 @@ $pop-color: #E2684A;
         
 
         &_text{
-
+            
+            // border: 1px solid green;
             position: relative;
             color: whitesmoke;
 
@@ -170,6 +171,7 @@ $pop-color: #E2684A;
             // justify-content: center;
             // text-align: center;
             margin-left: 30px;
+            margin-right: 30px;
 
             font-family: 'Hubballi', sans-serif;
 
@@ -214,14 +216,18 @@ $pop-color: #E2684A;
     &_right{
         width: 50%;
         height: 100%;
+
         background-color: rgba(226, 104, 74, 0.71);
         stroke-width: 1px;
         stroke: rgba(207, 207, 207, 0.00);
         backdrop-filter: blur(4px);
 
         display: flex;
-        text-align: center;
         flex-direction: column;
+        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
         &_title{
             h1{
@@ -230,6 +236,31 @@ $pop-color: #E2684A;
                 font-size: 40px;
                 color: whitesmoke;
             }
+        }
+
+        &_divForm{
+            border: 1px wheat solid;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            height: 100%;
+            width: 80%;
+
+            &_form{
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+            }
+            
+
+
         }
 
     }
