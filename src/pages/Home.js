@@ -11,8 +11,8 @@ const Home = ({ cursorRef }) => {
             const targetID = event.target.id;
             switch (targetID) {
                 default:
-                    cursorRef.current.style.width = "100px";
-                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.width = "60px";
+                    cursorRef.current.style.height = "60px";
                     cursorRef.current.style.border = "3px solid #16a085";
             }
 

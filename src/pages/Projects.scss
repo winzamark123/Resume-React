@@ -277,8 +277,13 @@ $pop-color: #E2684A;
                             }
     
                             a{
+                                transition: 0.3s;
                                 color: $light-undertone;
                                 cursor: none;
+                            }
+
+                            a:hover{
+                                color: $primary-color;
                             }
                         }
                     }
@@ -305,9 +310,13 @@ $pop-color: #E2684A;
         top: 5vh;
         left: 2vw;
         &_icon{
-            
+            transition: 0.3s;
             cursor: none;
             color: $bg-color;
+        }
+
+        &_icon:hover{
+            color: $pop-color;
         }
     }
 }

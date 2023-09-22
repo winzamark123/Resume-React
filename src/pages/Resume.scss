@@ -86,7 +86,16 @@ $pop-color: #E2684A;
 
         &_icon{
             color: $bg-color;
+            transition: 0.3s;
+
+            cursor: none;
         }
+
+        &_icon:hover{
+            color: $primary-color;
+        }
+
+
     }
 
     &_popup{

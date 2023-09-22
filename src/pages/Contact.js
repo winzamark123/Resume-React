@@ -89,12 +89,11 @@ const Contact = ({ cursorRef }) => {
         <div className="contact_container">
 
             <div className="contact_back"
-                id="contact_backBTN"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
                 <a className="resume_back_icon" href="/">
-                    <FontAwesomeIcon icon={faArrowLeft} size="4x" />
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" id="contact_backBTN" />
                 </a>
 
             </div>

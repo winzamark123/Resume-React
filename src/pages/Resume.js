@@ -73,7 +73,7 @@ const Resume = ({ cursorRef }) => {
                 onMouseLeave={handleMouseLeave}
             >
                 <a className="resume_back_icon" href="/">
-                    <FontAwesomeIcon icon={faArrowLeft} size="4x" beat />
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" />
                 </a>
 
             </div>
