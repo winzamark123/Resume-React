@@ -56,23 +56,17 @@ const Home = ({ cursorRef }) => {
                         <ul className="socials_container_list">
                             <li className="socials_container_list_item">
                                 <a href="https://www.instagram.com/winzamark12/">
-                                    <button class="button-logo">
-                                        <FontAwesomeIcon icon={faInstagram} size="4x" />
-                                    </button>
+                                    <FontAwesomeIcon icon={faInstagram} size="4x" />
                                 </a>
                             </li>
                             <li className="socials_container_list_item">
                                 <a href="https://github.com/winzamark123">
-                                    <button class="button-logo">
-                                        <FontAwesomeIcon icon={faGithub} size="4x" />
-                                    </button>
+                                    <FontAwesomeIcon icon={faGithub} size="4x" />
                                 </a>
                             </li>
                             <li className="socials_container_list_item">
                                 <a href="https://www.linkedin.com/in/teeranade-cheng-68ab28253/">
-                                    <button class="button-logo">
-                                        <FontAwesomeIcon icon={faLinkedin} size="4x" />
-                                    </button>
+                                    <FontAwesomeIcon icon={faLinkedin} size="4x" />
                                 </a>
                             </li>
                         </ul>

@@ -11,6 +11,17 @@ $primary-color: #16a085;
 $secondary-color: #759D85; 
 $pop-color: #E2684A;
 
+.contact_back{
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    
+    a{
+        color: whitesmoke;
+        cursor: none;
+    }
+}
+
 .contact_container{
     display: flex;
     flex-direction: column;
@@ -97,6 +108,10 @@ $pop-color: #E2684A;
                         &_item{
                             transform: translate(-25px, -3px);
                             margin-bottom: 10px;
+
+                            a{
+                                cursor: none;
+                            }
                         }
                     }
                 }
@@ -287,6 +302,10 @@ $pop-color: #E2684A;
                     }
 
                     input:hover{
+                        border-bottom: 1px solid $primary-color;
+                    }
+
+                    input:not(:placeholder-shown){
                         border-bottom: 1px solid $primary-color;
                     }
 

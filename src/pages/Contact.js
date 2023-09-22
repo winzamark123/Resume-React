@@ -1,6 +1,7 @@
 import "./Contact.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = ({ cursorRef }) => {
 
@@ -56,10 +57,15 @@ const Contact = ({ cursorRef }) => {
         if (cursorRef.current) {
             const targetID = event.target.id;
             switch (targetID) {
+                case "contact_backBTN":
+                    cursorRef.current.style.width = "60px";
+                    cursorRef.current.style.height = "60px";
+                    cursorRef.current.style.border = "3px solid #E2684A";
+                    break;
 
                 default:
-                    cursorRef.current.style.width = "100px";
-                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.width = "60px";
+                    cursorRef.current.style.height = "60px";
                     cursorRef.current.style.border = "3px solid #16a085";
             }
 
@@ -81,6 +87,17 @@ const Contact = ({ cursorRef }) => {
 
     return (
         <div className="contact_container">
+
+            <div className="contact_back"
+                id="contact_backBTN"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <a className="resume_back_icon" href="/">
+                    <FontAwesomeIcon icon={faArrowLeft} size="4x" />
+                </a>
+
+            </div>
             <div className="contact_container_top">
                 <div className="contact_container_top_title">
                     <h2>Contacts Page</h2>
@@ -131,12 +148,12 @@ const Contact = ({ cursorRef }) => {
                             </div>
 
                             <div className="form_container_right_divForm_form_group">
-                                <input type="text" name="Socials" placeholder=" "/>
+                                <input type="text" name="Socials" placeholder=" " />
                                 <label>LinkedIN / Instagram / Phone Number</label>
                             </div>
 
                             <div className="form_container_right_divForm_form_group">
-                                <input type="text" name="message"  required placeholder=" "/>
+                                <input type="text" name="message" required placeholder=" " />
                                 <label>Message</label>
 
                             </div>
@@ -155,7 +172,10 @@ const Contact = ({ cursorRef }) => {
                 <div className="contact_container_bottom_absolute">
                     <div className="contact_container_bottom_absolute_logoContainer">
                         <div className="contact_container_bottom_absolute_logoContainer_logo">
-                            <ul className="contact_container_bottom_absolute_logoContainer_logo_list">
+                            <ul className="contact_container_bottom_absolute_logoContainer_logo_list"
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                            >
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://www.instagram.com/winzamark12/">
                                         <FontAwesomeIcon icon={faInstagram} size="2x" color="whitesmoke" />
