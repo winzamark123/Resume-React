@@ -19,7 +19,14 @@ $pop-color: #E2684A;
     a{
         color: whitesmoke;
         cursor: none;
+        transition: 0.3s;
     }
+
+    a:hover{
+        color: $pop-color;
+    }
+
+    
 }
 
 .contact_container{
@@ -110,7 +117,13 @@ $pop-color: #E2684A;
                             margin-bottom: 10px;
 
                             a{
+                                color: whitesmoke;
+                                transition: 0.3s;
                                 cursor: none;
+                            }
+
+                            a:hover{
+                                color: $primary-color;
                             }
                         }
                     }
@@ -335,7 +348,7 @@ $pop-color: #E2684A;
                 button{
                     font-family: "Huballi", sans-serif;
 
-                    background-color: $pop-color;
+                    background-color: rgba(226, 104, 74, 0.71);
                     outline: none;
 
                     border-radius: 30px;
@@ -346,6 +359,14 @@ $pop-color: #E2684A;
                     font-size: 1rem;
 
                     color: whitesmoke;
+
+                    cursor: none;
+                    transition: 0.3s;
+                }
+
+                button:hover{
+                    background-color: $pop-color;
+                    
                 }
 
             }

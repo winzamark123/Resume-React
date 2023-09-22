@@ -6,6 +6,31 @@ import Game from './Game';
 
 const Home = ({ cursorRef }) => {
 
+    const handleMouseEnter = (event) => {
+        if (cursorRef.current) {
+            const targetID = event.target.id;
+            switch (targetID) {
+                default:
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #16a085";
+            }
+
+            // cursorRef.current.style.width = "100px";
+            // cursorRef.current.style.height = "100px";
+            // cursorRef.current.style.border = "3px solid #16a085";
+        }
+    }
+
+
+    const handleMouseLeave = () => {
+        if (cursorRef.current) {
+            cursorRef.current.style.width = "30px";
+            cursorRef.current.style.height = "30px";
+            cursorRef.current.style.border = "2px solid white";
+        }
+    }
+
     const listItems = ["Software Engineer",
         "Full-Stack Developer",
         "Anime Addict",
@@ -53,7 +78,10 @@ const Home = ({ cursorRef }) => {
                     </div>
 
                     <div className="socials_container">
-                        <ul className="socials_container_list">
+                        <ul className="socials_container_list"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
                             <li className="socials_container_list_item">
                                 <a href="https://www.instagram.com/winzamark12/">
                                     <FontAwesomeIcon icon={faInstagram} size="4x" />

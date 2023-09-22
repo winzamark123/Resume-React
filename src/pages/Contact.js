@@ -178,17 +178,17 @@ const Contact = ({ cursorRef }) => {
                             >
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://www.instagram.com/winzamark12/">
-                                        <FontAwesomeIcon icon={faInstagram} size="2x" color="whitesmoke" />
+                                        <FontAwesomeIcon icon={faInstagram} size="2x" />
                                     </a>
                                 </li>
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://github.com/winzamark123" >
-                                        <FontAwesomeIcon icon={faGithub} size="2x" color="whitesmoke" />
+                                        <FontAwesomeIcon icon={faGithub} size="2x" />
                                     </a>
                                 </li>
                                 <li className="contact_container_bottom_absolute_logoContainer_logo_list_item">
                                     <a href="https://www.linkedin.com/in/teeranade-cheng-68ab28253/">
-                                        <FontAwesomeIcon icon={faLinkedin} size="2x" color="whitesmoke" />
+                                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
                                     </a>
                                 </li>
                             </ul>

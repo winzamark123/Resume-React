@@ -171,6 +171,15 @@ $pop-color: #E2684A;
             
             &_item{
                 padding: 5px;
+
+                a{
+                    color: whitesmoke;
+                    cursor: none;
+                }
+
+                a:hover{
+                    color: $primary-color;
+                }
             }
 
             // border: solid 1px red;
