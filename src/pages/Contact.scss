@@ -142,7 +142,7 @@ $pop-color: #E2684A;
     display: flex;
     align-items: center;
     
-    border: solid 1px white;
+    // border: solid 1px white;
     // box-shadow: 1px 1px 10px 1px $light-undertone;
 
     height: 70%;
@@ -172,6 +172,7 @@ $pop-color: #E2684A;
             // text-align: center;
             margin-left: 30px;
             margin-right: 30px;
+            margin-top: 50px;
 
             font-family: 'Hubballi', sans-serif;
 
@@ -190,22 +191,11 @@ $pop-color: #E2684A;
                 font-style: italic;
                 color: $pop-color;
 
-                font-size: 30px;
+                font-size: 25px;
             }
 
             &_p{
                 font-size: 20px;
-            }
-
-            &_info{
-                display: flex;
-                flex-direction: column;
-
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                
-                line-height: 3px;
             }
 
            
@@ -224,7 +214,7 @@ $pop-color: #E2684A;
 
         display: flex;
         flex-direction: column;
-        
+
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -235,11 +225,13 @@ $pop-color: #E2684A;
                 font-weight: 400;
                 font-size: 40px;
                 color: whitesmoke;
+
+                margin-top: 70px;
             }
         }
 
         &_divForm{
-            border: 1px wheat solid;
+            // border: 1px wheat solid;
 
             display: flex;
             justify-content: center;
@@ -249,6 +241,8 @@ $pop-color: #E2684A;
             height: 100%;
             width: 80%;
 
+            margin-top: -50px;
+
             &_form{
                 display: flex;
                 flex-direction: column;
@@ -256,6 +250,84 @@ $pop-color: #E2684A;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+
+                position: relative;
+                
+                transition: 0.5s;
+                // border: 1px solid blue;
+
+                width: 100%;
+
+                &_group{
+                    position: relative;
+                    // border: 1px solid red;
+                    margin-bottom: 45px;
+                    font-family: 'Hubballi', sans-serif;
+
+                    width: 90%;
+
+
+                    input{
+                        width: 100%;
+                        padding: 0.5rem 0 0.5rem 0;
+
+                        background: none;
+                        outline: none;
+                        font-size: 1rem;
+                        transition: all 0.3s;
+
+                        border: transparent;
+                        border-bottom: 1px solid whitesmoke;
+
+                        cursor: none;
+
+
+
+                        
+                    }
+
+                    input:hover{
+                        border-bottom: 1px solid $primary-color;
+                    }
+
+
+                    label{
+                        position: absolute;
+                        top: 50%;
+                        left: 0px;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                        transition: all 0.3s;
+                        color: whitesmoke;
+                    }
+
+                    input:hover + label, input:not(:placeholder-shown) + label {
+                        top: 0;
+                        font-size: 0.8rem;
+                        color: $primary-color;
+
+
+                        cursor: none;
+                    }
+
+
+                }
+
+                button{
+                    font-family: "Huballi", sans-serif;
+
+                    background-color: $pop-color;
+                    outline: none;
+
+                    border-radius: 30px;
+                    border: transparent;
+                    width: 150px;
+                    height: 50px;
+
+                    font-size: 1rem;
+
+                    color: whitesmoke;
+                }
 
             }
             

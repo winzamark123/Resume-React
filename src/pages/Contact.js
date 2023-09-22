@@ -52,6 +52,32 @@ const Contact = ({ cursorRef }) => {
         }
     }
 
+    const handleMouseEnter = (event) => {
+        if (cursorRef.current) {
+            const targetID = event.target.id;
+            switch (targetID) {
+
+                default:
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #16a085";
+            }
+
+            // cursorRef.current.style.width = "100px";
+            // cursorRef.current.style.height = "100px";
+            // cursorRef.current.style.border = "3px solid #16a085";
+        }
+    }
+
+
+    const handleMouseLeave = () => {
+        if (cursorRef.current) {
+            cursorRef.current.style.width = "30px";
+            cursorRef.current.style.height = "30px";
+            cursorRef.current.style.border = "2px solid white";
+        }
+    }
+
 
     return (
         <div className="contact_container">
@@ -81,21 +107,6 @@ const Contact = ({ cursorRef }) => {
                             </p>
                         </div>
 
-                        <div className="form_container_left_text_info">
-                            <div className="form_container_left_text_info_address">
-                                <h2>Phone</h2>
-                                <p>{info["phoneNum"]}</p>
-                            </div>
-                            <div className="form_container_left_text_info_phone">
-                                <h2>Address</h2>
-                                <p>{info["address"]}</p>
-                            </div>
-                            <div className="form_container_left_text_info_email">
-                                <h2>Email</h2>
-                                <p>{info["email"]}</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
@@ -103,23 +114,30 @@ const Contact = ({ cursorRef }) => {
                     <div className="form_container_right_title">
                         <h1>CONTACT FORM</h1>
                     </div>
-                    <div className="form_container_right_divForm">
+                    <div className="form_container_right_divForm" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <form className="form_container_right_divForm_form" onSubmit={handleFormSubmit} >
                             <input type="hidden" name="_captcha" value="false" />
                             <input type="hidden" name="_subject" value="Wincheng.fyi Contact Email!" />
                             <input type="hidden" name="_next" value="http://localhost:3000/contact" />
 
-                            <div className="form_container_divForm_form_email">
-                                <input type="email" name="email" />
+                            <div className="form_container_right_divForm_form_group">
+                                <input type="name" name="Name" required placeholder=" " />
+                                <label>Your Name</label>
                             </div>
 
-                            <div className="form_container_divForm_form_linkedIN">
-                                <input type="text" name="LinkedIN" placeholder="LinkedIN" />
-
+                            <div className="form_container_right_divForm_form_group">
+                                <input type="email" name="email" required placeholder=" " />
+                                <label>Email</label>
                             </div>
 
-                            <div className="form_container_divForm_form_message">
-                                <input type="text" name="message" placeholder="Write Your Messages here!" required />
+                            <div className="form_container_right_divForm_form_group">
+                                <input type="text" name="Socials" placeholder=" "/>
+                                <label>LinkedIN / Instagram / Phone Number</label>
+                            </div>
+
+                            <div className="form_container_right_divForm_form_group">
+                                <input type="text" name="message"  required placeholder=" "/>
+                                <label>Message</label>
 
                             </div>
                             <button type="submit"> Send </button>
