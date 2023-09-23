@@ -1,4 +1,9 @@
 import "./Map.scss"
+import { useEffect, useState } from 'react';
+import RoomMap_Contact from "../assets/RoomMap_Contact.png";
+import RoomMap_Projects from "../assets/RoomMap_Projects.png";
+import RoomMap_Resume from "../assets/RoomMap_Resume.png";
+import RoomMap from "../assets/RoomMap.png";
 
 const NavLinks = {
     "Resume": "/resume",
@@ -7,8 +12,33 @@ const NavLinks = {
 }
 
 const Map = ({ cursorRef }) => {
+    // console.log(cursorRef)
+    const [bgImage, setBgImage] = useState(RoomMap);
 
-    const handleMouseEnter = () => {
+
+    const handleMouseEnter = (event) => {
+
+        const targetID = event.target.id;
+
+        switch (targetID) {
+            case "door":
+                setBgImage(RoomMap_Resume);
+                break;
+
+            case "livingRoom":
+                setBgImage(RoomMap_Projects);
+                break;
+
+            case "painting":
+                setBgImage(RoomMap_Contact);
+                break;
+
+            default:
+                setBgImage(RoomMap);
+                break;
+        }
+
+
         if (cursorRef.current) {
             cursorRef.current.style.width = "100px";
             cursorRef.current.style.height = "100px";
@@ -16,7 +46,11 @@ const Map = ({ cursorRef }) => {
         }
     }
 
+
+
     const handleMouseLeave = () => {
+        setBgImage("url(../assets/RoomMap.png)");
+
         if (cursorRef.current) {
             cursorRef.current.style.width = "30px";
             cursorRef.current.style.height = "30px";
@@ -24,16 +58,20 @@ const Map = ({ cursorRef }) => {
         }
     }
 
-    const handleClick = (e) => {
-        e.preventDefault();
-        console.log("clicked");
-
-
-    }
-
     return (
-        <div className="map-container">
-            <div className="map-pixelart">
+        <div className="map-container" >
+            <div className="map-pixelart"
+                style={{
+                    backgroundImage: `url(${bgImage})`,
+                    width: "100%",
+                    height: "100%",
+                    imageRendering: "pixelated",
+                    backgroundSize: "100%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "top center",
+                    transition: "0.3s"
+                }}
+            >
                 <div className="floor" id="floor1"></div>
                 <div className="floor" id="floor2">
                     <a className="floor_hover"
