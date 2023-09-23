@@ -274,7 +274,7 @@ const Projects = ({ cursorRef }) => {
 
 
             <div className="projects_title">
-                <span>Some of my not so cool </span>
+                <span>Some of my really cool</span>
                 <h1>Projects</h1>
             </div>
 

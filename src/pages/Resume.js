@@ -25,6 +25,7 @@ const Resume = ({ cursorRef }) => {
                     cursorRef.current.style.border = "3px solid #16a085";
                     cursorRef.current.style.cursor = "none";
                     break;
+
                 default:
                     cursorRef.current.style.width = "100px";
                     cursorRef.current.style.height = "100px";
@@ -68,7 +69,6 @@ const Resume = ({ cursorRef }) => {
             </div>
 
             <div className="resume_back"
-                id="back_BTN"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
