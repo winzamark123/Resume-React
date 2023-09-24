@@ -1,4 +1,10 @@
+body::after {
+    content: url("../assets/RoomMap_Contact.png") url("../assets/RoomMap_Projects.png") url("../assets/RoomMap_Resume.png") url("../assets/RoomMap.png");
+    display: none;
+  }
+
 .map-container {
+    will-change: background-image;
     z-index: -1;
     display: flex;
     width: 1024px;
@@ -12,25 +18,13 @@
 
 }
 
-.map-pixelart {
-    // width: 100%;
-    // height: 100%;
-    // image-rendering: pixelated;
-    // background-image: url("../assets/RoomMap.png");
-
-
-    // background-size: 100%;
-    // background-repeat: no-repeat;
-    // background-position: top center;
-}
-
 .floor{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 
-    border: solid 1px white; 
+    // border: solid 1px white; 
     width: 95%;
     height: 200px;
     
@@ -42,7 +36,7 @@
         position: relative;
         margin-right: 100px;
         
-        border: solid 2px red; 
+        // border: solid 2px red; 
         height: 80%;
         width: 100px; 
 
@@ -53,7 +47,7 @@
         position: relative;
         margin-right: 610px; 
         
-        border: solid 2px red; 
+        // border: solid 2px red; 
         height: 80%;
         width: 260px; 
     }
@@ -62,7 +56,7 @@
         position: relative;
         margin-right: 100px; 
         
-        border: solid 2px red; 
+        // border: solid 2px red; 
         height: 80%;
         width: 260px; 
     }

@@ -1,5 +1,5 @@
 import "./Map.scss"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import RoomMap_Contact from "../assets/RoomMap_Contact.png";
 import RoomMap_Projects from "../assets/RoomMap_Projects.png";
 import RoomMap_Resume from "../assets/RoomMap_Resume.png";
@@ -49,7 +49,7 @@ const Map = ({ cursorRef }) => {
 
 
     const handleMouseLeave = () => {
-        setBgImage("url(../assets/RoomMap.png)");
+        setBgImage(RoomMap);
 
         if (cursorRef.current) {
             cursorRef.current.style.width = "30px";
@@ -62,11 +62,12 @@ const Map = ({ cursorRef }) => {
         <div className="map-container" >
             <div className="map-pixelart"
                 style={{
+                    willChange: "background-image",
                     backgroundImage: `url(${bgImage})`,
                     width: "100%",
                     height: "100%",
                     imageRendering: "pixelated",
-                    backgroundSize: "100%",
+                    backgroundSize: "101%",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "top center",
                     transition: "0.3s"
@@ -80,7 +81,6 @@ const Map = ({ cursorRef }) => {
                         onMouseLeave={handleMouseLeave}
                         id="door"
                     >
-                        <div className="floor_hover_inside" ></div>
                     </a>
                 </div>
                 <div className="floor" id="floor3">
@@ -90,7 +90,6 @@ const Map = ({ cursorRef }) => {
                         onMouseLeave={handleMouseLeave}
                         id="livingRoom">
 
-                        <div className="floor_hover_inside" ></div>
                     </a>
                 </div>
                 <div className="floor" id="floor4"></div>
@@ -100,7 +99,6 @@ const Map = ({ cursorRef }) => {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         id="painting">
-                        <div className="floor_hover_inside" ></div>
                     </a>
                 </div>
             </div>
