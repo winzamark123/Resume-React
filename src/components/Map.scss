@@ -1,8 +1,3 @@
-body::after {
-    content: url("../assets/RoomMap_Contact.png") url("../assets/RoomMap_Projects.png") url("../assets/RoomMap_Resume.png") url("../assets/RoomMap.png");
-    display: none;
-  }
-
 .map-container {
     will-change: background-image;
     z-index: -1;
@@ -10,12 +5,17 @@ body::after {
     width: 1024px;
     height: 1024px;
 
-    /* border: solid 1px blue; */
+    // border: solid 1px blue; 
 
     align-items: center;
     justify-content: center;
-    text-align: center;
 
+
+}
+
+.map-pixelart::before{
+    content: url("../assets/RoomMap_Contact.png") url("../assets/RoomMap.png") url("../assets/RoomMap_Resume.png") url("../assets/RoomMap_Projects.png");
+    display: none;
 }
 
 .floor{
@@ -24,9 +24,11 @@ body::after {
     justify-content: center;
     align-items: flex-end;
 
-    // border: solid 1px white; 
+    border: solid 1px white; 
     width: 95%;
     height: 200px;
+
+    animation: highlightGuide 30s ease-in-out infinite;
     
     &_hover{
         cursor: none;
@@ -36,9 +38,10 @@ body::after {
         position: relative;
         margin-right: 100px;
         
-        // border: solid 2px red; 
+        border: solid 2px red; 
         height: 80%;
         width: 100px; 
+
 
 
     }
@@ -47,18 +50,20 @@ body::after {
         position: relative;
         margin-right: 610px; 
         
-        // border: solid 2px red; 
+        border: solid 2px red; 
         height: 80%;
         width: 260px; 
+
     }
 
     #painting{
         position: relative;
         margin-right: 100px; 
         
-        // border: solid 2px red; 
+        border: solid 2px red; 
         height: 80%;
         width: 260px; 
+
     }
 
     
@@ -68,3 +73,34 @@ body::after {
     height: 160px;
 }
 
+@keyframes highlightGuide{
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 0.75;
+    }
+    30%{
+        opacity: 1;
+    }
+
+    45%{
+        opacity: 1;
+    }
+
+    60%{
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 0.75;
+    }
+
+    90%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

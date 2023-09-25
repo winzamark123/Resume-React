@@ -12,8 +12,10 @@ const NavLinks = {
 }
 
 const Map = ({ cursorRef }) => {
-    // console.log(cursorRef)
+
     const [bgImage, setBgImage] = useState(RoomMap);
+
+
 
 
     const handleMouseEnter = (event) => {
@@ -64,13 +66,13 @@ const Map = ({ cursorRef }) => {
                 style={{
                     willChange: "background-image",
                     backgroundImage: `url(${bgImage})`,
+                    backgroundPosition: "top center",
                     width: "100%",
                     height: "100%",
                     imageRendering: "pixelated",
-                    backgroundSize: "101%",
+                    backgroundSize: "100%",
                     backgroundRepeat: "no-repeat",
-                    backgroundPosition: "top center",
-                    transition: "0.3s"
+                    transition: "1s"
                 }}
             >
                 <div className="floor" id="floor1"></div>
