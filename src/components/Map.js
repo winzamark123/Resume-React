@@ -78,10 +78,10 @@ const Map = ({ cursorRef }) => {
                 <div className="floor" id="floor1"></div>
                 <div className="floor" id="floor2">
                     <a className="floor_hover"
-                        href={NavLinks["Resume"]}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         id="door"
+                        href={NavLinks["Resume"]}
                     >
                     </a>
                 </div>
