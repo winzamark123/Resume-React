@@ -1,5 +1,5 @@
 import "./Map.scss"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import RoomMap_Contact from "../assets/RoomMap_Contact.png";
 import RoomMap_Projects from "../assets/RoomMap_Projects.png";
 import RoomMap_Resume from "../assets/RoomMap_Resume.png";
@@ -60,11 +60,20 @@ const Map = ({ cursorRef }) => {
         }
     }
 
+    useEffect(() => {
+        const images = [RoomMap_Contact, RoomMap_Projects, RoomMap_Resume, RoomMap];
+        images.forEach(img => {
+            new Image().src = img;
+        });
+    }, []);
+
+    
     return (
         <div className="map-container" >
             <div className="map-pixelart"
                 style={{
-                    willChange: "background-image",
+                    transform: "translate3d(0, 0, 0)",
+                    willChange: "transform",
                     backgroundImage: `url(${bgImage})`,
                     backgroundPosition: "top center",
                     width: "100%",
@@ -72,7 +81,7 @@ const Map = ({ cursorRef }) => {
                     imageRendering: "pixelated",
                     backgroundSize: "100%",
                     backgroundRepeat: "no-repeat",
-                    transition: "1s"
+                    transition: "0.5s",
                 }}
             >
                 <div className="floor" id="floor1"></div>
