@@ -2,8 +2,11 @@ import "./Contact.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react';
 
 const Contact = ({ cursorRef }) => {
+
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     // Calculate milliseconds in a year
     const minute = 1000 * 60;
@@ -15,15 +18,11 @@ const Contact = ({ cursorRef }) => {
     const d = new Date();
     let years = (Math.round(d.getTime() / year) - 34);
 
-    const info = {
-        "phoneNum": "+1 530-760-5245",
-        "address": "1133 OLIVE DRIVE, DAVIS, CA",
-        "email": "winzamark12@gmail.com"
-    }
-
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         console.log("Form Submit Clicked");
+
+        setFormSubmitted(true);
 
         const formData = new FormData(event.target);
 
@@ -131,6 +130,7 @@ const Contact = ({ cursorRef }) => {
                         <h1>CONTACT FORM</h1>
                     </div>
                     <div className="form_container_right_divForm" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+
                         <form className="form_container_right_divForm_form" onSubmit={handleFormSubmit} >
                             <input type="hidden" name="_captcha" value="false" />
                             <input type="hidden" name="_subject" value="Wincheng.fyi Contact Email!" />
@@ -159,6 +159,14 @@ const Contact = ({ cursorRef }) => {
                             <button type="submit"> Send </button>
 
                         </form>
+                        
+                        <div className="form_container_right_divForm_complete">
+                            <h1>Form Submitted!</h1>
+                            <h3>I'll get back to you as soon as I receive it!</h3>
+                        </div>
+
+
+
                     </div>
 
 

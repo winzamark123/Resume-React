@@ -225,7 +225,7 @@ const Projects = ({ cursorRef }) => {
 
     return (
         <div className="projects" style={{ "--filterSettings": filterSetting }}
-            onMouseEnter={handleMouseLeave}
+            onMouseEnter={handleMouseLeave} // to reset cursor
         >
             <div className="projects_container">
                 <div className="projects_container_carousel">
@@ -234,7 +234,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[0]["title"]} //id = ImageGPT
-                            style={{ marginLeft: "10vw", backgroundPosition: "41% 27%" }}
+                            style={{ marginLeft: "10vw",backgroundPosition: "41% 27%" }}
                             onClick={() => handleProjectsToggle(itemLabels[0], 0)}
                         ></div>
 
@@ -257,7 +257,7 @@ const Projects = ({ cursorRef }) => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             id={itemLabels[2]["title"]}
-                            style={{ marginLeft: "43vw", backgroundPosition: "100% 25%" }}
+                            style={{ marginLeft: "42vw", backgroundPosition: "100% 25%" }}
                             onClick={() => handleProjectsToggle(itemLabels[2], 2)}
                         ></div>
 

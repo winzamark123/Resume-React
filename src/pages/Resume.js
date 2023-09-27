@@ -53,6 +53,8 @@ const Resume = ({ cursorRef }) => {
     }
 
 
+
+
     return (
         <div className="resume">
             <div className="resume_title">

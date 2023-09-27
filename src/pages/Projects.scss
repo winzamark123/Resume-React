@@ -26,7 +26,9 @@ $pop-color: #E2684A;
     left: 0px;
     background-image: url("../assets/ProjectsPage-Assets/ShelfBG.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    // background-size: contain;
+    // background-size: calc(100vh - 100px);
+    background-size: cover; 
     
     transition: filter 0.7s ease;
     filter: var(--filterSettings);

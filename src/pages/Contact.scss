@@ -346,7 +346,7 @@ $pop-color: #E2684A;
                 }
 
                 button{
-                    font-family: "Huballi", sans-serif;
+                    font-family: "Hubballi", sans-serif;
 
                     background-color: rgba(226, 104, 74, 0.71);
                     outline: none;
@@ -369,7 +369,16 @@ $pop-color: #E2684A;
                     
                 }
 
+            
             }
+
+            &_complete{
+                display: none;
+            }
+
+
+
+
             
 
 

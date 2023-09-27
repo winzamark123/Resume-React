@@ -65,7 +65,6 @@ $pop-color: #E2684A;
             
         }
 
-
     }
 
     &_back{
@@ -130,11 +129,19 @@ $pop-color: #E2684A;
                 cursor: none;
 
                 a{
-                    color: $primary-color;
+                    color: whitesmoke;
                     cursor: none;
                 }
 
+                a:hover{
+                    color: $primary-color;
+                }
+
                 btn{
+                    color: whitesmoke;
+                }
+
+                btn:hover{
                     color: $pop-color;
                 }
             }
