@@ -1,6 +1,6 @@
 # Win Cheng's Resume Website (React App) 
 
-## You can view the website here ~ <a href = "https://wincheng.fyi/" wincheng.fyi </a>
+## You can view the website here ~ <a href = "https://wincheng.fyi/"> wincheng.fyi </a>
 
 
 ### Description 
