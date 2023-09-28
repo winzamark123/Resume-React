@@ -54,6 +54,8 @@ $pop-color: #E2684A;
         display: flex;
         justify-content: flex-end;
 
+        position: relative;
+
         &_title{
             border-top: 6px solid $primary-color;
             display: flex;
@@ -87,7 +89,14 @@ $pop-color: #E2684A;
 
             position: absolute;
             left: 70px;
-            bottom: 40px;
+
+            // bottom: 40px;
+            bottom: -100px;
+            
+            animation: slideup 1s forwards;
+            animation-delay: 2s;
+            // transition: 10s ease-in;
+            
 
             &_logoContainer{
                 // border: 1px solid white;
@@ -125,6 +134,8 @@ $pop-color: #E2684A;
                             a:hover{
                                 color: $primary-color;
                             }
+                            
+                            
                         }
                     }
                 }
@@ -143,6 +154,8 @@ $pop-color: #E2684A;
             display: flex;
             justify-content: space-between;
 
+           
+
             &_circle1{
                 width: 25px;
                 height: 25px;
@@ -158,6 +171,8 @@ $pop-color: #E2684A;
                 border-radius: 50%;
                 background-color: $primary-color;
             }
+
+            
 
 
         }
@@ -236,8 +251,8 @@ $pop-color: #E2684A;
         height: 100%;
 
         background-color: rgba(226, 104, 74, 0.71);
-        stroke-width: 1px;
-        stroke: rgba(207, 207, 207, 0.00);
+        // stroke-width: 1px;
+        // stroke: rgba(207, 207, 207, 0.00);
         backdrop-filter: blur(4px);
 
         display: flex;
@@ -246,6 +261,9 @@ $pop-color: #E2684A;
         justify-content: center;
         align-items: center;
         text-align: center;
+        z-index: 999;
+
+
 
         &_title{
             h1{
@@ -281,7 +299,7 @@ $pop-color: #E2684A;
 
                 position: relative;
                 
-                transition: 0.5s;
+                // transition: 0.5s;
                 // border: 1px solid blue;
 
                 width: 100%;
@@ -302,12 +320,14 @@ $pop-color: #E2684A;
                         background: none;
                         outline: none;
                         font-size: 1rem;
-                        transition: all 0.3s;
+                        // transition: all 0.3s;
 
                         border: transparent;
                         border-bottom: 1px solid whitesmoke;
 
                         cursor: none;
+
+                        color: whitesmoke; 
 
 
 
@@ -379,10 +399,23 @@ $pop-color: #E2684A;
 
 
 
-            
-
-
         }
 
+    }
+}
+
+@keyframes slideup {
+    from{
+        bottom: -100px;
+    } to {
+        bottom: 40px;
+    }
+}
+
+@keyframes slideright{
+    from{
+        right: -100px;
+    } to {
+        right: 70px;
     }
 }
