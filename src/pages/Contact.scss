@@ -49,12 +49,15 @@ $pop-color: #E2684A;
 
         margin: 40px;
         margin-left: 70px;
-        margin-right: 70px;
+        margin-right: -150px;
 
         display: flex;
         justify-content: flex-end;
 
         position: relative;
+
+        animation: sliderightTop 1s forwards;
+        animation-delay: 2s;
 
         &_title{
             border-top: 6px solid $primary-color;
@@ -149,7 +152,11 @@ $pop-color: #E2684A;
             width: 65px;
             height: 30px;
 
-            margin-right: 10px;
+            margin-right: -150px;
+
+            animation: sliderightCircles 1s forwards;
+            animation-delay: 2s;
+
 
             display: flex;
             justify-content: space-between;
@@ -412,10 +419,18 @@ $pop-color: #E2684A;
     }
 }
 
-@keyframes slideright{
+@keyframes sliderightTop{
     from{
-        right: -100px;
+        margin-right: -150px;
     } to {
-        right: 70px;
+        margin-right: 70px;
+    }
+}
+
+@keyframes sliderightCircles{
+    from{
+        margin-right: -150px;
+    } to {
+        margin-right: 10px;
     }
 }
