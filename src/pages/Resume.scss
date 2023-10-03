@@ -16,7 +16,7 @@ $pop-color: #E2684A;
     cursor: none;
 
     &_title{
-        // z-index: 2;
+        z-index: 10;
         position: absolute; 
         // border: solid 3px white;
 
@@ -44,6 +44,7 @@ $pop-color: #E2684A;
         }
     }
     &_container{
+        z-index: 1;
         height: 100vh;
         background-image: url("../assets/ResumePage-Assets/ResumeTable.png");
         background-size: cover;
@@ -67,8 +68,27 @@ $pop-color: #E2684A;
 
     }
 
+    // &_container::before{
+    //     z-index: 2;
+    //     opacity: 0;
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     background-image: url("../assets/ResumePage-Assets/ResumeTableHighlight.png");
+    //     background-position: inherit;
+    //     background-size: inherit;
+
+    //     transition: opacity 0.3s;
+    // }
+
+
+
     &_back{
         // border: 3px solid red;
+        z-index: 10;
         width: 11vw;
         height: 11vw;
 
@@ -106,6 +126,7 @@ $pop-color: #E2684A;
         }
 
         &_show{
+            z-index: 1000;
             opacity: 1;
             visibility: visible;
             position: absolute;
