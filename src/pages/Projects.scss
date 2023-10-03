@@ -151,6 +151,11 @@ $pop-color: #E2684A;
                     margin-top: 10px;
                     cursor: none;
     
+                    color: whitesmoke;
+                    transition: 0.3s;
+                }
+
+                &_backBTN:hover{
                     color: $pop-color;
                 }
             }

@@ -8,10 +8,16 @@ const Game = ({cursorRef}) => {
         <div className="game_container">
             <div className="frame">
                 <Map cursorRef={cursorRef}/>
-                {/* <Character characterName={characterNames[0]} initPos={initPos[characterNames[0]]} /> */}
             </div>
             <div className="game_container_right">
                 <p>Scroll Down ↓</p>
+            </div>
+            <div className="game_container_text">
+                <div className="game_container_text_floor1"></div>
+                <div className="game_container_text_floor2"></div>
+                <div className="game_container_text_floor3"></div>
+                <div className="game_container_text_floor4"></div>
+                <div className="game_container_text_floor5"></div>
             </div>
         </div>
     )
