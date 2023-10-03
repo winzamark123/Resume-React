@@ -109,6 +109,27 @@ $pop-color: #E2684A;
                     animation: floating 2s ease-in-out infinite;
                 }
 
+                &_hover::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-image: inherit;
+                    background-position: inherit;
+                    background-size: inherit;
+                    z-index: -1;
+                    transition: 0.3s;
+                 
+                }
+
+                &_hover:hover::before{
+                    filter: hue-rotate(120deg) saturate(150%) brightness(140%);
+                    transition: filter 0.3s;
+                }
+                
+
                 
             }
             
