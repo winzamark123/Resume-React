@@ -1,5 +1,7 @@
 import "./Resume.scss"
 import ResumePDF from '../assets/ResumePage-Assets/Cheng_Teeranade_Resume.pdf'
+import ResumeBG from '../assets/ResumePage-Assets/ResumeTable.png'
+import highlightResumeBG from '../assets/ResumePage-Assets/ResumeTableHighlight.png'
 import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +9,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const Resume = ({ cursorRef }) => {
 
     const [showResume, setShowResume] = useState(false);
+    const [bgImage, setBgImage] = useState(ResumeBG);
 
     const handleMouseEnter = (event) => {
         if (cursorRef.current) {
@@ -26,15 +29,19 @@ const Resume = ({ cursorRef }) => {
                     cursorRef.current.style.cursor = "none";
                     break;
 
+                case "resume_container_item":
+                    setBgImage(highlightResumeBG);
+                    cursorRef.current.style.width = "100px";
+                    cursorRef.current.style.height = "100px";
+                    cursorRef.current.style.border = "3px solid #16a085";
+                    break;
+
                 default:
+                    setBgImage(ResumeBG);
                     cursorRef.current.style.width = "100px";
                     cursorRef.current.style.height = "100px";
                     cursorRef.current.style.border = "3px solid #16a085";
             }
-
-            // cursorRef.current.style.width = "100px";
-            // cursorRef.current.style.height = "100px";
-            // cursorRef.current.style.border = "3px solid #16a085";
         }
     }
 
@@ -61,14 +68,28 @@ const Resume = ({ cursorRef }) => {
                 <span>Take a look at my </span>
                 <h1>Resume!</h1>
             </div>
-            <div className="resume_container">
+            <div className="resume_container"
+                style={{
+                    transform: "translate3d(0, 0, 0)",
+                    willChange: "transform",
+                    backgroundImage: `url(${bgImage})`,
+                    backgroundPosition: "center",
+                    height: "100vh",
+                    imageRendering: "pixelated",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    transition: "0.5s"
+                }}
+            >
                 <div className="resume_container_item"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     onClick={handleResumeToggle}
+                    id="resume_container_item"
                 >
                 </div>
             </div>
+
 
             <div className="resume_back"
                 onMouseEnter={handleMouseEnter}
