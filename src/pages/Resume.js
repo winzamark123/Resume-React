@@ -120,7 +120,7 @@ const Resume = ({ cursorRef }) => {
                     <a
                         id="download_BTN"
                         href={ResumePDF}
-                        download={ResumePDF}
+                        download="Cheng_Teeranade_Resume.pdf"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >Download Here!</a>
