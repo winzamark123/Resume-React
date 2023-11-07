@@ -49,7 +49,7 @@ A curated portfolio displays my best work, demonstrating my capabilities through
 - **HTML/SCSS**: Markup and styling languages used for creating web pages with styled components.
 - **Midjourney**: The majority of artworks used and presented on the website. 
 
-##Contributing
+## Contributing
 ontributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
@@ -58,10 +58,10 @@ ontributions are what make the open source community such an amazing place to le
 4. Push to the Branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 
-##Credits
+## Credits
 - Teeranade Cheng (Win) - Initial Work - [Teeranade Cheng](#contact)
 
-##Contact
+## Contact
 If you have any questions or comments, please feel free to get in touch:
 - **LinkedIN**: <a href="https://www.linkedin.com/in/teeranade-cheng/" target = "_blank"> Teeranade Cheng </a>
 - **Github**: <a href="https://github.com/winzamark123/" target = "_blank">winzamark123 </a>
