@@ -66,7 +66,9 @@ If you have any questions or comments, please feel free to get in touch:
 - **LinkedIN**: <a href="https://www.linkedin.com/in/teeranade-cheng/" target = "_blank"> Teeranade Cheng </a>
 - **Github**: <a href="https://github.com/winzamark123/" target = "_blank">winzamark123 </a>
 - **Email**: winzamark12@gmail.com
-   
+
+## Acknowledgements
+Special thanks to everyone who has provided feedback and contributions to the project. Your support is what drives my passion for technology and development!
 
 
  
