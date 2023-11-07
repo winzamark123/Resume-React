@@ -43,5 +43,30 @@ A curated portfolio displays my best work, demonstrating my capabilities through
 ### Contacts Page
 - Contact form to connect!
 
+## Tools and Frameworks Used:
+- **Firebase**: Hosting services for the deployed website.
+- **React.js**: The core framework used to build the user interface.
+- **HTML/SCSS**: Markup and styling languages used for creating web pages with styled components.
+- **Midjourney**: The majority of artworks used and presented on the website. 
+
+##Contributing
+ontributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+##Credits
+- Teeranade Cheng (Win) - Initial Work - [Teeranade Cheng](#contact)
+
+##Contact
+If you have any questions or comments, please feel free to get in touch:
+- **LinkedIN**: <a href="https://www.linkedin.com/in/teeranade-cheng/" target = "_blank"> Teeranade Cheng </a>
+- **Github**: <a href="https://github.com/winzamark123/" target = "_blank">winzamark123 </a>
+- **Email**: winzamark12@gmail.com
+   
+
 
  
