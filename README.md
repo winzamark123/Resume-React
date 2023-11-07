@@ -49,7 +49,7 @@ A curated portfolio displays my best work, demonstrating my capabilities through
 - **Midjourney**: The majority of artworks used and presented on the website. 
 
 ## Contributing
-ontributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
 2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
