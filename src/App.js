@@ -4,6 +4,7 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import { useEffect, useState, useRef } from 'react';
+import RouteChangeTracker from './RouteChangeTracker';
 import { app, perf, analytics } from './firebase';
 import {
   BrowserRouter as Router,
@@ -14,7 +15,6 @@ import {
 
 
 function App() {
-
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
   const cursorRef = useRef(null);
@@ -69,6 +69,7 @@ function App() {
 
 
       <Router>
+        <RouteChangeTracker />
         <Routes>
           <Route path="/" element={<Home cursorRef={cursorRef} />} />
           <Route path="/resume" element={<Resume cursorRef={cursorRef} />} />
