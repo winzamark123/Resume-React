@@ -18,6 +18,8 @@ Welcome to the repository for my personal resume website, crafted to highlight m
 ## Live Demo
 
 Experience the live version of my resume website: <a href="https://wincheng.fyi/" target = "_blank"> wincheng.fyi </a>
+<img src="./gitImage/HomePage.png" alt="Home Page" width="250"/>
+
 ![Home Page](./gitImage/HomePage.png "Home Page")
 ![Resume Page](./gitImage/ResumePage.png "Resume Page")
 ![Project Page](./gitImage/ProjectPage.png "Project Page")
