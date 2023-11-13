@@ -4,6 +4,7 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import { useEffect, useState, useRef } from 'react';
+import { app, perf, analytics } from './firebase';
 import {
   BrowserRouter as Router,
   Routes,
